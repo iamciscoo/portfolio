@@ -14,7 +14,7 @@ function inquiryRows(input: ContactInput) {
     ["Name", input.name],
     ["Email", input.email],
     ...(input.phone ? [["Phone", input.phone]] : []),
-    ["Company", input.company || "—"],
+    ["Company", input.company || "-"],
     [
       "Service",
       services.find((s) => s.id === input.service)?.title.en || input.service,

@@ -3,14 +3,14 @@ import { l } from "@/lib/localize";
 export const personalStory = {
   greeting: l(
     "Francis, to most. Cisco, to friends.",
-    "Для большинства — Фрэнсис. Для друзей — Cisco.",
+    "Для большинства - Фрэнсис. Для друзей - Cisco.",
     "Francis kwa wengi. Cisco kwa marafiki.",
     "Francis pour la plupart. Cisco pour mes amis.",
     "Francis para muchos. Cisco para mis amigos.",
   ),
   heroTitle: l(
     "A person behind every product.",
-    "За каждым продуктом — человек.",
+    "За каждым продуктом - человек.",
     "Mtu nyuma ya kila bidhaa.",
     "Une personne derrière chaque produit.",
     "Una persona detrás de cada producto.",
@@ -31,7 +31,7 @@ export const personalStory = {
   ),
   photoCaption: l(
     "Away from the screen, still myself.",
-    "Вне экрана — всё тот же я.",
+    "Вне экрана - всё тот же я.",
     "Mbali na skrini, bado ni mimi.",
     "Loin de l’écran, toujours moi-même.",
     "Lejos de la pantalla, sigo siendo yo.",

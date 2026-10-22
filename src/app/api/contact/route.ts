@@ -94,7 +94,7 @@ export async function POST(request: Request) {
         from,
         to,
         replyTo: input.email,
-        subject: `New Portfolio Inquiry — ${service.title.en}`,
+        subject: `New Portfolio Inquiry - ${service.title.en}`,
         html: inquiryEmail(input),
         text: inquiryText(input),
       },

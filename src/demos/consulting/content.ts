@@ -30,7 +30,7 @@ export const consulting = {
   ),
   perspectiveBody: l(
     "NORTHLINE is a fictional advisory practice created for this interactive website. Its concept approach starts with asking useful questions, understanding the context and turning broad ambition into practical decisions. All people, insights and case studies are illustrative.",
-    "NORTHLINE — вымышленная консалтинговая практика для этого интерактивного сайта. Её подход начинается с полезных вопросов и понимания контекста, чтобы превратить амбиции в практические решения. Команда, статьи и кейсы приведены для иллюстрации.",
+    "NORTHLINE - вымышленная консалтинговая практика для этого интерактивного сайта. Её подход начинается с полезных вопросов и понимания контекста, чтобы превратить амбиции в практические решения. Команда, статьи и кейсы приведены для иллюстрации.",
     "NORTHLINE ni kampuni ya ushauri ya kubuni kwa tovuti hii. Mbinu huanza kwa maswali muhimu, kuelewa mazingira na kugeuza malengo kuwa maamuzi ya vitendo. Watu, makala na kesi ni mifano.",
     "NORTHLINE est un cabinet de conseil fictif créé pour ce site interactif. Son approche commence par les bonnes questions, la compréhension du contexte et la traduction de l’ambition en décisions concrètes. Équipe, analyses et cas sont illustratifs.",
     "NORTHLINE es una consultora ficticia creada para este sitio interactivo. Su enfoque parte de hacer preguntas útiles, entender el contexto y convertir la ambición en decisiones concretas. Personas, artículos y casos son ilustrativos.",

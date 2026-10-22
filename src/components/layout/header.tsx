@@ -29,7 +29,7 @@ export function Header() {
         {t("skip")}
       </a>
       <header className="site-header">
-        <Link className="wordmark" href="/" aria-label="Cisco — Home">
+        <Link className="wordmark" href="/" aria-label="Cisco - Home">
           cisco<span>*</span>
         </Link>
         <DesktopNav />

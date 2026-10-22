@@ -9,7 +9,7 @@ import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Francis Mwambene — Cisco",
+  title: "Francis Mwambene - Cisco",
   description: "Developer and product builder. From Tanzania, based in Russia.",
   icons: { icon: "/icon.svg" },
 };

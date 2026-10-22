@@ -4,7 +4,7 @@ export const insights = [
     id: "decisions",
     title: l(
       "Strategy is a set of decisions.",
-      "Стратегия — это набор решений.",
+      "Стратегия - это набор решений.",
       "Mkakati ni mfululizo wa maamuzi.",
       "La stratégie est un ensemble de décisions.",
       "La estrategia es un conjunto de decisiones.",

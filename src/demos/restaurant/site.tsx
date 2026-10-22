@@ -84,7 +84,7 @@ export async function RestaurantSite({ locale }: { locale: Locale }) {
           />
           <ImageGallery
             src="/images/demos/restaurant.webp"
-            alt="SAVOUR — concept dining"
+            alt="SAVOUR - concept dining"
             width={1200}
             height={800}
           />

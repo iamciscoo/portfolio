@@ -88,7 +88,7 @@ export default async function CaseStudy({
             <ImageGallery
               src={project.cover}
               eager
-              alt={`${project.name} — ${t("projects.screenshots")}`}
+              alt={`${project.name} - ${t("projects.screenshots")}`}
             />
           </div>
         </CaseVisual>
@@ -130,7 +130,7 @@ export default async function CaseStudy({
               src={project.mobile}
               width={390}
               height={844}
-              alt={`${project.name} — ${t("projects.mobile")}`}
+              alt={`${project.name} - ${t("projects.mobile")}`}
             />
           </div>
         </section>

@@ -37,7 +37,7 @@ export const fashion = {
   ),
   about: l(
     "Amara Nkosi is a fictional character created for this website concept. Her imagined practice moves between editorial storytelling, studio portraiture and contemporary fashion campaigns. Photographs are illustrative stock images, not a claim about the subjects’ identity or career.",
-    "Амара Нкоси — вымышленный персонаж этого концепта. Её воображаемая практика объединяет редакционные съёмки, студийные портреты и модные кампании. Использованы стоковые иллюстрации; личности и карьера людей на фотографиях не приписываются этому персонажу.",
+    "Амара Нкоси - вымышленный персонаж этого концепта. Её воображаемая практика объединяет редакционные съёмки, студийные портреты и модные кампании. Использованы стоковые иллюстрации; личности и карьера людей на фотографиях не приписываются этому персонажу.",
     "Amara Nkosi ni mhusika wa kubuni wa dhana hii. Kazi yake ya mfano inahusisha picha za mitindo, studio na kampeni. Picha ni za kuonyesha tu; hazidai utambulisho au kazi ya watu walio kwenye picha.",
     "Amara Nkosi est un personnage fictif créé pour ce concept. Son univers imaginé relie récits de mode, portraits de studio et campagnes contemporaines. Les photographies sont des images de stock illustratives et ne décrivent ni l’identité ni la carrière des sujets.",
     "Amara Nkosi es un personaje ficticio creado para este concepto. Su trabajo imaginado abarca narrativa editorial, retratos de estudio y campañas de moda. Las fotos de archivo son ilustrativas y no describen la identidad ni la carrera de sus protagonistas.",
@@ -71,10 +71,10 @@ export const fashion = {
     "Representación",
   ),
   agency: l(
-    "MUSE Studio — fictional creative agency. For concept inquiries, try the local booking preview.",
-    "MUSE Studio — вымышленное креативное агентство. Попробуйте демонстрационную форму запроса на съёмку.",
-    "MUSE Studio — wakala wa kubuni. Jaribu hakiki ya ombi la upigaji picha.",
-    "MUSE Studio — agence créative fictive. Pour une demande conceptuelle, essayez l’aperçu local de réservation.",
+    "MUSE Studio - fictional creative agency. For concept inquiries, try the local booking preview.",
+    "MUSE Studio - вымышленное креативное агентство. Попробуйте демонстрационную форму запроса на съёмку.",
+    "MUSE Studio - wakala wa kubuni. Jaribu hakiki ya ombi la upigaji picha.",
+    "MUSE Studio - agence créative fictive. Pour une demande conceptuelle, essayez l’aperçu local de réservation.",
     "MUSE Studio: agencia creativa ficticia. Para consultas del concepto, prueba la vista previa local de reserva.",
   ),
   contact: l(

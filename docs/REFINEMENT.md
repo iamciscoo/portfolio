@@ -1,4 +1,4 @@
-# Portfolio refinement — 22 October 2026
+# Portfolio refinement - 22 October 2026
 
 The owner explicitly requested implementation and delegated creative decisions. Existing routes, locales, real-project links, concept demos, metadata, Resend and deployment configuration are retained.
 

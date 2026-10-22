@@ -51,14 +51,14 @@ export const construction = {
   ),
   about: l(
     "FORMWORK is an independent website concept for an engineering and construction practice. The fictional firm is imagined around early coordination, straightforward communication and careful site delivery. All projects and people below are demonstration content.",
-    "FORMWORK — концепт сайта инженерно-строительной компании. Вымышленная фирма делает акцент на ранней координации, понятной коммуникации и внимательной работе на объекте. Все проекты и сотрудники приведены для демонстрации.",
+    "FORMWORK - концепт сайта инженерно-строительной компании. Вымышленная фирма делает акцент на ранней координации, понятной коммуникации и внимательной работе на объекте. Все проекты и сотрудники приведены для демонстрации.",
     "FORMWORK ni dhana ya tovuti ya uhandisi na ujenzi. Kampuni ya mfano inazingatia uratibu wa mapema, mawasiliano wazi na utekelezaji makini. Miradi na watu wote ni mifano.",
     "FORMWORK est un concept de site indépendant pour un cabinet d’ingénierie et de construction. L’entreprise fictive privilégie la coordination en amont, une communication claire et une réalisation soignée. Tous les projets et les personnes présentés sont des exemples.",
     "FORMWORK es un concepto independiente de sitio para una empresa de ingeniería y construcción. La firma ficticia se centra en coordinación temprana, comunicación clara y ejecución cuidadosa. Todos los proyectos y personas son ejemplos.",
   ),
   qualityTitle: l(
     "The standard is\nin the details.",
-    "Стандарт качества —\nв деталях.",
+    "Стандарт качества -\nв деталях.",
     "Kiwango kiko\nkwenye maelezo.",
     "La qualité est\ndans les détails.",
     "La calidad está\nen los detalles.",

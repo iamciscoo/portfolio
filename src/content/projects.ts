@@ -4,7 +4,7 @@ export const projects = [
     slug: "globoexpats",
     name: "GloboExpats",
     category: "marketplace",
-    year: "2025 — present",
+    year: "2025 - present",
     url: "https://globoexpats.com/",
     source: "https://globoexpats.com/about",
     color: "#e8eaf0",
@@ -26,7 +26,7 @@ export const projects = [
     ),
     problem: l(
       "Starting life in a new country means finding essentials, trustworthy sellers and useful local knowledge. GloboExpats brings these everyday needs into a shared marketplace.",
-      "Начать жизнь в новой стране — значит найти необходимые вещи, надёжных продавцов и полезную информацию. GloboExpats объединяет эти задачи на одной площадке.",
+      "Начать жизнь в новой стране - значит найти необходимые вещи, надёжных продавцов и полезную информацию. GloboExpats объединяет эти задачи на одной площадке.",
       "Kuanza maisha nchi mpya kunahitaji bidhaa muhimu, wauzaji wa kuaminika na taarifa za eneo. GloboExpats inaunganisha mahitaji haya katika soko moja.",
       "S’installer dans un nouveau pays demande de trouver l’essentiel, des vendeurs fiables et des informations locales utiles. GloboExpats réunit ces besoins dans une place de marché commune.",
       "Empezar en otro país supone encontrar lo esencial, vendedores fiables e información local útil. GloboExpats reúne esas necesidades en un mercado compartido.",

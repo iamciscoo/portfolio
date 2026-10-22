@@ -30,7 +30,7 @@ export async function PersonalStory({ locale }: { locale: Locale }) {
           </div>
           <figcaption>
             {text(personalStory.photoCaption, locale)}
-            <span>— Cisco</span>
+            <span>- Cisco</span>
           </figcaption>
         </figure>
         <div className="story-chapters">

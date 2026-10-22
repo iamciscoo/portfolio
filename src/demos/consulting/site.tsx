@@ -46,7 +46,7 @@ export async function ConsultingSite({ locale }: { locale: Locale }) {
               <div className="demo-image">
                 <Image
                   src="/images/demos/consulting.webp"
-                  alt="Illustrative workspace — fictional advisory firm"
+                  alt="Illustrative workspace - fictional advisory firm"
                   fill
                   loading="eager"
                   fetchPriority="high"

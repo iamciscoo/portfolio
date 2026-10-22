@@ -24,7 +24,7 @@ export async function StudioGrid({
               src={demo.image}
               fill
               sizes="(max-width: 700px) 92vw, 46vw"
-              alt={`${demo.name} — ${t(`studio.${demo.category}`)}`}
+              alt={`${demo.name} - ${t(`studio.${demo.category}`)}`}
             />
             <span className="concept-tag">{t("common.concept")}</span>
             <div className="studio-brand">

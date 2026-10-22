@@ -24,7 +24,7 @@ export async function ProjectExhibits({ locale }: { locale: Locale }) {
           desktop={
             <Link
               href={`/projects/${project.slug}`}
-              aria-label={`${project.name} — ${t("common.view")}`}
+              aria-label={`${project.name} - ${t("common.view")}`}
             >
               <div className="browser-bar">
                 <i />
@@ -34,7 +34,7 @@ export async function ProjectExhibits({ locale }: { locale: Locale }) {
               </div>
               <Image
                 src={project.cover}
-                alt={`${project.name} — ${t("projects.desktop")}`}
+                alt={`${project.name} - ${t("projects.desktop")}`}
                 width={1440}
                 height={1000}
                 sizes="(max-width: 700px) 72vw, (max-width: 1000px) 70vw, 684px"
@@ -44,7 +44,7 @@ export async function ProjectExhibits({ locale }: { locale: Locale }) {
           phone={
             <Image
               src={project.mobile}
-              alt={`${project.name} — ${t("projects.mobile")}`}
+              alt={`${project.name} - ${t("projects.mobile")}`}
               width={390}
               height={844}
               sizes="(max-width: 700px) 20vw, 167px"

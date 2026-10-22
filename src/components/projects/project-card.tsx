@@ -20,7 +20,7 @@ export async function ProjectCard({
       <Link
         href={`/projects/${project.slug}`}
         className={`project-visual project-${project.slug}`}
-        aria-label={`${project.name} — ${t("common.view")}`}
+        aria-label={`${project.name} - ${t("common.view")}`}
       >
         <div className="project-browser">
           <div className="browser-bar">
@@ -31,7 +31,7 @@ export async function ProjectCard({
           </div>
           <Image
             src={project.cover}
-            alt={`${project.name} — ${t("projects.desktop")}`}
+            alt={`${project.name} - ${t("projects.desktop")}`}
             width={1440}
             height={1000}
             sizes="(max-width: 700px) 92vw, 46vw"

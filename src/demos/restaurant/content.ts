@@ -16,7 +16,7 @@ export const restaurant = {
   ),
   intro: l(
     "Good food. Better company. An unhurried celebration of the season, from the first bite to the last conversation.",
-    "Хорошая еда. Прекрасная компания. Неспешное наслаждение сезоном — от первого кусочка до последнего разговора.",
+    "Хорошая еда. Прекрасная компания. Неспешное наслаждение сезоном - от первого кусочка до последнего разговора.",
     "Chakula kizuri. Kampuni nzuri zaidi. Furahia msimu bila haraka, kutoka tonge la kwanza hadi mazungumzo ya mwisho.",
     "Une bonne cuisine. Une belle compagnie. Le plaisir de la saison, sans se presser, de la première bouchée à la dernière conversation.",
     "Buena comida. Mejor compañía. Una celebración sin prisa de la temporada, del primer bocado a la última conversación.",
@@ -30,7 +30,7 @@ export const restaurant = {
   ),
   story: l(
     "SAVOUR is a fictional neighbourhood kitchen imagined around fresh produce, generous hospitality and the simple joy of sharing a meal. Our concept menu follows the coast: bright citrus, warming spices and carefully prepared local ingredients.",
-    "SAVOUR — концепт уютного ресторана, основанный на свежих продуктах, гостеприимстве и радости совместного ужина. В меню — настроение побережья: цитрусы, тёплые специи и местные ингредиенты.",
+    "SAVOUR - концепт уютного ресторана, основанный на свежих продуктах, гостеприимстве и радости совместного ужина. В меню - настроение побережья: цитрусы, тёплые специи и местные ингредиенты.",
     "SAVOUR ni dhana ya mgahawa wa ujirani wenye mazao safi, ukarimu na furaha ya kula pamoja. Menyu yetu ya mfano inafuata pwani: machungwa, viungo na mazao ya eneo.",
     "SAVOUR est un restaurant de quartier fictif imaginé autour des produits frais, de l’accueil et du plaisir de partager un repas. Le menu conceptuel suit la côte : agrumes, épices chaleureuses et ingrédients locaux préparés avec soin.",
     "SAVOUR es un restaurante ficticio de barrio imaginado en torno a productos frescos, hospitalidad y el placer de compartir. Su menú conceptual sigue la costa: cítricos, especias y productos locales preparados con cuidado.",
