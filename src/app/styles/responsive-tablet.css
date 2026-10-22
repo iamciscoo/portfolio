@@ -1,0 +1,148 @@
+@media (max-width: 800px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-menu {
+    display: inline-flex;
+  }
+  .site-header {
+    height: 76px;
+  }
+  .header-cta {
+    display: inline-flex;
+  }
+  .hero-main {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 25px;
+  }
+  .hero-copy h1 {
+    font-size: 6.4vw;
+  }
+  .hero-copy > p {
+    font-size: 12px;
+    margin-block: 20px;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .hero-actions .button {
+    padding: 12px 15px;
+    font-size: 10px;
+  }
+  .portrait-sticker {
+    width: 80px;
+    height: 52px;
+    left: -12px;
+    bottom: 50px;
+    font-size: 9px;
+  }
+  .portrait-placeholder > span {
+    font-size: 16vw;
+  }
+  .portrait-placeholder p {
+    font-size: 10px;
+  }
+  .portrait-placeholder small {
+    font-size: 8px;
+  }
+  .portrait-caption {
+    font-size: 7px;
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+  }
+  .hero-bottom > span {
+    font-size: 8px;
+  }
+  .intro-section {
+    padding-block: 75px;
+    grid-template-columns: 0.7fr 1.3fr;
+  }
+  .intro-section .eyebrow {
+    font-size: 8px;
+  }
+  .section-heading {
+    align-items: start;
+  }
+  .section-heading > div + div {
+    max-width: 230px;
+  }
+  .project-grid {
+    gap: 22px;
+  }
+  .project-visual {
+    padding: 40px 15px 0;
+  }
+  .studio-section {
+    padding-block: 70px;
+  }
+  .studio-caption {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .studio-brand {
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .studio-brand h3 {
+    font-size: 35px;
+  }
+  .tile-fashion .studio-brand h3 {
+    font-size: 48px;
+  }
+  .tile-consulting .studio-brand h3 {
+    font-size: 27px;
+  }
+  .expertise-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .expertise-section {
+    padding-block: 70px;
+  }
+  .journey-preview {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .mini-milestone h3 {
+    font-size: 18px;
+  }
+  .footer-top {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+  .footer-nav {
+    grid-template-columns: 1fr;
+  }
+  .round-link {
+    width: 75px;
+    height: 75px;
+  }
+  .about-grid {
+    gap: 35px;
+  }
+  .about-text h2 {
+    font-size: 28px;
+  }
+  .timeline-entry {
+    grid-template-columns: 140px 1fr;
+    gap: 25px;
+  }
+  .case-meta {
+    gap: 25px;
+  }
+  .case-section {
+    gap: 35px;
+  }
+  .service-detail {
+    grid-template-columns: 30px 1fr 1.1fr;
+    gap: 20px;
+  }
+  .service-detail h2 {
+    font-size: 27px;
+  }
+  .case-mobile {
+    gap: 35px;
+  }
+}

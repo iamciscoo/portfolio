@@ -1,0 +1,100 @@
+@media (max-width: 900px) {
+  .demo-wrap {
+    width: calc(100% - 64px);
+  }
+  .demo-nav nav {
+    gap: 16px;
+  }
+  .demo-nav .demo-button {
+    padding: 12px 15px;
+    gap: 10px;
+  }
+  .demo-nav nav a {
+    font-size: 10px;
+  }
+  .demo-bar {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .demo-wrap {
+    width: calc(100% - 40px);
+  }
+  .demo-bar {
+    font-size: 8px;
+    gap: 8px;
+    padding: 9px 15px;
+  }
+  .demo-bar > span {
+    display: none;
+  }
+  .demo-bar > div {
+    gap: 10px;
+  }
+  .demo-nav {
+    padding-block: 22px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .demo-nav nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 10px;
+    padding-top: 10px;
+  }
+  .demo-nav nav a {
+    font-size: 10px;
+  }
+  .demo-nav .demo-button {
+    font-size: 9px;
+    padding: 10px 12px;
+    gap: 9px;
+  }
+  .demo-nav > a:first-child {
+    font-size: 23px;
+  }
+  .demo-label {
+    font-size: 9px;
+  }
+  .demo-button {
+    font-size: 11px;
+    padding: 13px 17px;
+    gap: 15px;
+  }
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .collection-filters {
+    gap: 17px;
+    margin-block: 25px;
+  }
+  .collection-filters button {
+    font-size: 10px;
+  }
+  .collection-caption h3 {
+    font-size: 23px;
+  }
+  .demo-footer {
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+    padding-block: 30px;
+  }
+  .demo-footer p {
+    max-width: 100%;
+  }
+  .demo-hero-actions {
+    gap: 18px;
+  }
+  .demo-form-pair {
+    gap: 12px;
+  }
+  .demo-form input,
+  .demo-form select,
+  .demo-form textarea {
+    font-size: 16px;
+  }
+}

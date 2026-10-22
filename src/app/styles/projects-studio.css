@@ -1,0 +1,191 @@
+.work-section {
+  padding: 25px 0 110px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.project-grid .project-card:nth-child(2) {
+  margin-top: 90px;
+}
+.project-visual {
+  display: block;
+  position: relative;
+  aspect-ratio: 1.25;
+  overflow: hidden;
+  padding: 55px 25px 0;
+}
+.project-browser {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 15px 45px #2222;
+  transform: rotate(-4deg) translateY(10px);
+  transition: transform 0.5s;
+  transform-origin: center bottom;
+  background: #fff;
+}
+.project-card:nth-child(2) .project-browser {
+  transform: rotate(4deg) translateY(10px);
+}
+.project-visual:hover .project-browser {
+  transform: rotate(0) translateY(-7px);
+}
+.project-browser img {
+  width: 100%;
+  height: auto;
+}
+.browser-bar {
+  height: 21px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 0 9px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.browser-bar i {
+  width: 4px;
+  height: 4px;
+  background: #c6c8cb;
+  border-radius: 50%;
+}
+.browser-bar span {
+  margin: auto;
+  font-size: 7px;
+  color: #666;
+  letter-spacing: 0;
+}
+.project-open {
+  position: absolute;
+  right: 17px;
+  bottom: 17px;
+  border-radius: 50%;
+  background: #fff;
+  color: #191919;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+}
+.project-caption {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  gap: 15px;
+}
+.project-caption .eyebrow {
+  color: var(--muted);
+  font-size: 9px;
+}
+.project-caption h3 {
+  margin: 10px 0;
+}
+.project-caption p {
+  font-size: 12px;
+}
+.project-caption > svg {
+  margin-top: 25px;
+}
+.studio-section {
+  background: var(--surface);
+  padding: 95px 0;
+}
+.studio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px 28px;
+}
+.studio-image {
+  position: relative;
+  display: block;
+  aspect-ratio: 1.5;
+  overflow: hidden;
+  isolation: isolate;
+}
+.studio-image:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #000b, transparent 80%);
+  z-index: -1;
+}
+.studio-image > img {
+  object-fit: cover;
+  transition: transform 0.7s;
+  z-index: -2;
+}
+.studio-image:hover > img {
+  transform: scale(1.04);
+}
+.tile-fashion .studio-image > img {
+  object-position: 50% 30%;
+  filter: grayscale(1);
+}
+.studio-brand {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  right: 28px;
+  color: white;
+}
+.studio-brand > span {
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.studio-brand h3 {
+  font-size: 46px;
+  letter-spacing: -0.03em;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tile-restaurant .studio-brand h3 {
+  font-family: Georgia, serif;
+  letter-spacing: 0.15em;
+}
+.tile-fashion .studio-brand h3 {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+.tile-construction .studio-brand h3 {
+  font-weight: 800;
+}
+.tile-consulting .studio-brand h3 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  letter-spacing: 0.02em;
+}
+.concept-tag {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 9px;
+  background: #18181899;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  border: 1px solid #ffffff50;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.studio-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  padding-top: 18px;
+}
+.studio-caption p {
+  font-size: 11px;
+  max-width: 260px;
+}
+.studio-caption a {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+  align-self: start;
+}

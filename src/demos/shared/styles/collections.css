@@ -1,0 +1,133 @@
+.collection-filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 32px 0;
+}
+.collection-filters button {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 5px 0;
+  font-size: 11px;
+  opacity: 0.8;
+}
+.collection-filters button[aria-pressed="true"] {
+  opacity: 1;
+  border-color: currentColor;
+}
+.collection-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px 30px;
+}
+.collection-open {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  color: inherit;
+  display: block;
+}
+.collection-photo {
+  aspect-ratio: 1.35;
+  position: relative;
+  overflow: hidden;
+}
+.collection-photo > img {
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.collection-open:hover .collection-photo img {
+  transform: scale(1.035);
+}
+.collection-photo > span {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  background: #fff;
+  color: #171819;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.collection-caption {
+  padding-top: 18px;
+}
+.collection-caption > span {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+.collection-caption h3 {
+  font-size: 25px;
+  margin: 10px 0;
+  letter-spacing: -0.03em;
+}
+.collection-caption p {
+  font-size: 12px;
+  max-width: 450px;
+}
+.collection-dialog {
+  width: min(850px, 92vw);
+}
+.collection-dialog > img {
+  max-height: 45dvh;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 25px;
+}
+.collection-dialog h2 {
+  margin-bottom: 15px;
+}
+.collection-dialog p {
+  margin: 15px 0;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.concept-detail {
+  font-size: 10px !important;
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+}
+.demo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-block: 40px;
+  font-size: 10px;
+  border-top: 1px solid currentColor;
+}
+.demo-footer p {
+  font-size: 10px;
+  max-width: 500px;
+}
+.demo-footer a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.demo-image {
+  position: relative;
+  overflow: hidden;
+}
+.demo-image img {
+  object-fit: cover;
+}
+.demo-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 32px;
+}
+.demo-hero-actions > a {
+  font-size: 11px;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}

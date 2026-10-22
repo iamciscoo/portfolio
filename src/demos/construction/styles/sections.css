@@ -1,0 +1,138 @@
+.construction-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding-block: 95px;
+}
+.construction-services h2 {
+  font-size: clamp(40px, 4.5vw, 66px);
+  margin-top: 25px;
+}
+.construction-services article {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px 20px;
+  border-top: 1px solid #21262530;
+  padding: 22px 0;
+}
+.construction-services article > span {
+  font-size: 10px;
+  color: var(--construction-orange);
+}
+.construction-services h3 {
+  font-size: 25px;
+  letter-spacing: -0.035em;
+}
+.construction-services p {
+  grid-column: 2;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.construction-work {
+  background: #e7eae6;
+  padding-block: 85px;
+}
+.construction-work h2 {
+  font-size: clamp(40px, 5vw, 72px);
+  margin-top: 25px;
+}
+.construction-sample-note {
+  font-size: 10px;
+  margin-top: 20px;
+}
+.construction-site .collection-grid {
+  gap: 45px 35px;
+}
+.construction-site .collection-caption h3 {
+  font-weight: 600;
+  font-size: 29px;
+}
+.construction-site .collection-photo {
+  aspect-ratio: 1.35;
+}
+.construction-site .collection-filters button[aria-pressed="true"] {
+  color: var(--construction-orange);
+}
+.construction-company {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 100px;
+  padding-block: 95px;
+  align-items: center;
+}
+.construction-company .demo-image {
+  aspect-ratio: 1.1;
+}
+.construction-company h2 {
+  font-size: clamp(44px, 5vw, 72px);
+  margin: 25px 0;
+}
+.construction-company p {
+  font-size: 13px;
+  line-height: 2;
+}
+.construction-quality {
+  background: #212625;
+  color: #f3f4f2;
+  padding-block: 85px;
+}
+.construction-quality .demo-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 80px;
+}
+.construction-quality .demo-label {
+  grid-column: 1/-1;
+}
+.construction-quality h2 {
+  font-size: clamp(40px, 5vw, 70px);
+}
+.construction-quality p {
+  font-size: 14px;
+  line-height: 2;
+}
+.construction-team {
+  padding-block: 75px;
+}
+.construction-team > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 35px;
+}
+.construction-team article {
+  border-top: 1px solid #21262540;
+  padding-top: 20px;
+}
+.construction-team article > span {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  background: #e0e3dd;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin-bottom: 25px;
+}
+.construction-team h3 {
+  font-size: 23px;
+}
+.construction-team p {
+  font-size: 11px;
+  margin-top: 10px;
+}
+.construction-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  border-top: 1px solid #21262530;
+  padding-block: 65px;
+}
+.construction-contact h2 {
+  font-size: clamp(42px, 5vw, 72px);
+}
+.construction-site .demo-footer {
+  border-color: #21262530;
+}

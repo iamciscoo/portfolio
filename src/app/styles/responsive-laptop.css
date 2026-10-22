@@ -1,0 +1,45 @@
+@media (max-width: 1150px) {
+  .site-header {
+    padding-inline: 32px;
+  }
+  .wrap {
+    width: calc(100% - 64px);
+  }
+  .desktop-nav {
+    margin-left: 0;
+    gap: 17px;
+  }
+  .header-cta {
+    display: none;
+  }
+  .hero-copy h1 {
+    font-size: 6.5vw;
+  }
+  .hero-main {
+    gap: 30px;
+  }
+  .hero-actions {
+    gap: 16px;
+  }
+  .hero-actions .button {
+    padding: 15px 18px;
+  }
+  .hero-actions .text-link {
+    font-size: 10px;
+  }
+  .section-heading {
+    gap: 35px;
+  }
+  .intro-section {
+    gap: 35px;
+  }
+  .expertise-grid {
+    gap: 20px;
+  }
+  .journey-preview {
+    gap: 40px;
+  }
+  .footer-top {
+    gap: 30px;
+  }
+}

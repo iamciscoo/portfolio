@@ -1,0 +1,93 @@
+.fashion-site {
+  background: #f5f4f0;
+  color: #181818;
+}
+.fashion-site h1,
+.fashion-site h2,
+.fashion-site h3 {
+  font-weight: 500;
+}
+.fashion-site .demo-nav {
+  position: relative;
+  z-index: 2;
+}
+.fashion-site .demo-nav > .demo-button {
+  background: #181818;
+  color: #fff;
+  border-color: #181818;
+}
+.fashion-hero {
+  min-height: 790px;
+  position: relative;
+  background: #e4e3de;
+  overflow: hidden;
+}
+.fashion-hero-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 63%;
+  overflow: hidden;
+}
+.fashion-hero-image img {
+  object-fit: cover;
+  object-position: 50% 38%;
+  filter: grayscale(1);
+}
+.fashion-hero-copy {
+  position: relative;
+  z-index: 1;
+  padding: 70px 0 220px;
+  margin-left: max(50px, calc((100vw - 1280px) / 2));
+  max-width: 370px;
+}
+.fashion-hero-copy h1 {
+  white-space: pre-line;
+  font-size: 58px;
+  line-height: 1.06;
+  margin: 35px 0 25px;
+  letter-spacing: -0.06em;
+}
+.fashion-hero-copy p {
+  font-size: 12px;
+  max-width: 265px;
+  line-height: 1.9;
+}
+.fashion-explore {
+  font-size: 11px;
+  display: inline-block;
+  border-bottom: 1px solid #181818;
+  margin-top: 30px;
+  padding-bottom: 7px;
+}
+.fashion-name {
+  position: absolute;
+  bottom: 8px;
+  left: 3.5%;
+  right: 3.5%;
+  font-size: clamp(100px, 18vw, 270px);
+  font-weight: 800;
+  letter-spacing: -0.1em;
+  line-height: 0.9;
+  color: #f5f4f0;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+}
+.fashion-name span {
+  font-size: 0.55em;
+  align-self: end;
+  letter-spacing: -0.08em;
+}
+.fashion-edition {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  background: #f5f4f0b0;
+  padding: 7px 12px;
+}

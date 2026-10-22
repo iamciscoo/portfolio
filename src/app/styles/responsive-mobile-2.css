@@ -1,0 +1,150 @@
+@media (max-width: 600px) {
+  .round-link {
+    width: 55px;
+    height: 55px;
+  }
+  .round-link svg {
+    width: 25px;
+    height: 25px;
+  }
+  .contact-band p {
+    font-size: 12px;
+    max-width: 280px;
+  }
+  .site-footer {
+    padding-top: 45px;
+  }
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+  .footer-top > div:first-child {
+    grid-column: 1/-1;
+  }
+  .footer-nav {
+    grid-template-columns: 1fr 1fr;
+    font-size: 10px;
+    gap: 10px;
+  }
+  .footer-social a {
+    font-size: 10px;
+  }
+  .footer-bottom {
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 8px;
+  }
+  .footer-bottom > span:nth-child(2) {
+    display: none;
+  }
+  .page-heading {
+    padding: 55px 0 40px;
+  }
+  .page-heading h1 {
+    font-size: 43px;
+    margin-block: 22px;
+  }
+  .page-heading p {
+    font-size: 13px;
+  }
+  .page-content {
+    padding-bottom: 65px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .about-portrait {
+    aspect-ratio: 1.15;
+  }
+  .about-text h2 {
+    font-size: 28px;
+  }
+  .about-text p {
+    font-size: 13px;
+  }
+  .about-lifestyle {
+    margin-top: 35px;
+    aspect-ratio: 1.4;
+  }
+  .timeline-entry {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 0 35px 22px;
+  }
+  .timeline-entry h2 {
+    font-size: 23px;
+  }
+  .timeline-entry p {
+    font-size: 12px;
+  }
+  .timeline-controls,
+  .filter-controls {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .filter-controls button,
+  .timeline-controls button {
+    font-size: 10px;
+    padding: 8px 13px;
+  }
+  .case-header {
+    padding: 40px 0 30px;
+  }
+  .case-header h1 {
+    font-size: 43px;
+    margin: 28px 0 18px;
+  }
+  .case-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 30px 0;
+  }
+  .case-meta > div:first-child {
+    grid-column: 1/-1;
+  }
+  .case-cover {
+    padding: 12px;
+  }
+  .case-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-block: 40px;
+  }
+  .case-section h2 {
+    font-size: 28px;
+  }
+  .case-section p {
+    font-size: 13px;
+  }
+  .feature-list li {
+    font-size: 12px;
+  }
+  .case-mobile {
+    grid-template-columns: 1fr;
+    padding-block: 45px;
+    gap: 35px;
+  }
+  .phone-frame {
+    width: 240px;
+  }
+  .case-source {
+    padding-bottom: 50px;
+  }
+  .service-detail {
+    grid-template-columns: 25px 1fr;
+    gap: 18px;
+  }
+  .service-detail > div {
+    grid-column: 2;
+  }
+  .service-detail h2 {
+    font-size: 27px;
+  }
+  .dialog-content {
+    padding: 35px 22px;
+  }
+  .studio-notice .eyebrow {
+    font-size: 8px;
+  }
+}

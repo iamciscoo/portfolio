@@ -1,0 +1,116 @@
+@media (max-width: 900px) {
+  .restaurant-story {
+    gap: 40px;
+  }
+  .restaurant-gallery {
+    gap: 40px;
+  }
+  .restaurant-gallery-images .gallery-trigger {
+    height: 280px;
+  }
+  .restaurant-visit-info {
+    gap: 25px;
+  }
+  .restaurant-visit-info .demo-button {
+    padding: 13px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 650px) {
+  .restaurant-hero-copy {
+    padding: 65px 0 75px;
+  }
+  .restaurant-hero-copy h1 {
+    font-size: 56px;
+  }
+  .restaurant-hero-copy p {
+    font-size: 12px;
+    max-width: 320px;
+  }
+  .restaurant-hero-foot {
+    font-size: 7px;
+    gap: 20px;
+  }
+  .restaurant-story {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-block: 65px;
+  }
+  .restaurant-story h2 {
+    font-size: 39px;
+  }
+  .restaurant-story p {
+    font-size: 13px;
+  }
+  .restaurant-menu {
+    padding-block: 65px;
+  }
+  .restaurant-section-title h2 {
+    font-size: 43px;
+  }
+  .menu-tabs {
+    gap: 15px;
+    margin-block: 25px;
+  }
+  .menu-tabs button {
+    font-size: 11px;
+  }
+  .dish-list article {
+    grid-template-columns: 18px 1fr 55px;
+    gap: 10px;
+    padding-block: 21px;
+  }
+  .dish-list h3 {
+    font-size: 23px;
+  }
+  .dish-list p {
+    font-size: 10px;
+  }
+  .dish-price {
+    font-size: 12px;
+  }
+  .restaurant-gallery {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-block: 65px;
+  }
+  .restaurant-gallery h2 {
+    font-size: 40px;
+  }
+  .restaurant-gallery-images .gallery-trigger {
+    height: 240px;
+  }
+  .restaurant-gallery-images .gallery-trigger:nth-child(2) {
+    margin-top: 35px;
+  }
+  .restaurant-visit {
+    padding-bottom: 55px;
+  }
+  .restaurant-visit h2 {
+    font-size: 40px;
+  }
+  .restaurant-visit-info {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 20px;
+  }
+  .restaurant-visit-info > .demo-button {
+    grid-column: 1/-1;
+    justify-self: start;
+  }
+  .concept-map {
+    height: 220px;
+  }
+  .map-pin {
+    left: 25%;
+    font-size: 9px;
+  }
+  .map-water {
+    font-size: 7px;
+  }
+  .restaurant-section-title > p {
+    font-size: 9px;
+  }
+  .restaurant-story .demo-label {
+    margin-bottom: 0;
+  }
+}

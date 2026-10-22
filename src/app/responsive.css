@@ -1,0 +1,6 @@
+@import "./styles/responsive-desktop.css";
+@import "./styles/responsive-laptop.css";
+@import "./styles/responsive-tablet.css";
+@import "./styles/responsive-mobile-1.css";
+@import "./styles/responsive-mobile-2.css";
+@import "./styles/responsive-small-mobile.css";

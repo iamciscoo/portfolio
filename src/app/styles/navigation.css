@@ -1,0 +1,96 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 56px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.wordmark {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  line-height: 1;
+}
+.wordmark span {
+  font-size: 10px;
+  vertical-align: top;
+  letter-spacing: 0;
+  margin: 3px 0 0 4px;
+  display: inline-block;
+}
+.desktop-nav {
+  display: flex;
+  gap: 26px;
+  margin-left: 55px;
+}
+.desktop-nav a {
+  font-size: 11px;
+  color: var(--muted);
+  position: relative;
+  white-space: nowrap;
+}
+.desktop-nav a:hover,
+.desktop-nav a[aria-current="page"] {
+  color: var(--text);
+}
+.desktop-nav a[aria-current="page"]:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  bottom: -10px;
+  left: 50%;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.locale-select {
+  background: transparent;
+  color: var(--text);
+  font-size: 10px;
+  border: 0;
+  padding: 8px 2px;
+  cursor: pointer;
+}
+.locale-select option {
+  background: var(--bg);
+  color: var(--text);
+}
+.mobile-menu {
+  display: none;
+}
+.mobile-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--bg);
+  width: min(390px, 100%);
+  padding: 90px 35px;
+  z-index: 90;
+}
+.mobile-panel nav {
+  display: grid;
+  gap: 0;
+}
+.mobile-panel nav a {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  font-size: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.menu-close {
+  position: absolute;
+  top: 25px;
+  right: 28px;
+}

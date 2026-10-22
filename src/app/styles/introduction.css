@@ -1,0 +1,32 @@
+.intro-section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  padding: 115px 0;
+}
+.intro-section > .eyebrow {
+  align-self: start;
+}
+.intro-section p {
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 610px;
+  margin: 25px 0;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 65px;
+  margin-bottom: 45px;
+}
+.section-heading h2 {
+  margin-top: 18px;
+}
+.section-heading > div + div {
+  max-width: 320px;
+}
+.section-heading p {
+  font-size: 13px;
+  margin-bottom: 22px;
+}

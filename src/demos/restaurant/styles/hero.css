@@ -1,0 +1,78 @@
+.restaurant-site {
+  background: #f0eee5;
+  color: #233b32;
+  --restaurant-green: #173a2c;
+}
+.restaurant-site h1,
+.restaurant-site h2,
+.restaurant-site h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+.restaurant-hero {
+  position: relative;
+  background: #13271e;
+  color: #fff;
+  isolation: isolate;
+}
+.restaurant-hero > img {
+  object-fit: cover;
+  object-position: 50% 55%;
+  z-index: -2;
+}
+.restaurant-hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #091e17e0, #10251c65 65%),
+    linear-gradient(0deg, #0921167a, transparent);
+  z-index: -1;
+}
+.restaurant-logo {
+  font-family: Georgia, serif;
+  font-weight: 400 !important;
+  letter-spacing: 0.2em !important;
+  display: grid;
+  font-size: 28px !important;
+}
+.restaurant-logo span {
+  font-family: Manrope, Arial, sans-serif;
+  letter-spacing: 0.26em;
+  font-size: 7px;
+  text-align: center;
+  margin-top: 4px;
+}
+.restaurant-hero .demo-nav {
+  border-bottom: 1px solid #ffffff35;
+}
+.restaurant-hero-copy {
+  padding: 90px 0 110px;
+  max-width: 750px;
+}
+.restaurant-hero-copy h1 {
+  font-size: clamp(60px, 7.5vw, 112px);
+  line-height: 1.04;
+  white-space: pre-line;
+  margin: 25px 0;
+}
+.restaurant-hero-copy p {
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 390px;
+  opacity: 0.85;
+}
+.restaurant-hero-copy .demo-button {
+  background: #e5e9d8;
+  color: #173a2c;
+  border-color: #e5e9d8;
+}
+.restaurant-hero-foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid #ffffff35;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+}

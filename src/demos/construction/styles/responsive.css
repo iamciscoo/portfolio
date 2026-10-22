@@ -1,0 +1,129 @@
+@media (max-width: 900px) {
+  .construction-hero {
+    gap: 35px;
+  }
+  .construction-hero-photo {
+    height: 480px;
+  }
+  .construction-hero h1 {
+    font-size: 55px;
+  }
+  .construction-hero .demo-hero-actions {
+    gap: 15px;
+  }
+  .construction-services {
+    gap: 40px;
+  }
+  .construction-company {
+    gap: 45px;
+  }
+  .construction-quality .demo-wrap {
+    gap: 25px 40px;
+  }
+  .construction-strap p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .construction-site .demo-nav > a:first-child {
+    font-size: 21px;
+  }
+  .construction-hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-block: 40px;
+  }
+  .construction-hero h1 {
+    font-size: 59px;
+    margin-block: 25px;
+  }
+  .construction-hero p {
+    font-size: 12px;
+  }
+  .construction-hero-photo {
+    height: 370px;
+  }
+  .construction-strap > div {
+    gap: 20px;
+    padding-block: 20px;
+  }
+  .construction-strap p {
+    font-size: 14px;
+  }
+  .construction-strap span:first-child {
+    font-size: 34px;
+  }
+  .construction-strap span:last-child {
+    display: none;
+  }
+  .construction-services {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-block: 60px;
+  }
+  .construction-services h2 {
+    font-size: 43px;
+  }
+  .construction-work {
+    padding-block: 60px;
+  }
+  .construction-work h2 {
+    font-size: 43px;
+  }
+  .construction-company {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-block: 60px;
+  }
+  .construction-company h2 {
+    font-size: 49px;
+  }
+  .construction-quality {
+    padding-block: 60px;
+  }
+  .construction-quality .demo-wrap {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .construction-quality h2 {
+    font-size: 46px;
+  }
+  .construction-quality p {
+    font-size: 13px;
+  }
+  .construction-team {
+    padding-block: 55px;
+  }
+  .construction-team > div {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .construction-team article {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    gap: 0 20px;
+  }
+  .construction-team article > span {
+    grid-row: span 2;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+  .construction-team h3 {
+    font-size: 23px;
+    align-self: end;
+  }
+  .construction-team p {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+  .construction-contact {
+    flex-direction: column;
+    align-items: start;
+    padding-block: 50px;
+    gap: 30px;
+  }
+  .construction-contact h2 {
+    font-size: 45px;
+  }
+}

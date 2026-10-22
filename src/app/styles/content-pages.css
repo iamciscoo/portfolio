@@ -1,0 +1,112 @@
+.page-heading {
+  padding: 80px 0 65px;
+}
+.page-heading h1 {
+  margin: 24px 0;
+  white-space: pre-line;
+  max-width: 1000px;
+  font-size: clamp(45px, 6vw, 86px);
+}
+.page-heading p {
+  max-width: 560px;
+  font-size: 15px;
+}
+.page-content {
+  padding-bottom: 100px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+}
+.about-portrait {
+  position: relative;
+  aspect-ratio: 0.87;
+}
+.about-portrait img {
+  object-fit: cover;
+}
+.about-text {
+  display: grid;
+  gap: 38px;
+  align-content: start;
+}
+.about-text h2 {
+  font-size: 35px;
+  margin: 12px 0 20px;
+}
+.about-text p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.about-lifestyle {
+  position: relative;
+  aspect-ratio: 2;
+  margin-top: 60px;
+}
+.about-lifestyle img {
+  object-fit: cover;
+}
+.timeline-controls,
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.filter-controls button,
+.timeline-controls button {
+  border: 1px solid var(--line);
+  background: transparent;
+  border-radius: 30px;
+  padding: 9px 17px;
+  font-size: 11px;
+}
+.filter-controls button[aria-pressed="true"],
+.timeline-controls button[aria-pressed="true"] {
+  background: var(--button);
+  color: var(--button-text);
+  border-color: var(--button);
+}
+.timeline {
+  max-width: 920px;
+  margin-left: auto;
+}
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 40px;
+  position: relative;
+  padding: 0 0 50px 25px;
+  border-left: 1px solid var(--line);
+}
+.timeline-entry:before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 5px;
+  background: var(--accent);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.timeline-entry time {
+  font-size: 11px;
+  color: var(--muted);
+}
+.timeline-entry h2 {
+  font-size: 26px;
+}
+.timeline-entry h3 {
+  font-size: 14px;
+  margin: 12px 0;
+  color: var(--muted);
+  letter-spacing: 0;
+}
+.timeline-entry p {
+  font-size: 13px;
+  max-width: 540px;
+}
+.full-project-grid .project-grid .project-card:nth-child(2) {
+  margin-top: 0;
+}

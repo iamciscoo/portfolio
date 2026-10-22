@@ -1,0 +1,220 @@
+@media (max-width: 600px) {
+  .wrap {
+    width: calc(100% - 40px);
+  }
+  .site-header {
+    padding-inline: 20px;
+    height: 70px;
+  }
+  .wordmark {
+    font-size: 30px;
+  }
+  .header-actions {
+    gap: 6px;
+  }
+  .header-cta {
+    display: none;
+  }
+  .hero {
+    padding-top: 25px;
+  }
+  .hero-top {
+    align-items: start;
+  }
+  .hero-top .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+    gap: 7px;
+  }
+  .location {
+    font-size: 8px;
+    white-space: nowrap;
+    gap: 4px;
+  }
+  .location svg {
+    width: 11px;
+  }
+  .hero-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 0 30px;
+  }
+  .hero-copy h1 {
+    font-size: clamp(42px, 10.8vw, 68px);
+    line-height: 1.08;
+  }
+  .hero-copy > p {
+    font-size: 13px;
+    max-width: 360px;
+    margin: 24px 0;
+  }
+  .hero-actions {
+    gap: 23px;
+    flex-wrap: nowrap;
+  }
+  .hero-actions .button {
+    font-size: 11px;
+    padding: 15px 18px;
+    gap: 12px;
+  }
+  .hero-actions .text-link {
+    font-size: 11px;
+  }
+  .portrait-frame {
+    max-width: none;
+    aspect-ratio: 1.18;
+    margin-left: 15px;
+  }
+  .portrait-placeholder > span {
+    font-size: 110px;
+  }
+  .portrait-placeholder p {
+    font-size: 11px;
+    margin-top: 12px;
+  }
+  .portrait-placeholder small {
+    font-size: 9px;
+  }
+  .portrait-caption {
+    left: 20px;
+    right: 20px;
+    font-size: 8px;
+    bottom: 18px;
+  }
+  .portrait-sticker {
+    width: 93px;
+    height: 57px;
+    left: -15px;
+    bottom: 45px;
+  }
+  .hero-bottom {
+    font-size: 8px;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 18px 0;
+  }
+  .hero-bottom > span:last-child {
+    display: none;
+  }
+  .hero-bottom a {
+    font-size: 9px;
+    gap: 7px;
+  }
+  .intro-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 70px 0;
+  }
+  .intro-section .eyebrow {
+    font-size: 9px;
+  }
+  .intro-section p {
+    font-size: 14px;
+    margin-block: 22px;
+  }
+  .section-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .section-heading h2 {
+    margin-bottom: 22px;
+  }
+  .section-heading > div + div {
+    max-width: 100%;
+  }
+  .section-heading p {
+    font-size: 13px;
+    max-width: 350px;
+  }
+  .work-section {
+    padding: 0 0 65px;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .project-grid .project-card:nth-child(2) {
+    margin-top: 0;
+  }
+  .project-visual {
+    padding: 45px 22px 0;
+    aspect-ratio: 1.2;
+  }
+  .project-caption {
+    padding-top: 18px;
+  }
+  .project-caption h3 {
+    font-size: 25px;
+  }
+  .studio-section {
+    padding-block: 65px;
+  }
+  .studio-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .studio-image {
+    aspect-ratio: 1.35;
+  }
+  .studio-brand h3 {
+    font-size: 44px;
+  }
+  .tile-fashion .studio-brand h3 {
+    font-size: 60px;
+  }
+  .tile-consulting .studio-brand h3 {
+    font-size: 34px;
+  }
+  .studio-caption {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .studio-caption p {
+    font-size: 10px;
+    max-width: 190px;
+  }
+  .studio-caption a {
+    font-size: 9px;
+    gap: 5px;
+  }
+  .expertise-section {
+    padding-block: 65px;
+  }
+  .expertise-section h2 {
+    margin-bottom: 35px;
+  }
+  .expertise-grid {
+    gap: 30px 20px;
+  }
+  .expertise-grid h3 {
+    font-size: 16px;
+    margin: 18px 0 12px;
+  }
+  .expertise-grid p {
+    font-size: 11px;
+  }
+  .journey-preview {
+    grid-template-columns: 1fr;
+    padding-bottom: 65px;
+    gap: 30px;
+  }
+  .journey-preview h2 {
+    margin-bottom: 25px;
+  }
+  .services-preview {
+    padding: 0 0 60px;
+  }
+  .service-row {
+    grid-template-columns: 26px 1fr 24px;
+    padding-block: 23px;
+  }
+  .service-row h3 {
+    font-size: 23px;
+  }
+  .contact-band {
+    padding-block: 60px;
+  }
+  .contact-band h2 {
+    font-size: 40px;
+  }
+}

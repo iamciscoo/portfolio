@@ -1,0 +1,133 @@
+.demo-bar {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #171819;
+  color: #eceeea;
+  padding: 9px 30px;
+  font-family: Manrope, Arial, sans-serif;
+  border-bottom: 1px solid #37393b;
+  font-size: 9px;
+  letter-spacing: 0.03em;
+}
+.demo-bar > a,
+.demo-bar > div,
+.demo-bar > div > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.demo-bar > span {
+  color: #afb3b7;
+}
+.demo-bar .locale-select {
+  color: #eceeea;
+}
+.demo-bar > div {
+  gap: 20px;
+}
+.demo-site {
+  font-family: Manrope, Arial, sans-serif;
+  line-height: 1.6;
+}
+.demo-site p {
+  color: inherit;
+  opacity: 0.75;
+}
+.demo-site h1,
+.demo-site h2,
+.demo-site h3 {
+  color: inherit;
+}
+.demo-site section {
+  scroll-margin-top: 70px;
+}
+.demo-wrap {
+  width: min(1280px, calc(100% - 100px));
+  margin-inline: auto;
+}
+.demo-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: block;
+}
+.demo-button {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  color: inherit;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 15px 23px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.demo-button:hover {
+  transform: translateY(-2px);
+}
+.demo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding-block: 30px;
+}
+.demo-nav nav {
+  display: flex;
+  gap: 25px;
+  font-size: 11px;
+}
+.demo-nav nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.demo-nav > a:first-child {
+  font-size: 25px;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+}
+.demo-form {
+  display: grid;
+  gap: 16px;
+}
+.demo-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+}
+.demo-form input,
+.demo-form select,
+.demo-form textarea {
+  padding: 11px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  width: 100%;
+  border-radius: 4px;
+}
+.demo-form-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.demo-success {
+  display: grid;
+  gap: 18px;
+  padding-top: 10px;
+}
+.demo-success p {
+  font-size: 13px;
+}
+.demo-success .button {
+  justify-self: start;
+}

@@ -1,0 +1,33 @@
+@media (max-width: 360px) {
+  .wrap {
+    width: calc(100% - 32px);
+  }
+  .hero-actions {
+    gap: 15px;
+  }
+  .hero-actions .button {
+    font-size: 10px;
+    padding: 13px 15px;
+  }
+  .hero-actions .text-link {
+    font-size: 10px;
+  }
+  .hero-top .eyebrow {
+    font-size: 7px;
+  }
+  .location {
+    font-size: 7px;
+  }
+  .hero-copy h1 {
+    font-size: 40px;
+  }
+  .page-heading h1 {
+    font-size: 37px;
+  }
+  .studio-caption {
+    flex-direction: column;
+  }
+  .contact-band h2 {
+    font-size: 34px;
+  }
+}

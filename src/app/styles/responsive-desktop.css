@@ -1,0 +1,17 @@
+@media (min-width: 1600px) {
+  .hero-main {
+    gap: 65px;
+  }
+  .hero-copy h1 {
+    font-size: 100px;
+  }
+  .hero {
+    padding-top: 45px;
+  }
+  .hero-main {
+    padding-block: 65px;
+  }
+  .portrait-frame {
+    max-width: 500px;
+  }
+}

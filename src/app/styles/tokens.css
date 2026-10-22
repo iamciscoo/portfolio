@@ -1,0 +1,36 @@
+@font-face {
+  font-family: Manrope;
+  src: url("/fonts/manrope.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+@theme {
+  --font-sans: Manrope, Arial, sans-serif;
+  --color-accent: #537dff;
+}
+:root {
+  --bg: #171819;
+  --surface: #1e2022;
+  --raised: #272a2d;
+  --text: #efefeb;
+  --muted: #a6a9ad;
+  --line: #36393c;
+  --accent: #426be6;
+  --button: #eeeeea;
+  --button-text: #191a1c;
+  --radius: 4px;
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --bg: #f4f3ef;
+  --surface: #eae9e4;
+  --raised: #e2e2dc;
+  --text: #202224;
+  --muted: #555a60;
+  --line: #cccfcf;
+  --accent: #3158cc;
+  --button: #202224;
+  --button-text: #f4f3ef;
+  color-scheme: light;
+}

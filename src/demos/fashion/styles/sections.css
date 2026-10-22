@@ -1,0 +1,121 @@
+.fashion-work {
+  padding-block: 90px;
+}
+.fashion-section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #18181840;
+}
+.fashion-section-heading h2 {
+  font-size: 52px;
+}
+.fashion-site .collection-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 55px 40px;
+}
+.fashion-site .collection-item:nth-child(even) {
+  margin-top: 100px;
+}
+.fashion-site .collection-photo {
+  aspect-ratio: 0.82;
+  background: #deddd6;
+}
+.fashion-site .collection-photo img {
+  object-position: 50% 30%;
+  filter: grayscale(1);
+  transition:
+    filter 0.5s,
+    transform 0.5s;
+}
+.fashion-site .collection-open:hover img {
+  filter: grayscale(0);
+}
+.fashion-site .collection-caption h3 {
+  font-size: 28px;
+}
+.fashion-site .collection-caption p {
+  max-width: 340px;
+}
+.fashion-about {
+  background: #181818;
+  color: #efeee9;
+  padding-block: 90px;
+}
+.fashion-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+.fashion-about h2 {
+  font-size: clamp(45px, 6vw, 82px);
+  margin-top: 30px;
+}
+.fashion-about p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.fashion-about h3 {
+  font-size: 19px;
+  letter-spacing: -0.02em;
+  margin: 45px 0 25px;
+}
+.fashion-highlight {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+  border-top: 1px solid #ffffff35;
+  padding: 18px 0;
+}
+.fashion-highlight span {
+  font-size: 10px;
+  color: #b5b5ae;
+}
+.fashion-highlight p {
+  font-size: 11px;
+}
+.fashion-campaign {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 100px;
+  padding-block: 90px;
+  align-items: center;
+}
+.fashion-campaign .demo-image {
+  aspect-ratio: 0.85;
+}
+.fashion-campaign img {
+  filter: grayscale(1);
+  object-position: 50% 25%;
+}
+.fashion-campaign h2 {
+  font-size: clamp(38px, 4.5vw, 64px);
+  margin: 30px 0;
+}
+.fashion-campaign p {
+  font-size: 13px;
+  margin-bottom: 30px;
+  max-width: 370px;
+}
+.fashion-contact {
+  border-top: 1px solid #18181840;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  padding-block: 70px;
+}
+.fashion-contact > div:first-child p {
+  font-size: 12px;
+  line-height: 1.9;
+  max-width: 310px;
+  margin-top: 20px;
+}
+.fashion-contact h2 {
+  font-size: clamp(42px, 5vw, 70px);
+  margin-bottom: 30px;
+}
+.fashion-site .demo-footer {
+  border-color: #18181840;
+}
