@@ -22,6 +22,8 @@ Package versions are pinned and the authoritative npm lockfile is committed. Lif
 
 ## Integration limits
 
+The initial source commit was pushed successfully to `iamciscoo/portfolio` on `main`. GitHub Actions [run 39790579156](https://github.com/iamciscoo/portfolio/actions/runs/39790579156) failed before any job steps ran: GitHub reports, "The job was not started because your account is locked due to a billing issue." This is an account-level CI blocker; no failing application check was reported by that run. Resolve the account billing issue and rerun the workflow to obtain hosted CI results. Local lint, typecheck, 37 unit/API tests, 23 browser tests and the production build passed.
+
 No real email was sent. No Resend or shared rate-limiter credentials were supplied. Provider acceptance/failure behavior is verified through test doubles and the local form correctly reports unavailable delivery. Real inbox delivery needs a configured sending domain, credentials and an authorized end-to-end check.
 
 Vercel deployment requires the owner's connected Vercel account and project/environment configuration. A successful local build and GitHub push are not a cloud deployment. No field performance or production Core Web Vitals measurements are claimed.
