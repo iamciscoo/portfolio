@@ -51,12 +51,10 @@ export function ProjectScene({
   children,
   desktop,
   phone,
-  color,
 }: {
   children: ReactNode;
   desktop: ReactNode;
   phone: ReactNode;
-  color: string;
 }) {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -70,11 +68,7 @@ export function ProjectScene({
   return (
     <article ref={ref} className="project-exhibit" data-sc-act="project">
       <div className="exhibit-copy">{children}</div>
-      <div
-        className="exhibit-stage"
-        data-sc-stage
-        style={{ background: color }}
-      >
+      <div className="exhibit-stage" data-sc-stage>
         <motion.div className="exhibit-desktop" style={{ scale: scale, y: y }}>
           {desktop}
         </motion.div>

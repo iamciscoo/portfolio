@@ -42,7 +42,12 @@
     "source": "Chanzo cha taarifa",
     "gallery": "Picha",
     "close": "Funga",
-    "download": "Pakua CV"
+    "download": "Pakua CV",
+    "photoVersion": "Toleo la picha",
+    "original": "Asili",
+    "enhanced": "Iliyoboreshwa",
+    "enhancementNote": "Uwazi umeboreshwa kwa AI. Picha asili ipo kwa kulinganisha.",
+    "originalPhoto": "Picha asili."
   },
   "home": {
     "eyebrow": "FRANCIS JACOB MWAMBENE · CISCO",

@@ -20,7 +20,6 @@ export async function ProjectCard({
       <Link
         href={`/projects/${project.slug}`}
         className={`project-visual project-${project.slug}`}
-        style={{ background: project.color }}
         aria-label={`${project.name} — ${t("common.view")}`}
       >
         <div className="project-browser">

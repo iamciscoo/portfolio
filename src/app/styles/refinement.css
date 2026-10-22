@@ -3,6 +3,7 @@
 @import "./personal-story.css";
 @import "./home-notes.css";
 @import "./interactions.css";
+@import "./photo-refinement.css";
 h1,
 h2 {
   letter-spacing: -0.04em;
@@ -36,15 +37,14 @@ h2 {
 }
 .exhibit-stage {
   position: relative;
-  overflow: hidden;
-  height: clamp(340px, 45vw, 620px);
-  padding: 55px 13% 0 6%;
+  overflow: visible;
+  padding: 0 10% 0 0;
   isolation: isolate;
 }
 .exhibit-desktop {
   width: 100%;
-  border: 1px solid #b9c2c8;
-  border-radius: 8px 8px 0 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 25px 50px #141c3326;
@@ -56,9 +56,9 @@ h2 {
 }
 .exhibit-phone {
   position: absolute;
-  right: 5%;
-  bottom: -4%;
-  width: 20%;
+  right: 1.5%;
+  bottom: 6%;
+  width: 22%;
   max-width: 235px;
   border: 6px solid #1e2022;
   border-radius: 26px;
@@ -201,13 +201,12 @@ h2 {
     font-size: 34px;
   }
   .exhibit-stage {
-    height: clamp(245px, 68vw, 390px);
-    padding: 28px 12% 0 4%;
+    padding: 0 9% 0 0;
   }
   .exhibit-phone {
     width: 24%;
-    right: 3%;
-    bottom: -5%;
+    right: 1.5%;
+    bottom: 6%;
     border-width: 3px;
     border-radius: 14px;
   }

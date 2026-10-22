@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ImageGallery } from "@/components/common/image-gallery";
 import { ArrowUpRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -19,10 +19,12 @@ export async function PersonalStory({ locale }: { locale: Locale }) {
       <div className="story-layout">
         <figure className="story-photo">
           <div>
-            <Image
+            <ImageGallery
               src={profile.photos.headshot.src}
+              originalSrc={profile.photos.headshot.originalSrc}
               alt="Francis in a white T-shirt, photographed indoors"
-              fill
+              width={profile.photos.headshot.width}
+              height={profile.photos.headshot.height}
               sizes="(max-width: 700px) 85vw, 34vw"
             />
           </div>

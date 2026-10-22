@@ -14,7 +14,6 @@ export async function ProjectExhibits({ locale }: { locale: Locale }) {
       {projects.map((project) => (
         <ProjectScene
           key={project.slug}
-          color={project.color}
           desktop={
             <Link
               href={`/projects/${project.slug}`}

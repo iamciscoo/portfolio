@@ -1,5 +1,7 @@
 # Cinematic hero, personal About and five languages
 
+This records the cinematic revision. The subsequent owner-requested photo enhancement and frameless showcase update is documented in `PHOTOS-AND-DISPLAYS.md`; its photo processing supersedes the unretouched-photo description below.
+
 ## Requested direction
 
 The owner rejected the flat postcard hero and clarified that Instagram-inspired personal material belongs on About. Replaced the postcard composition with a full-bleed cinematic landscape, more direct headline, accessible project links and an invitation to meet Francis. Personal Story, the verified GloboExpats video still and personal gallery now live on About. Project showcases follow the homepage hero directly.

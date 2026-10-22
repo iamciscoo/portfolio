@@ -4,9 +4,7 @@ import { notFound } from "next/navigation";
 import { isLocale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { profile } from "@/content/profile";
-import { personalStory } from "@/content/refinement";
 import { cinematic } from "@/content/cinematic";
-import { PageHeading } from "@/components/common/page-heading";
 import { ContactBand } from "@/components/common/contact-band";
 import { ImageGallery } from "@/components/common/image-gallery";
 import { PersonalStory } from "@/components/portfolio/personal-story";
@@ -34,11 +32,25 @@ export default async function About({
   const t = await getTranslations();
   return (
     <>
-      <PageHeading
-        label={t("nav.about")}
-        title={t("pages.about")}
-        description={t("about.body")}
-      />
+      <section className="about-photo-intro wrap">
+        <div>
+          <span className="personal-kicker">{t("nav.about")}</span>
+          <h1>{t("pages.about")}</h1>
+          <p>{t("about.body")}</p>
+        </div>
+        <figure>
+          <ImageGallery
+            src={profile.photos.boat.src}
+            originalSrc={profile.photos.boat.originalSrc}
+            alt={text(profile.photos.boat.alt, locale)}
+            width={profile.photos.boat.width}
+            height={profile.photos.boat.height}
+            eager
+            sizes="(max-width: 900px) 92vw, 52vw"
+          />
+          <figcaption>{text(profile.photos.boat.caption, locale)}</figcaption>
+        </figure>
+      </section>
       <PersonalStory locale={locale} />
       <section className="about-facts wrap">
         <Reveal>
@@ -76,20 +88,19 @@ export default async function About({
           </a>
         </div>
         <div className="photo-collection-grid">
-          {profile.photos.gallery.map((photo, index) => (
+          {profile.photos.gallery.map((photo) => (
             <figure key={photo.src}>
               <ImageGallery
                 src={photo.src}
-                alt={photo.alt}
-                width={index === 0 ? 720 : 810}
-                height={index === 0 ? 960 : 1080}
+                originalSrc={
+                  "originalSrc" in photo ? photo.originalSrc : undefined
+                }
+                alt={text(photo.alt, locale)}
+                width={photo.width}
+                height={photo.height}
+                sizes="(max-width: 700px) 88vw, (max-width: 900px) 44vw, 30vw"
               />
-              <figcaption>
-                {text(
-                  index === 0 ? personalStory.event : personalStory.candid,
-                  locale,
-                )}
-              </figcaption>
+              <figcaption>{text(photo.caption, locale)}</figcaption>
             </figure>
           ))}
         </div>

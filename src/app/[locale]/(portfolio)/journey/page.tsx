@@ -35,10 +35,10 @@ export default async function Journey({
       <section className="page-content wrap">
         <div className="journey-photo">
           <Image
-            src="/images/profile/cisco-timun.webp"
+            src="/images/profile/cisco-timun-enhanced.webp"
             alt="Francis at Tanzania International Model United Nations in 2025"
-            width={478}
-            height={638}
+            width={1086}
+            height={1448}
             sizes="(max-width: 700px) 110px, 240px"
           />
           <div>

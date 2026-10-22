@@ -42,7 +42,12 @@
     "source": "Source de recherche",
     "gallery": "Galerie",
     "close": "Fermer",
-    "download": "Télécharger le CV"
+    "download": "Télécharger le CV",
+    "photoVersion": "Version de la photo",
+    "original": "Original",
+    "enhanced": "Améliorée",
+    "enhancementNote": "Clarté améliorée par IA. L’original reste disponible pour comparer.",
+    "originalPhoto": "Photographie originale."
   },
   "home": {
     "eyebrow": "FRANCIS JACOB MWAMBENE · CISCO",
