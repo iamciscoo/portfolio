@@ -8,12 +8,19 @@ import { RestaurantSite } from "@/demos/restaurant/site";
 import { FashionSite } from "@/demos/fashion/site";
 import { ConstructionSite } from "@/demos/construction/site";
 import { ConsultingSite } from "@/demos/consulting/site";
+import { ShopSite } from "@/demos/shop/site";
+import { ToursSite } from "@/demos/tours/site";
+import { showcase } from "@/content/showcase";
+import { Link } from "@/i18n/navigation";
+import { ArrowUpRight } from "lucide-react";
 import "@/demos/shared/demo.css";
 const sites = {
   restaurant: RestaurantSite,
   fashion: FashionSite,
   construction: ConstructionSite,
   consulting: ConsultingSite,
+  shop: ShopSite,
+  tours: ToursSite,
 };
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -61,6 +68,15 @@ export default async function Demo({
       <DemoBar />
       <main id="demo-main">
         <Site locale={locale} />
+        <aside className="demo-commission">
+          <div>
+            <p>{text(showcase.offer, locale)}</p>
+            <Link className="button primary" href="/contact?service=business">
+              {text(showcase.build, locale)}
+              <ArrowUpRight size={18} />
+            </Link>
+          </div>
+        </aside>
       </main>
     </>
   );

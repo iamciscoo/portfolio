@@ -42,12 +42,7 @@
     "source": "Fuente de investigación",
     "gallery": "Galería",
     "close": "Cerrar",
-    "download": "Descargar CV",
-    "photoVersion": "Versión de la foto",
-    "original": "Original",
-    "enhanced": "Mejorada",
-    "enhancementNote": "Claridad mejorada con IA. El original está disponible para comparar.",
-    "originalPhoto": "Fotografía original."
+    "download": "Descargar CV"
   },
   "home": {
     "eyebrow": "FRANCIS JACOB MWAMBENE · CISCO",
@@ -65,7 +60,7 @@
     "workTitle": "Ideas llevadas\nal mundo real.",
     "workNote": "Productos reales. Necesidades reales. Descubre el razonamiento detrás de cada desarrollo.",
     "studioTitle": "Mundos distintos.\nLa misma atención al detalle.",
-    "studioBody": "Explora cuatro sitios conceptuales interactivos. Sectores diferentes, identidades propias e ideas para imaginar tu próximo sitio.",
+    "studioBody": "Explora seis conceptos de sitios interactivos. Puedo crear una experiencia similar para tu negocio, adaptada a tu marca y tus necesidades.",
     "expertise": "DE LA INTERFAZ A LA INFRAESTRUCTURA",
     "expertiseTitle": "El oficio detrás\nde la experiencia.",
     "journeyTitle": "La curiosidad impulsa.\nEl propósito orienta.",
@@ -82,7 +77,7 @@
     "projects": "Proyectos con propósito.",
     "projectsIntro": "Dos proyectos reales que conectan interfaces cuidadas con necesidades prácticas.",
     "studio": "Pequeños mundos.\nGrandes posibilidades.",
-    "studioIntro": "Cuatro sectores. Cuatro identidades. Descubre sitios conceptuales pensados para vivirlos.",
+    "studioIntro": "Seis sectores, seis identidades. Explora conceptos interactivos que puedo adaptar a tu negocio.",
     "services": "De tu primera idea\nal siguiente capítulo.",
     "servicesIntro": "Sitios web, productos full-stack y soporte práctico: Windows, aplicaciones y juegos.",
     "contact": "Las buenas ideas empiezan\ncon una conversación.",
@@ -126,7 +121,9 @@
     "consulting": "Consultoría y asesoramiento",
     "webType": "Sitio interactivo",
     "more": "Tu sector podría ser el siguiente.",
-    "moreBody": "¿Otro tipo de negocio? Creemos una experiencia digital con mirada propia."
+    "moreBody": "¿Otro tipo de negocio? Creemos una experiencia digital con mirada propia.",
+    "shop": "Tienda en línea",
+    "tours": "Viajes y turismo"
   },
   "form": {
     "name": "Nombre completo",

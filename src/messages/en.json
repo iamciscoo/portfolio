@@ -42,12 +42,7 @@
     "source": "Research source",
     "gallery": "Gallery",
     "close": "Close",
-    "download": "Download CV",
-    "photoVersion": "Photo version",
-    "original": "Original",
-    "enhanced": "Enhanced",
-    "enhancementNote": "AI-enhanced for clarity. The original is available to compare.",
-    "originalPhoto": "Original photograph."
+    "download": "Download CV"
   },
   "home": {
     "eyebrow": "FRANCIS JACOB MWAMBENE · CISCO",
@@ -65,7 +60,7 @@
     "workTitle": "Ideas brought\nto the real world.",
     "workNote": "Real products. Real business problems. A closer look at the thinking behind the build.",
     "studioTitle": "Different worlds.\nThe same attention to detail.",
-    "studioBody": "Step inside four fully interactive concept websites. Different industries, distinct identities — built to show what your next website could feel like.",
+    "studioBody": "Browse six interactive website concepts. I can build a similar experience for your business, adapted to your brand and features.",
     "expertise": "FROM INTERFACE TO INFRASTRUCTURE",
     "expertiseTitle": "The craft behind\nthe experience.",
     "journeyTitle": "Built on curiosity.\nMoving with purpose.",
@@ -82,7 +77,7 @@
     "projects": "Work with a purpose.",
     "projectsIntro": "Two real-world projects connecting thoughtful interfaces with practical needs.",
     "studio": "Small worlds.\nBig possibilities.",
-    "studioIntro": "Four industries. Four distinct identities. Explore working website concepts, made to be experienced.",
+    "studioIntro": "Six industries. Six identities. Explore working website concepts that I can adapt for your business.",
     "services": "From your first idea\nto your next chapter.",
     "servicesIntro": "Websites, full-stack products and practical software support — including Windows, applications and game setup.",
     "contact": "Good things start\nwith a conversation.",
@@ -126,7 +121,9 @@
     "consulting": "Consulting & advisory",
     "webType": "Interactive website",
     "more": "Your industry could be next.",
-    "moreBody": "Have a different kind of business? Let's build a digital experience with its own point of view."
+    "moreBody": "Have a different kind of business? Let's build a digital experience with its own point of view.",
+    "shop": "Online shop",
+    "tours": "Tours & travel"
   },
   "form": {
     "name": "Full name",

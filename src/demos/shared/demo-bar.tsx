@@ -2,8 +2,13 @@ import { getTranslations } from "next-intl/server";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { LocaleSwitcher } from "@/components/layout/locale-switcher";
+import { showcase } from "@/content/showcase";
+import { text } from "@/lib/localize";
+import { getLocale } from "next-intl/server";
+import type { Locale } from "@/i18n/routing";
 export async function DemoBar() {
   const t = await getTranslations();
+  const locale = (await getLocale()) as Locale;
   return (
     <>
       <a href="#demo-main" className="skip-link">
@@ -17,8 +22,8 @@ export async function DemoBar() {
         <span>{t("demo.label")}</span>
         <div>
           <LocaleSwitcher />
-          <Link href="/contact">
-            {t("common.start")}
+          <Link href="/contact?service=business">
+            {text(showcase.build, locale)}
             <ArrowUpRight size={14} />
           </Link>
         </div>

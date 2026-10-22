@@ -42,12 +42,7 @@
     "source": "Chanzo cha taarifa",
     "gallery": "Picha",
     "close": "Funga",
-    "download": "Pakua CV",
-    "photoVersion": "Toleo la picha",
-    "original": "Asili",
-    "enhanced": "Iliyoboreshwa",
-    "enhancementNote": "Uwazi umeboreshwa kwa AI. Picha asili ipo kwa kulinganisha.",
-    "originalPhoto": "Picha asili."
+    "download": "Pakua CV"
   },
   "home": {
     "eyebrow": "FRANCIS JACOB MWAMBENE · CISCO",
@@ -65,7 +60,7 @@
     "workTitle": "Mawazo yanakuwa\nuhalisia.",
     "workNote": "Bidhaa halisi. Changamoto halisi za biashara. Fahamu maamuzi yaliyoongoza ujenzi.",
     "studioTitle": "Ulimwengu tofauti.\nUmakini uleule.",
-    "studioBody": "Tembelea dhana nne za tovuti zenye mwingiliano. Sekta tofauti na utambulisho wa kipekee, kukuonyesha tovuti yako inaweza kuwaje.",
+    "studioBody": "Angalia dhana sita za tovuti zenye mwingiliano. Ninaweza kujenga tovuti kama hizi kwa biashara yako, chapa yako na vipengele unavyohitaji.",
     "expertise": "KUANZIA MUONEKANO HADI MIUNDOMBINU",
     "expertiseTitle": "Ustadi nyuma\nya uzoefu.",
     "journeyTitle": "Imejengwa kwa udadisi.\nInaendelea kwa kusudi.",
@@ -82,7 +77,7 @@
     "projects": "Kazi zenye kusudi.",
     "projectsIntro": "Miradi miwili halisi inayounganisha muonekano wenye fikra na mahitaji ya vitendo.",
     "studio": "Ulimwengu mdogo.\nUwezekano mkubwa.",
-    "studioIntro": "Sekta nne. Utambulisho wa aina nne. Jaribu dhana za tovuti zinazofanya kazi.",
+    "studioIntro": "Sekta sita. Utambulisho sita. Jaribu dhana za tovuti ninazoweza kurekebisha kwa biashara yako.",
     "services": "Kutoka wazo lako la kwanza\nhadi hatua inayofuata.",
     "servicesIntro": "Tovuti, bidhaa za full-stack na msaada wa programu — ikiwa ni pamoja na Windows, programu na michezo.",
     "contact": "Mambo mazuri huanza\nkwa mazungumzo.",
@@ -126,7 +121,9 @@
     "consulting": "Ushauri wa biashara",
     "webType": "Tovuti yenye mwingiliano",
     "more": "Sekta yako inaweza kufuata.",
-    "moreBody": "Una biashara ya aina nyingine? Tujenge uzoefu wa kidijitali wenye utambulisho wake."
+    "moreBody": "Una biashara ya aina nyingine? Tujenge uzoefu wa kidijitali wenye utambulisho wake.",
+    "shop": "Duka la mtandaoni",
+    "tours": "Utalii na safari"
   },
   "form": {
     "name": "Jina kamili",

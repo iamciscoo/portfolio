@@ -27,6 +27,8 @@ const routes = [
   "/studio/fashion",
   "/studio/construction",
   "/studio/consulting",
+  "/studio/shop",
+  "/studio/tours",
 ];
 for (const locale of locales)
   test(`all ${locale} routes render with localized metadata`, async ({
@@ -60,6 +62,8 @@ for (const width of [320, 390, 768, 1280, 1440])
         "/studio/fashion",
         "/studio/construction",
         "/studio/consulting",
+        "/studio/shop",
+        "/studio/tours",
       ]) {
         await page.goto(`/${locale}${route}`);
         await page.waitForLoadState("networkidle");
@@ -255,6 +259,8 @@ for (const route of [
   "/studio/fashion",
   "/studio/construction",
   "/studio/consulting",
+  "/studio/shop",
+  "/studio/tours",
 ])
   test(`accessibility scan ${route || "home"}`, async ({ page }) => {
     await page.goto(`/en${route}`);

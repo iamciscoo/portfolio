@@ -30,10 +30,12 @@ export function DemoInquiry({
   kind,
   label,
   className = "demo-button",
+  initialMessage = "",
 }: {
   kind: "reserve" | "book" | "quote" | "consult";
   label?: string;
   className?: string;
+  initialMessage?: string;
 }) {
   const t = useTranslations("demo");
   const [open, setOpen] = useState(false);
@@ -172,7 +174,12 @@ export function DemoInquiry({
               )}
               <label>
                 {t("message")}
-                <textarea name="message" rows={3} maxLength={2000} />
+                <textarea
+                  name="message"
+                  rows={3}
+                  maxLength={2000}
+                  defaultValue={initialMessage}
+                />
               </label>
               {error && (
                 <p role="alert" className="field-error">

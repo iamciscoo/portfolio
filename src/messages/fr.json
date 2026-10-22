@@ -42,12 +42,7 @@
     "source": "Source de recherche",
     "gallery": "Galerie",
     "close": "Fermer",
-    "download": "Télécharger le CV",
-    "photoVersion": "Version de la photo",
-    "original": "Original",
-    "enhanced": "Améliorée",
-    "enhancementNote": "Clarté améliorée par IA. L’original reste disponible pour comparer.",
-    "originalPhoto": "Photographie originale."
+    "download": "Télécharger le CV"
   },
   "home": {
     "eyebrow": "FRANCIS JACOB MWAMBENE · CISCO",
@@ -65,7 +60,7 @@
     "workTitle": "Des idées devenues\nréalité.",
     "workNote": "De vrais produits. Des besoins concrets. Découvrez la réflexion derrière chaque réalisation.",
     "studioTitle": "Des univers différents.\nLa même attention aux détails.",
-    "studioBody": "Explorez quatre sites conceptuels interactifs. Quatre secteurs, quatre identités pour imaginer ce que pourrait devenir votre prochain site.",
+    "studioBody": "Explorez six concepts de sites interactifs. Je peux créer une expérience similaire pour votre activité, adaptée à votre marque et à vos besoins.",
     "expertise": "DE L’INTERFACE À L’INFRASTRUCTURE",
     "expertiseTitle": "Le savoir-faire\nderrière l’expérience.",
     "journeyTitle": "La curiosité pour moteur.\nUne direction pour avancer.",
@@ -82,7 +77,7 @@
     "projects": "Des projets qui ont du sens.",
     "projectsIntro": "Deux projets réels associant interfaces réfléchies et besoins concrets.",
     "studio": "De petits univers.\nDe grandes possibilités.",
-    "studioIntro": "Quatre secteurs. Quatre identités. Découvrez des sites conceptuels qui se vivent autant qu’ils se regardent.",
+    "studioIntro": "Six secteurs, six identités. Explorez des concepts interactifs que je peux adapter à votre activité.",
     "services": "De votre première idée\nà la prochaine étape.",
     "servicesIntro": "Sites, produits full-stack et assistance logicielle : Windows, applications et jeux.",
     "contact": "Tout commence\npar une conversation.",
@@ -126,7 +121,9 @@
     "consulting": "Conseil et stratégie",
     "webType": "Site interactif",
     "more": "Votre secteur pourrait suivre.",
-    "moreBody": "Une autre activité ? Créons une expérience numérique avec son propre point de vue."
+    "moreBody": "Une autre activité ? Créons une expérience numérique avec son propre point de vue.",
+    "shop": "Boutique en ligne",
+    "tours": "Voyages et tourisme"
   },
   "form": {
     "name": "Nom complet",
