@@ -9,11 +9,11 @@ export const homeNotes = {
     "Las ideas viajan.\nYo les doy vida.",
   ),
   intro: l(
-    "I’m Francis — Cisco to friends. From Tanzania to Russia, I build websites and digital products, and solve everyday software problems.",
-    "Я Фрэнсис, для друзей — Cisco. Мой путь идёт из Танзании в Россию. Создаю сайты и цифровые продукты и помогаю решать задачи с программами.",
-    "Mimi ni Francis — Cisco kwa marafiki. Kutoka Tanzania hadi Urusi, ninajenga tovuti na bidhaa za kidijitali na kutatua matatizo ya programu.",
-    "Je suis Francis, Cisco pour mes amis. De la Tanzanie à la Russie, je crée des sites et des produits numériques, et j’apporte des solutions concrètes aux problèmes informatiques.",
-    "Soy Francis, Cisco para mis amigos. De Tanzania a Rusia, creo sitios y productos digitales y resuelvo problemas informáticos cotidianos.",
+    "I’m Francis, Cisco to friends. I build websites, digital products and practical software solutions.",
+    "Я Фрэнсис, для друзей Cisco. Создаю сайты, цифровые продукты и практические программные решения.",
+    "Mimi ni Francis, Cisco kwa marafiki. Ninajenga tovuti, bidhaa za kidijitali na suluhisho za programu.",
+    "Je suis Francis, Cisco pour mes amis. Je crée des sites, des produits numériques et des solutions informatiques.",
+    "Soy Francis, Cisco para mis amigos. Creo sitios, productos digitales y soluciones informáticas.",
   ),
   workLabel: l(
     "Behind the build",

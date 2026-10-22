@@ -36,7 +36,7 @@ export function HorizontalShowcase({
     slides.forEach((slide) => observer.observe(slide));
     return () => observer.disconnect();
   }, []);
-  function move(direction: number) {
+  function move(direction: number, instant = false) {
     const rail = ref.current;
     if (!rail) return;
     const slides = [...rail.children] as HTMLElement[];
@@ -52,9 +52,10 @@ export function HorizontalShowcase({
       slides[Math.max(0, Math.min(slides.length - 1, current + direction))];
     rail.scrollTo({
       left: target.offsetLeft - rail.offsetLeft,
-      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
-        ? "instant"
-        : "smooth",
+      behavior:
+        instant || matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "instant"
+          : "smooth",
     });
   }
   return (
@@ -99,7 +100,7 @@ export function HorizontalShowcase({
           }[event.key];
           if (direction !== undefined) {
             event.preventDefault();
-            move(direction);
+            move(direction, true);
           }
         }}
       >

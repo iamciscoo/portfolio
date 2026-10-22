@@ -63,7 +63,11 @@ export async function PersonalHero({ locale }: { locale: Locale }) {
             <span>{text(cinematic.meet, locale)}</span>
             <ArrowUpRight size={18} />
           </Link>
-          <a className="hero-scroll-link" href="#selected-work">
+          <a
+            className="hero-scroll-link"
+            href="#selected-work"
+            aria-label={text(cinematic.scroll, locale)}
+          >
             <span>{text(cinematic.scroll, locale)}</span>
             <span className="scroll-arrow" aria-hidden="true">
               ↓

@@ -1,5 +1,7 @@
 # Cisco: personal field notes
 
+Mobile reading refinement: use shorter introductions, 16px hero body copy, more open heading leading and fewer repeated labels. Homepage project summaries stay in case studies on phones, bringing displays forward. Keep copy stationary during scroll, limit background travel to 24px and use short, subtle section reveals. Templates belong immediately above the inquiry message, with an explicit apply action. Source text uses no em dashes. See `docs/MOBILE-CLARITY.md`.
+
 The latest layout uses native horizontal scroll-snap rails for both homepage showcases. Previous/next buttons, keyboard arrows, Home/End and touch scrolling keep the full collection accessible. The studio index retains its grid. All examples explain that a similar website can be built for the visitor's brand. PACE and SAFIRI add distinct shop and tour-company concepts. On phones, the homepage hero fits its content instead of filling the viewport; tap feedback acknowledges actions. Photo dialogs show just the chosen image; original source files remain preserved. See `docs/COMPACT-STUDIO.md`.
 
 Keep the existing Manrope, charcoal (#171819), warm white (#efefeb) and cobalt (#426be6) identity. Authentic photos supply sunlit amber, grass and blue/red clothing; do not add decorative neon gradients. Manrope handles interface and headings; a restrained Georgia italic accent gives personal, editorial words a different voice.

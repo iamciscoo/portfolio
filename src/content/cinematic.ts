@@ -9,11 +9,11 @@ export const cinematic = {
     "Desarrollador y creador de productos",
   ),
   meet: l(
-    "Meet the person behind the work",
-    "Познакомиться с автором",
-    "Mfahamu mtu nyuma ya kazi",
-    "Rencontrer la personne derrière les projets",
-    "Conoce a la persona detrás del trabajo",
+    "Meet Cisco",
+    "Знакомьтесь, Cisco",
+    "Mfahamu Cisco",
+    "Rencontrer Cisco",
+    "Conoce a Cisco",
   ),
   scroll: l(
     "Explore the work below",
@@ -45,7 +45,7 @@ export const cinematic = {
   ),
   momentsBody: l(
     "The work is one part of the story. These personal photographs and moments from my own videos show a little more of the person behind it.",
-    "Работа — лишь часть истории. Личные фотографии и моменты из моих видео помогают узнать человека за проектами.",
+    "Работа - лишь часть истории. Личные фотографии и моменты из моих видео помогают узнать человека за проектами.",
     "Kazi ni sehemu moja ya hadithi. Picha binafsi na matukio kutoka video zangu yanaonyesha zaidi mtu aliye nyuma yake.",
     "Le travail ne raconte pas tout. Ces photographies personnelles et instants de mes vidéos montrent un peu plus la personne derrière les projets.",
     "El trabajo es solo una parte de la historia. Estas fotos personales y momentos de mis vídeos muestran algo más de quien está detrás.",

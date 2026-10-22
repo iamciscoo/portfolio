@@ -1,31 +1,34 @@
 .inquiry-templates {
-  margin: 28px 0 32px;
-  padding: 23px;
-  border: 1px solid var(--line);
-  background: var(--surface);
+  margin: 0 0 4px;
 }
-.inquiry-templates > label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 9px;
+.template-picker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
-.inquiry-templates > p {
+.template-picker > label {
   font-size: 12px;
-  margin-bottom: 16px;
-  line-height: 1.8;
+  color: var(--muted);
 }
 .inquiry-templates select {
-  width: 100%;
+  width: min(100%, 340px);
+  min-width: 0;
+  flex: 1 1 260px;
   min-height: 46px;
   border: 1px solid var(--line);
   background: var(--bg);
   color: var(--text);
   border-radius: 4px;
   padding: 12px;
-  font-size: 13px;
+  font-size: 14px;
 }
 .template-preview {
-  padding-top: 20px;
+  margin-top: 12px;
+  padding: 18px;
+  background: var(--surface);
+  border-radius: 4px;
 }
 .template-preview > p {
   white-space: pre-line;
@@ -53,10 +56,13 @@
   margin-top: 10px;
 }
 @media (max-width: 600px) {
-  .inquiry-templates {
-    padding: 18px;
+  .template-picker {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
   }
   .inquiry-templates select {
+    width: 100%;
     font-size: 16px;
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useRef, type ReactNode } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { useCompactMotion } from "@/components/common/use-compact-motion";
 
 export function HeroScene({
   copy,
@@ -14,13 +15,18 @@ export function HeroScene({
   top: ReactNode;
 }) {
   const ref = useRef<HTMLElement>(null);
+  const compact = useCompactMotion();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
-  const photoY = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const photoScale = useTransform(scrollYProgress, [0, 1], [1.03, 1.16]);
-  const copyY = useTransform(scrollYProgress, [0, 1], [0, -45]);
+  const photoY = useTransform(scrollYProgress, [0, 1], [0, compact ? 24 : 100]);
+  const photoScale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [1.03, compact ? 1.06 : 1.16],
+  );
+  const copyY = useTransform(scrollYProgress, [0, 1], [0, compact ? 0 : -45]);
   return (
     <section ref={ref} className="cinematic-hero" data-sc-act="hero">
       <motion.div

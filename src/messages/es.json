@@ -58,9 +58,9 @@
     "introTitle": "Mentalidad de creador.\nUna perspectiva global.",
     "introBody": "Combino ingeniería de software y visión de producto. Desde redes locales hasta un mercado para quienes empiezan en otro país, mi trabajo parte de entender las necesidades.",
     "workTitle": "Ideas llevadas\nal mundo real.",
-    "workNote": "Productos reales. Necesidades reales. Descubre el razonamiento detrás de cada desarrollo.",
-    "studioTitle": "Mundos distintos.\nLa misma atención al detalle.",
-    "studioBody": "Explora seis conceptos de sitios interactivos. Puedo crear una experiencia similar para tu negocio, adaptada a tu marca y tus necesidades.",
+    "workNote": "Proyectos reales. Sitios útiles.",
+    "studioTitle": "Tu próximo sitio.",
+    "studioBody": "Seis conceptos. Encuentra una idea para tu próximo sitio.",
     "expertise": "DE LA INTERFAZ A LA INFRAESTRUCTURA",
     "expertiseTitle": "El oficio detrás\nde la experiencia.",
     "journeyTitle": "La curiosidad impulsa.\nEl propósito orienta.",
@@ -84,7 +84,7 @@
     "contactIntro": "¿Un sitio, un producto o ayuda con tu equipo? Comparte lo que necesitas y encontremos el siguiente paso.",
     "notFound": "Un pequeño desvío.",
     "notFoundBody": "Esta página no existe. Volvamos a un lugar conocido.",
-    "metadata": "Francis Mwambene — Cisco | Desarrollador y creador de productos"
+    "metadata": "Francis Mwambene - Cisco | Desarrollador y creador de productos"
   },
   "about": {
     "origin": "DESDE TANZANIA, CON PERSPECTIVA",
@@ -161,7 +161,7 @@
     "phonePlaceholder": "Incluye el prefijo del país",
     "phoneHelp": "Opcional. Puedo usar este número para dar seguimiento a tu consulta.",
     "invalidPhone": "Introduce un número de 7 a 15 dígitos, con el prefijo del país si corresponde.",
-    "templateLabel": "Empezar con una plantilla (opcional)",
+    "templateLabel": "Plantillas (opcional)",
     "templateHelp": "Elige lo que necesitas y usa el texto editable de abajo.",
     "templateChoose": "Escribir mi propia consulta",
     "useTemplate": "Usar esta plantilla",

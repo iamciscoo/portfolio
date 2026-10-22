@@ -1,5 +1,7 @@
 # Francis Mwambene / Cisco
 
+The mobile reading pass shortens repeated copy, improves type spacing and keeps hero text steady during gentle background movement. Inquiry templates now sit directly above "Tell me what you need" and preserve existing text until explicitly applied. Em dashes are removed from tracked source and documentation. See `docs/MOBILE-CLARITY.md` for behavior and proof.
+
 A multilingual personal portfolio and interactive design studio with six industry concepts, built with Next.js App Router, React, TypeScript, Tailwind, next-intl, Motion, Radix Dialog, React Hook Form, Zod and Resend. Prepared for Vercel. No application database is required.
 
 The homepage has compact horizontal rails for real projects and concepts, with touch, keyboard and button navigation. PACE demonstrates an online shop with a sample basket; SAFIRI demonstrates a tour company with itineraries and enquiry previews. Every example offers a similar custom website for the visitor's brand. Mobile has a shorter hero and tap feedback. All published photography and Next Image responses use WebP. See `docs/COMPACT-STUDIO.md` for the design, new image prompts and verification scope.

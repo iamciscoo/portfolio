@@ -20,21 +20,25 @@ export function InquiryTemplates({
   const preset = inquiryPresets.find((item) => item.id === selected);
   return (
     <div className="inquiry-templates">
-      <label htmlFor="inquiry-template">{t("templateLabel")}</label>
-      <p id="template-help">{t("templateHelp")}</p>
-      <select
-        id="inquiry-template"
-        value={selected}
-        onChange={(event) => setSelected(event.target.value)}
-        aria-describedby="template-help"
-      >
-        <option value="">{t("templateChoose")}</option>
-        {inquiryPresets.map((item) => (
-          <option key={item.id} value={item.id}>
-            {text(item.label, locale)}
-          </option>
-        ))}
-      </select>
+      <div className="template-picker">
+        <label htmlFor="inquiry-template">{t("templateLabel")}</label>
+        <p id="template-help" className="sr-only">
+          {t("templateHelp")}
+        </p>
+        <select
+          id="inquiry-template"
+          value={selected}
+          onChange={(event) => setSelected(event.target.value)}
+          aria-describedby="template-help"
+        >
+          <option value="">{t("templateChoose")}</option>
+          {inquiryPresets.map((item) => (
+            <option key={item.id} value={item.id}>
+              {text(item.label, locale)}
+            </option>
+          ))}
+        </select>
+      </div>
       {preset && (
         <div className="template-preview">
           <p>{text(preset.brief, locale)}</p>

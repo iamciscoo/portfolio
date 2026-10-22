@@ -58,9 +58,9 @@
     "introTitle": "L’esprit d’un bâtisseur.\nUn regard ouvert sur le monde.",
     "introBody": "J’associe ingénierie logicielle et réflexion produit. Des réseaux locaux à une place de marché pour celles et ceux qui s’installent dans un nouveau pays, je commence par comprendre les besoins.",
     "workTitle": "Des idées devenues\nréalité.",
-    "workNote": "De vrais produits. Des besoins concrets. Découvrez la réflexion derrière chaque réalisation.",
-    "studioTitle": "Des univers différents.\nLa même attention aux détails.",
-    "studioBody": "Explorez six concepts de sites interactifs. Je peux créer une expérience similaire pour votre activité, adaptée à votre marque et à vos besoins.",
+    "workNote": "Des projets réels. Des sites utiles.",
+    "studioTitle": "Votre prochain site.",
+    "studioBody": "Six concepts. Trouvez une idée pour votre prochain site.",
     "expertise": "DE L’INTERFACE À L’INFRASTRUCTURE",
     "expertiseTitle": "Le savoir-faire\nderrière l’expérience.",
     "journeyTitle": "La curiosité pour moteur.\nUne direction pour avancer.",
@@ -84,7 +84,7 @@
     "contactIntro": "Un site, un produit ou un problème informatique ? Partagez votre besoin et trouvons la prochaine étape.",
     "notFound": "Un petit détour.",
     "notFoundBody": "Cette page n’existe pas. Retrouvons un chemin connu.",
-    "metadata": "Francis Mwambene — Cisco | Développeur et créateur de produits"
+    "metadata": "Francis Mwambene - Cisco | Développeur et créateur de produits"
   },
   "about": {
     "origin": "DE TANZANIE, AVEC UN REGARD OUVERT",
@@ -161,7 +161,7 @@
     "phonePlaceholder": "Indiquez l’indicatif du pays",
     "phoneHelp": "Facultatif. Je peux utiliser ce numéro pour donner suite à votre demande.",
     "invalidPhone": "Saisissez un numéro de 7 à 15 chiffres, avec l’indicatif si nécessaire.",
-    "templateLabel": "Partir d’un modèle (facultatif)",
+    "templateLabel": "Modèles (facultatif)",
     "templateHelp": "Choisissez votre besoin, puis utilisez le texte modifiable ci-dessous.",
     "templateChoose": "Rédiger ma propre demande",
     "useTemplate": "Utiliser ce modèle",

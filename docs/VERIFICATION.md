@@ -2,7 +2,17 @@
 
 Verified locally on Windows, 22 October 2026, with Node.js 22.23.2 and npm 10.9.8.
 
-## Current compact studio revision
+## Current mobile clarity revision
+
+52 unit/API tests, ESLint and the 81-route production build pass. The full expanded browser suite passed all 64 cases, including 75 localized route combinations, five viewport widths, accessibility, templates, new concepts, themes, keyboard navigation, reduced motion and no-JavaScript content. Phone checks at 320px and 390px cover all five languages, larger body type, less repeated copy, earlier website displays and zero page overflow.
+
+Template placement is verified between the brief label and textarea. The phone selector spans the textarea width (350px at a 390px viewport). Selection preserves existing text until an explicit replace/apply action, keeps contact details intact and focuses the editable brief. The English phone hero measured 455.5px, with 16px body type and 28px leading. Mobile background travel is limited to 24px, hero copy stays fixed, and reduced motion removes decorative transforms. A browser-only inversion of the compact travel branch was rejected by the motion assertion, without modifying source or server files.
+
+The mobile arrow link retains an explicit translated accessible name when its visible label is condensed. After this final semantic adjustment, all five mobile clarity cases passed on the final production build, including the phone accessibility scan. The source and documentation audit finds no literal or encoded em dashes in tracked text. Browser contact POSTs remain intercepted and no live email was sent. Preview uses port 3000 only. See `MOBILE-CLARITY.md` for design changes and production screenshots.
+
+## Prior revisions
+
+## Earlier compact studio revision
 
 52 unit/API tests, ESLint, strict TypeScript and the production build pass. The build generates 81 routes including special endpoints. All 75 combinations of five languages and 15 portfolio/demo routes render with localized metadata; the five-width responsive suite includes both new shop and tour concepts.
 

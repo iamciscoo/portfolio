@@ -5,6 +5,7 @@
 @import "./interactions.css";
 @import "./photo-refinement.css";
 @import "./horizontal-showcase.css";
+@import "./mobile-rhythm.css";
 h1,
 h2 {
   letter-spacing: -0.04em;

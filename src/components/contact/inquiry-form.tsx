@@ -103,17 +103,6 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
     >
       <span className="eyebrow">{t("step")}</span>
       <p>{t("detail")}</p>
-      <InquiryTemplates
-        hasBrief={!!description.trim()}
-        onApply={(service, brief) => {
-          setValue("service", service, { shouldDirty: true });
-          setValue("description", brief, {
-            shouldDirty: true,
-            shouldValidate: true,
-          });
-          setFocus("description");
-        }}
-      />
       <div className="form-grid">
         <ContactDetails register={register} errors={errors} error={error} />
         <div className="form-field full">
@@ -147,8 +136,19 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
             ))}
           </select>
         </div>
-        <div className="form-field full">
+        <div className="form-field full inquiry-brief">
           <label htmlFor="description">{t("description")} *</label>
+          <InquiryTemplates
+            hasBrief={!!description.trim()}
+            onApply={(service, brief) => {
+              setValue("service", service, { shouldDirty: true });
+              setValue("description", brief, {
+                shouldDirty: true,
+                shouldValidate: true,
+              });
+              setFocus("description");
+            }}
+          />
           <textarea
             id="description"
             rows={5}
