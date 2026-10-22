@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 import AxeBuilder from "@axe-core/playwright";
 const locales = ["en", "ru", "sw"];
 test("metadata endpoints bypass locale redirects", async ({ request }) => {
@@ -47,7 +47,7 @@ for (const locale of locales)
     }
     expect(errors).toEqual([]);
   });
-for (const width of [320, 768, 1024, 1440])
+for (const width of [320, 390, 768, 1280, 1440])
   test(`responsive pages fit ${width}px`, async ({ page }) => {
     test.setTimeout(90000);
     await page.setViewportSize({ width, height: 950 });
@@ -77,13 +77,22 @@ test("language switching preserves case-study and demo routes", async ({
   page,
 }) => {
   await page.goto("/en/projects/globoexpats");
-  await page.getByLabel("Language", { exact: true }).selectOption("ru");
+  await page.getByRole("button", { name: "Language", exact: true }).click();
+  await page
+    .getByRole("menuitemradio", { name: "Русский", exact: true })
+    .click();
   await expect(page).toHaveURL(/\/ru\/projects\/globoexpats$/);
   await page.goto("/sw/studio/restaurant");
-  await page.getByLabel("Lugha", { exact: true }).selectOption("en");
+  await page.getByRole("button", { name: "Lugha", exact: true }).click();
+  await page
+    .getByRole("menuitemradio", { name: "English", exact: true })
+    .click();
   await expect(page).toHaveURL(/\/en\/studio\/restaurant$/);
   await page.goto("/en/contact?service=redesign");
-  await page.getByLabel("Language", { exact: true }).selectOption("sw");
+  await page.getByRole("button", { name: "Language", exact: true }).click();
+  await page
+    .getByRole("menuitemradio", { name: "Kiswahili", exact: true })
+    .click();
   await expect(page).toHaveURL(/\/sw\/contact\?service=redesign$/);
   await expect(page.locator("#service")).toHaveValue("redesign");
 });

@@ -1,0 +1,35 @@
+[
+  {
+    "run": "production-desktop",
+    "frames": 18,
+    "headingContrastMinimum": 15.41,
+    "consoleErrors": [],
+    "requestCancellations": [
+      "net::ERR_ABORTED http://127.0.0.1:3002/en/contact?_rsc=ry-B8umWgNEV4JR9",
+      "net::ERR_ABORTED http://127.0.0.1:3002/en/contact?service=business&_rsc=1vwYfVB7_E9t4fEj",
+      "net::ERR_ABORTED http://127.0.0.1:3002/en/contact?service=application&_rsc=1vwYfVB7_E9t4fEj",
+      "net::ERR_ABORTED http://127.0.0.1:3002/en/contact?service=personal&_rsc=1vwYfVB7_E9t4fEj",
+      "net::ERR_ABORTED http://127.0.0.1:3002/en/contact?service=marketplace&_rsc=1vwYfVB7_E9t4fEj"
+    ]
+  },
+  {
+    "run": "production-mobile",
+    "frames": 18,
+    "headingContrastMinimum": 15.41,
+    "consoleErrors": [],
+    "requestCancellations": [
+      "net::ERR_ABORTED http://127.0.0.1:3002/en/contact?_rsc=ry-B8umWgNEV4JR9",
+      "net::ERR_ABORTED http://127.0.0.1:3002/en/contact?service=application&_rsc=1vwYfVB7_E9t4fEj",
+      "net::ERR_ABORTED http://127.0.0.1:3002/en/contact?service=business&_rsc=1vwYfVB7_E9t4fEj"
+    ]
+  },
+  {
+    "run": "production-reduced",
+    "frames": 18,
+    "headingContrastMinimum": 15.41,
+    "consoleErrors": [],
+    "requestCancellations": [
+      "net::ERR_ABORTED http://127.0.0.1:3002/en/contact?_rsc=ry-B8umWgNEV4JR9"
+    ]
+  }
+]

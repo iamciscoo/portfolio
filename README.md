@@ -43,13 +43,9 @@ Update content files without changing React components. No CMS or database is re
 
 ### Add authentic photos
 
-The site currently shows explicitly labeled graphic placeholders. No synthetic portrait is presented as Francis. Instagram was inaccessible during research.
+The refinement uses four authentic photographs: both owner uploads, a candid portrait from just.cisco, and a TIMUN photograph from i.amcisco. Both profiles were visually inspected using the already authenticated Chrome session. No generated face or altered likeness is used.
 
-1. Add `hero.webp` (portrait, ideally 1600×1900), `headshot.webp` (1200×1400), and `lifestyle.webp` (1800×1200) to `public/images/profile/`.
-2. Update the corresponding `src` in `profile.photos` and set `confirmed: true`.
-3. Optional gallery items use `{src, alt}` in `profile.photos.gallery`.
-
-Next Image handles responsive sizes, WebP/AVIF negotiation and lazy loading; the hero is prioritized. See `public/images/profile/README.md` for crop guidance.
+Sources, public-display approval and placement are recorded in `public/images/profile/manifest.json`. Update that manifest alongside `src/content/profile.ts` when replacing a photo. Next Image provides responsive formats and sizes; the hero is prioritized. See `docs/REFINEMENT.md`, `PRODUCT.md` and `DESIGN.md` for design decisions and verification.
 
 ### Publish an approved CV
 
@@ -59,7 +55,7 @@ Don State Technical University and the project contributions are owner-confirmed
 
 ## Real project research
 
-Case studies use the public [GloboExpats](https://globoexpats.com/), its [team page](https://globoexpats.com/about), and [iPhone Service TZ](https://iphoneservicetz.com/), reviewed 22 October 2026. The owner confirmed Product Manager plus full-stack team contributions at GloboExpats and independent development of the complete iPhone Service TZ website. Live-site screenshots were captured at desktop and mobile sizes. The public GloboExpats title is Product Lead; the case study explains the owner-preferred title.
+Case studies use the public [GloboExpats](https://globoexpats.com/), its [team page](https://globoexpats.com/about), and [iPhone Service TZ](https://iphoneservicetz.com/), reviewed 22 October 2026. The owner confirmed Product Manager plus full-stack team contributions at GloboExpats and independent development of the complete iPhone Service TZ website. Live-site screenshots were captured at desktop and mobile sizes. The public GloboExpats title is Product Lead; the portfolio follows the owner-confirmed role.
 
 Studio concepts are fictional, with illustrative stock photography. They do not claim to be paying clients. Their forms validate and preview requests locally, without storage, email or real reservations. Photo origins are recorded in `docs/ASSETS.md`.
 

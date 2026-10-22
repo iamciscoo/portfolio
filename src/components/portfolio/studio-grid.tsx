@@ -8,7 +8,7 @@ import { text } from "@/lib/localize";
 export async function StudioGrid({ locale }: { locale: Locale }) {
   const t = await getTranslations();
   return (
-    <div className="studio-grid">
+    <div className="studio-grid" data-sc-act="studio">
       {demos.map((demo, index) => (
         <article className={`studio-tile tile-${demo.slug}`} key={demo.slug}>
           <Link href={`/studio/${demo.slug}`} className="studio-image">

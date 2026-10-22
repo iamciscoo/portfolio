@@ -11,7 +11,7 @@ The photos, products and testimonials inside these captures belong to those live
 
 ## Personal imagery
 
-The supplied Instagram URLs could not be fetched. No images were downloaded from them. Profile SVGs are graphic placeholders with explicit labels; they are not AI-generated personal photographs. The original private CV was read for source facts and is not served publicly.
+Both Instagram profiles were visually reviewed in authenticated Chrome during refinement. Four real photos are used: two owner uploads, the just.cisco candid portrait and the i.amcisco TIMUN event portrait. See public/images/profile/manifest.json for sources, placements, dimensions and public-display approval. Faces are unchanged; WebP conversion strips metadata and CSS supplies crops. The workstation video cover was viewed but not downloaded successfully and is not published. No Russia-specific photo location is assumed. The private CV remains outside public assets.
 
 ## Fictional studio concepts
 

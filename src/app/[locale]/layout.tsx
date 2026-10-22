@@ -28,7 +28,12 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const messages = await getMessages({ locale });
   return (
-    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html
+      className="sc-ready"
+      lang={locale}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
         <Script
           id="theme-init"

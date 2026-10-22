@@ -1,0 +1,252 @@
+@import "./language-menu.css";
+@import "./personal-hero.css";
+@import "./personal-story.css";
+h1,
+h2 {
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+.project-exhibit {
+  margin-top: 55px;
+}
+.exhibit-copy {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+.exhibit-copy h3 {
+  font-size: clamp(32px, 3.7vw, 52px);
+  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+}
+.exhibit-copy p {
+  max-width: 670px;
+  font-size: 15px;
+}
+.exhibit-copy .personal-kicker {
+  margin-bottom: 12px;
+}
+.exhibit-copy > .text-link {
+  flex-shrink: 0;
+  margin-bottom: 5px;
+}
+.exhibit-stage {
+  position: relative;
+  overflow: hidden;
+  height: clamp(340px, 45vw, 620px);
+  padding: 55px 13% 0 6%;
+  isolation: isolate;
+}
+.exhibit-desktop {
+  width: 100%;
+  border: 1px solid #b9c2c8;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 25px 50px #141c3326;
+  transform-origin: center bottom;
+}
+.exhibit-desktop img {
+  width: 100%;
+  height: auto;
+}
+.exhibit-phone {
+  position: absolute;
+  right: 5%;
+  bottom: -4%;
+  width: 20%;
+  max-width: 235px;
+  border: 6px solid #1e2022;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 14px 30px #141c3333;
+}
+.exhibit-phone img {
+  width: 100%;
+  height: auto;
+}
+.project-exhibit + .project-exhibit {
+  margin-top: 100px;
+}
+.studio-section .section-heading h2 {
+  max-width: 700px;
+}
+.studio-image {
+  transition: border-radius 220ms ease-out;
+}
+.studio-caption p {
+  font-size: 13px;
+}
+.studio-grid {
+  column-gap: 45px;
+}
+.studio-tile:nth-child(even) {
+  padding-top: 75px;
+}
+.studio-tile.tile-fashion .studio-image {
+  aspect-ratio: 1.2;
+}
+.studio-tile.tile-consulting .studio-image {
+  aspect-ratio: 1.7;
+}
+.studio-tile .studio-brand h3 {
+  margin-top: 16px;
+}
+.contact-band.personal-contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+.contact-band.personal-contact > .contact-person {
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+  align-items: center;
+  margin: 0 0 36px;
+}
+.contact-person img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  object-position: 50% 60%;
+  border-radius: 50%;
+}
+.contact-person p {
+  color: var(--text);
+  font-size: 15px;
+}
+.contact-person small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+.contact-band.personal-contact > div:not(.contact-person) {
+  gap: 30px;
+}
+.contact-band.personal-contact h2 {
+  font-size: clamp(42px, 6.3vw, 88px);
+  max-width: 900px;
+}
+.contact-portrait {
+  position: relative;
+  width: min(100%, 280px);
+  aspect-ratio: 1.1;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.contact-portrait img {
+  object-fit: cover;
+  object-position: 50% 61%;
+}
+.button:active,
+.icon-button:active,
+.locale-trigger:active {
+  scale: 0.97;
+}
+@keyframes language-enter {
+  from {
+    opacity: 0.4;
+    transform: translateY(-4px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .locale-trigger:hover {
+    border-color: var(--line);
+    background: var(--surface);
+  }
+  .studio-image:hover {
+    border-radius: 12px;
+  }
+}
+@media (max-width: 1100px) {
+  .desktop-nav {
+    margin-left: 0;
+    gap: 18px;
+  }
+  .site-header {
+    padding-inline: 35px;
+  }
+}
+@media (max-width: 700px) {
+  .studio-tile:nth-child(even) {
+    padding-top: 0;
+  }
+  .studio-grid {
+    gap: 38px;
+  }
+  .site-header {
+    padding-inline: 20px;
+  }
+  .locale-trigger {
+    gap: 6px;
+    padding-inline: 7px;
+  }
+  .exhibit-copy {
+    display: block;
+    margin-bottom: 25px;
+  }
+  .exhibit-copy > .text-link {
+    margin-top: 20px;
+  }
+  .exhibit-copy h3 {
+    font-size: 34px;
+  }
+  .exhibit-stage {
+    height: clamp(245px, 68vw, 390px);
+    padding: 28px 12% 0 4%;
+  }
+  .exhibit-phone {
+    width: 24%;
+    right: 3%;
+    bottom: -5%;
+    border-width: 3px;
+    border-radius: 14px;
+  }
+  .project-exhibit {
+    margin-top: 35px;
+  }
+  .project-exhibit + .project-exhibit {
+    margin-top: 65px;
+  }
+  .contact-band.personal-contact {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .contact-person {
+    margin-bottom: 26px;
+  }
+  .contact-band.personal-contact h2 {
+    font-size: clamp(38px, 10.4vw, 64px);
+  }
+  .contact-band.personal-contact .round-link {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+  }
+  .contact-portrait {
+    width: 130px;
+    margin-bottom: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .locale-menu {
+    animation: none;
+  }
+  .exhibit-desktop,
+  .exhibit-phone,
+  .case-visual-motion {
+    transform: none !important;
+  }
+  .button:active,
+  .icon-button:active,
+  .locale-trigger:active {
+    scale: 1;
+  }
+}

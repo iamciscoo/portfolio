@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { LocaleSwitcher } from "@/components/layout/header";
+import { LocaleSwitcher } from "@/components/layout/locale-switcher";
 export async function DemoBar() {
   const t = await getTranslations();
   return (

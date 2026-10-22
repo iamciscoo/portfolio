@@ -11,9 +11,9 @@ export const milestones = [
     ),
     place: l("Russia", "Россия", "Urusi"),
     body: l(
-      "Continuing my education in Russia. Institution confirmed; qualification and dates awaiting confirmation.",
-      "Продолжаю образование в России. Учебное заведение подтверждено; программа и даты уточняются.",
-      "Naendelea na elimu Urusi. Chuo kimethibitishwa; programu na tarehe zinasubiri uthibitisho.",
+      "Continuing my education at Don State Technical University in Russia.",
+      "Продолжаю образование в Донском государственном техническом университете в России.",
+      "Naendelea na elimu katika Don State Technical University nchini Urusi.",
     ),
   },
   {

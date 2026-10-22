@@ -9,6 +9,7 @@ import { ImageGallery } from "@/components/common/image-gallery";
 import { ContactBand } from "@/components/common/contact-band";
 import { text } from "@/lib/localize";
 import { siteUrl } from "@/lib/metadata";
+import { CaseVisual } from "@/components/portfolio/scroll-scenes";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -82,13 +83,15 @@ export default async function CaseStudy({
             </a>
           </div>
         </div>
-        <div className="case-cover">
-          <ImageGallery
-            src={project.cover}
-            eager
-            alt={`${project.name} — ${t("projects.screenshots")}`}
-          />
-        </div>
+        <CaseVisual>
+          <div className="case-cover">
+            <ImageGallery
+              src={project.cover}
+              eager
+              alt={`${project.name} — ${t("projects.screenshots")}`}
+            />
+          </div>
+        </CaseVisual>
         <section className="case-section">
           <h2>{t("common.overview")}</h2>
           <p>{text(project.intro, locale)}</p>
@@ -131,14 +134,12 @@ export default async function CaseStudy({
             />
           </div>
         </section>
-        <section className="case-section">
-          <h2>{t("common.stack")}</h2>
-          {project.stack.length ? (
+        {project.stack.length > 0 && (
+          <section className="case-section">
+            <h2>{t("common.stack")}</h2>
             <p>{project.stack.join(" · ")}</p>
-          ) : (
-            <p>{t("projects.technicalNote")}</p>
-          )}
-        </section>
+          </section>
+        )}
         <div className="case-source">
           <p>{t("projects.evidence")}</p>
           <p>

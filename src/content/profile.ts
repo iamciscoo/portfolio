@@ -14,16 +14,25 @@ export const profile = {
   // Add an approved, privacy-reviewed PDF to public/ and set its URL here.
   cvUrl: null as string | null,
   photos: {
-    hero: { src: "/images/profile/hero-placeholder.svg", confirmed: false },
+    hero: { src: "/images/profile/cisco-outdoors.webp", confirmed: true },
     headshot: {
-      src: "/images/profile/headshot-placeholder.svg",
-      confirmed: false,
+      src: "/images/profile/cisco-candid.webp",
+      confirmed: true,
     },
     lifestyle: {
-      src: "/images/profile/lifestyle-placeholder.svg",
-      confirmed: false,
+      src: "/images/profile/cisco-outdoors.webp",
+      confirmed: true,
     },
-    gallery: [] as { src: string; alt: string }[],
+    gallery: [
+      {
+        src: "/images/profile/cisco-timun.webp",
+        alt: "Francis at Tanzania International Model United Nations, 2025",
+      },
+      {
+        src: "/images/profile/cisco-glasses.webp",
+        alt: "Francis wearing glasses, a candid close-up",
+      },
+    ],
   },
   currentEducation: {
     institution: "Don State Technical University",

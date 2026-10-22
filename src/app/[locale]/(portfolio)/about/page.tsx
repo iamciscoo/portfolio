@@ -7,6 +7,9 @@ import { profile } from "@/content/profile";
 import { PageHeading } from "@/components/common/page-heading";
 import { ContactBand } from "@/components/common/contact-band";
 import { pageMetadata } from "@/lib/metadata";
+import { personalStory } from "@/content/refinement";
+import { text } from "@/lib/localize";
+import { ImageGallery } from "@/components/common/image-gallery";
 export async function generateMetadata({
   params,
 }: {
@@ -96,7 +99,7 @@ export default async function About({
             src={profile.photos.lifestyle.src}
             alt={
               profile.photos.lifestyle.confirmed
-                ? `${profile.shortName} — Tanzania / Russia`
+                ? `${profile.shortName} outdoors in evening sunlight`
                 : t("home.portraitNote")
             }
             fill
@@ -104,18 +107,27 @@ export default async function About({
           />
         </div>
         {profile.photos.gallery.length > 0 && (
-          <div className="personal-gallery">
-            {profile.photos.gallery.map((photo) => (
-              <Image
-                key={photo.src}
-                src={photo.src}
-                alt={photo.alt}
-                width={600}
-                height={700}
-                sizes="(max-width: 600px) 90vw, 30vw"
-              />
-            ))}
-          </div>
+          <section className="photo-collection">
+            <h2>{text(personalStory.galleryTitle, locale)}</h2>
+            <div className="photo-collection-grid">
+              {profile.photos.gallery.map((photo, index) => (
+                <figure key={photo.src}>
+                  <ImageGallery
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={index === 0 ? 478 : 810}
+                    height={index === 0 ? 638 : 1080}
+                  />
+                  <figcaption>
+                    {text(
+                      index === 0 ? personalStory.event : personalStory.candid,
+                      locale,
+                    )}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
         )}
       </section>
       <ContactBand />

@@ -1,0 +1,42 @@
+[
+  {
+    "width": 1440,
+    "metrics": {
+      "lcp": 1632,
+      "cls": 0.000782152845594618,
+      "navigation": [
+        {
+          "ttfb": 348.60000002384186,
+          "domContentLoaded": 1508.5
+        }
+      ],
+      "images": [
+        {
+          "url": "http://127.0.0.1:3002/_next/image",
+          "bytes": 13378
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "metrics": {
+      "lcp": 160,
+      "cls": 0,
+      "navigation": [
+        {
+          "ttfb": 9.599999994039536,
+          "domContentLoaded": 127
+        }
+      ],
+      "images": [
+        {
+          "url": "http://127.0.0.1:3002/_next/image",
+          "bytes": 7403
+        }
+      ]
+    },
+    "errors": []
+  }
+]

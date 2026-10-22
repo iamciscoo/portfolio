@@ -6,6 +6,7 @@ import { PageHeading } from "@/components/common/page-heading";
 import { InquiryForm } from "@/components/contact/inquiry-form";
 import { pageMetadata } from "@/lib/metadata";
 import "./contact.css";
+import Image from "next/image";
 export async function generateMetadata({
   params,
 }: {
@@ -35,6 +36,14 @@ export default async function Contact({
       />
       <section className="wrap contact-layout page-content">
         <aside>
+          <div className="contact-portrait">
+            <Image
+              src={profile.photos.headshot.src}
+              alt={profile.shortName}
+              fill
+              sizes="(max-width: 700px) 130px, 280px"
+            />
+          </div>
           <span className="eyebrow">{t("form.direct")}</span>
           <a className="contact-email" href={`mailto:${profile.email}`}>
             {profile.email} ↗

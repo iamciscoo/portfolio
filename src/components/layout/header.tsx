@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import * as Dialog from "@radix-ui/react-dialog";
 import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
-import { Link, usePathname, useRouter } from "@/i18n/navigation";
-import { locales, type Locale } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/navigation";
+import { LocaleSwitcher } from "./locale-switcher";
 
 const links = [
   ["about", "/about"],
@@ -13,31 +13,6 @@ const links = [
   ["journey", "/journey"],
   ["services", "/services"],
 ] as const;
-export function LocaleSwitcher() {
-  const locale = useLocale();
-  const pathname = usePathname();
-  const router = useRouter();
-  const t = useTranslations("nav");
-  return (
-    <select
-      className="locale-select"
-      aria-label={t("language")}
-      value={locale}
-      onChange={(e) =>
-        router.replace(
-          `${pathname}${window.location.search}${window.location.hash}`,
-          { locale: e.target.value as Locale },
-        )
-      }
-    >
-      {locales.map((lang) => (
-        <option key={lang} value={lang}>
-          {lang === "en" ? "EN" : lang === "ru" ? "RU" : "SW"}
-        </option>
-      ))}
-    </select>
-  );
-}
 export function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
@@ -118,6 +93,9 @@ export function Header() {
                     ),
                   )}
                 </nav>
+                <div className="mobile-languages">
+                  <LocaleSwitcher expanded onSwitch={() => setOpen(false)} />
+                </div>
               </Dialog.Content>
             </Dialog.Portal>
           </Dialog.Root>

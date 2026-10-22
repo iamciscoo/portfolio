@@ -31,9 +31,9 @@ export const projects = [
       "Meneja wa Bidhaa · Msanidi wa Full-stack katika timu",
     ),
     contributions: l(
-      "I manage the product and contribute to full-stack development with the team. My focus combines product planning, practical user flows and technical delivery. Role and team contribution confirmed by Francis; the public company profile uses Product Lead.",
-      "Я управляю продуктом и участвую в full-stack-разработке вместе с командой. Соединяю планирование, пользовательские сценарии и техническую реализацию. Роль и командный вклад подтверждены Фрэнсисом; на сайте компании указано Product Lead.",
-      "Ninasimamia bidhaa na kushiriki uundaji wa full-stack pamoja na timu. Ninaunganisha mipango, matumizi ya vitendo na utekelezaji wa kiufundi. Francis amethibitisha jukumu; tovuti ya kampuni inatumia Product Lead.",
+      "I manage the product and contribute to full-stack development with the team. My focus combines product planning, practical user flows and technical delivery.",
+      "Я управляю продуктом и участвую в full-stack-разработке вместе с командой. Соединяю планирование, пользовательские сценарии и техническую реализацию.",
+      "Ninasimamia bidhaa na kushiriki uundaji wa full-stack pamoja na timu. Ninaunganisha mipango, matumizi ya vitendo na utekelezaji wa kiufundi.",
     ),
     approach: l(
       "Make discovery approachable, keep listing information readable, and make the marketplace feel connected to a real community. Trust and clear next steps are central to the public experience.",
@@ -97,9 +97,9 @@ export const projects = [
       "Msanidi pekee wa tovuti",
     ),
     contributions: l(
-      "I built the entire website independently, as confirmed by Francis. The public experience brings together service discovery, device selection, repair inquiries and visual repair storytelling.",
-      "Я полностью разработал сайт самостоятельно — подтверждено Фрэнсисом. Сайт объединяет поиск услуг, выбор устройства, заявку на ремонт и наглядную демонстрацию работ.",
-      "Nilijenga tovuti nzima mwenyewe, kama nilivyothibitisha. Inaunganisha huduma, uchaguzi wa kifaa, maombi ya matengenezo na picha za kazi.",
+      "I built the entire website independently. The experience brings together service discovery, device selection, repair inquiries and visual repair storytelling.",
+      "Я полностью разработал сайт самостоятельно. Сайт объединяет поиск услуг, выбор устройства, заявку на ремонт и наглядную демонстрацию работ.",
+      "Nilijenga tovuti nzima mwenyewe. Inaunganisha huduma, uchaguzi wa kifaa, maombi ya matengenezo na picha za kazi.",
     ),
     approach: l(
       "A calm, service-first layout gives repair information room to breathe. Photography, a before-and-after comparison and a guided inquiry flow help customers understand the next step.",

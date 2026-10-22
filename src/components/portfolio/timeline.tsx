@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { motion, useReducedMotion, useScroll } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import { milestones } from "@/content/experience";
 import { text } from "@/lib/localize";
@@ -8,6 +9,12 @@ export function Timeline() {
   const [filter, setFilter] = useState("all");
   const locale = useLocale() as Locale;
   const t = useTranslations("about");
+  const ref = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 70%", "end 65%"],
+  });
   return (
     <>
       <div
@@ -29,18 +36,35 @@ export function Timeline() {
           </button>
         ))}
       </div>
-      <div className="timeline" aria-live="polite">
+      <div
+        className="timeline"
+        ref={ref}
+        aria-live="polite"
+        data-sc-act="timeline"
+      >
+        <motion.div
+          className="timeline-progress"
+          aria-hidden="true"
+          style={{ scaleY: scrollYProgress }}
+        />
         {milestones
           .filter((m) => filter === "all" || m.type === filter)
           .map((m) => (
-            <article className="timeline-entry" key={m.id}>
+            <motion.article
+              initial={false}
+              whileInView={reduced ? {} : { opacity: [0.8, 1], y: [12, 0] }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.45 }}
+              className="timeline-entry"
+              key={m.id}
+            >
               <time>{text(m.date, locale)}</time>
               <div>
                 <h2>{text(m.title, locale)}</h2>
                 <h3>{text(m.place, locale)}</h3>
                 <p>{text(m.body, locale)}</p>
               </div>
-            </article>
+            </motion.article>
           ))}
       </div>
     </>

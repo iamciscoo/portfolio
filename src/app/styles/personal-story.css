@@ -1,0 +1,227 @@
+.personal-story {
+  border-top: 1px solid var(--line);
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+.story-heading {
+  margin-bottom: 64px;
+}
+.story-heading h2 {
+  max-width: 800px;
+  letter-spacing: -0.04em;
+}
+.story-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 100px;
+  align-items: start;
+}
+.story-photo {
+  position: sticky;
+  top: 130px;
+  margin: 0;
+  max-width: 445px;
+}
+.story-photo > div {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--surface);
+}
+.story-photo img {
+  object-fit: cover;
+  object-position: 50% 65%;
+}
+.story-photo figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 11px;
+  color: var(--muted);
+  padding-top: 18px;
+}
+.story-photo figcaption span {
+  color: var(--text);
+  white-space: nowrap;
+}
+.story-chapter {
+  padding: 20px 0 50px;
+  border-top: 1px solid var(--line);
+}
+.story-chapter h3 {
+  font-size: clamp(25px, 2.6vw, 36px);
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.story-chapter p {
+  margin: 20px 0;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 520px;
+}
+.about-grid > div:first-child {
+  position: sticky;
+  top: 130px;
+  align-self: start;
+}
+.about-portrait img {
+  object-fit: cover;
+  object-position: 50% 66%;
+}
+.about-lifestyle img {
+  object-fit: cover;
+  object-position: 50% 36%;
+}
+.photo-collection {
+  margin-top: 80px;
+}
+.photo-collection h2 {
+  font-size: clamp(30px, 3.4vw, 48px);
+  margin-bottom: 35px;
+}
+.photo-collection-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 35px;
+  align-items: start;
+}
+.photo-collection figure {
+  margin: 0;
+}
+.photo-collection figure:nth-child(2) {
+  margin-top: 90px;
+}
+.photo-collection .gallery-trigger {
+  width: 100%;
+}
+.photo-collection .gallery-trigger img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+.photo-collection figure:nth-child(2) img {
+  object-position: 50% 60%;
+}
+.photo-collection figcaption {
+  padding-top: 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.journey-photo {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 45px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 30px 0;
+  margin-bottom: 60px;
+}
+.journey-photo img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.journey-photo h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.journey-photo p {
+  max-width: 550px;
+}
+.timeline {
+  position: relative;
+}
+.timeline-progress {
+  position: absolute;
+  width: 2px;
+  background: var(--accent);
+  top: 0;
+  left: -1px;
+  height: 100%;
+  transform-origin: top;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .story-layout {
+    gap: 45px;
+  }
+  .photo-collection .gallery-trigger img {
+    height: 360px;
+  }
+}
+@media (max-width: 700px) {
+  .personal-story {
+    padding-top: 55px;
+    padding-bottom: 50px;
+  }
+  .story-heading {
+    margin-bottom: 35px;
+  }
+  .story-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .story-photo {
+    position: relative;
+    top: auto;
+    width: 88%;
+    max-width: 400px;
+  }
+  .story-photo > div {
+    aspect-ratio: 1.15;
+  }
+  .story-chapter {
+    padding: 22px 0 28px;
+  }
+  .story-chapter h3 {
+    font-size: 28px;
+  }
+  .story-chapter p {
+    margin-top: 16px;
+  }
+  .about-grid > div:first-child {
+    position: relative;
+    top: auto;
+  }
+  .photo-collection {
+    margin-top: 45px;
+  }
+  .photo-collection-grid {
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+  .photo-collection figure:nth-child(2) {
+    margin-top: 0;
+    width: 85%;
+    margin-left: auto;
+  }
+  .photo-collection .gallery-trigger img {
+    height: auto;
+    max-height: 500px;
+  }
+  .journey-photo {
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .journey-photo img {
+    height: 160px;
+  }
+  .journey-photo h2 {
+    font-size: 24px;
+  }
+  .journey-photo p {
+    font-size: 13px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-photo,
+  .about-grid > div:first-child {
+    position: relative;
+    top: auto;
+  }
+  .timeline-progress {
+    transform: none !important;
+  }
+}
