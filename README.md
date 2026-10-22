@@ -1,6 +1,8 @@
 # Francis Mwambene / Cisco
 
-A multilingual personal portfolio and interactive design studio, built with Next.js App Router, React, TypeScript, Tailwind, next-intl, Motion, Radix Dialog, React Hook Form, Zod and Resend. Prepared for Vercel. No application database is required.
+A multilingual personal portfolio and interactive design studio with six industry concepts, built with Next.js App Router, React, TypeScript, Tailwind, next-intl, Motion, Radix Dialog, React Hook Form, Zod and Resend. Prepared for Vercel. No application database is required.
+
+The homepage has compact horizontal rails for real projects and concepts, with touch, keyboard and button navigation. PACE demonstrates an online shop with a sample basket; SAFIRI demonstrates a tour company with itineraries and enquiry previews. Every example offers a similar custom website for the visitor's brand. Mobile has a shorter hero and tap feedback. All published photography and Next Image responses use WebP. See `docs/COMPACT-STUDIO.md` for the design, new image prompts and verification scope.
 
 ## Run locally
 
@@ -43,7 +45,7 @@ Update content files without changing React components. No CMS or database is re
 
 ### Add authentic photos
 
-The owner-requested cinematic Tanzania-to-Russia artwork replaces the earlier flat postcard and is clearly labeled as an imagined landscape. About opens with a new boat photograph from Instagram and includes a newly retrieved TIMUN assembly photo, the personal narrative, portraits and a captured GloboExpats work-video still with its original clip link. Both Instagram profiles were visually reviewed in authenticated Chrome. Four photographs have owner-authorized AI-assisted clarity variants; originals are preserved and available through the translated Original/Enhanced viewer. AI reconstruction may change fine details. See `docs/PHOTOS-AND-DISPLAYS.md` for photo sources, actual dimensions and the editing prompt, and `docs/CINEMATIC-REFINEMENT.md` for hero artwork details.
+The owner-requested cinematic Tanzania-to-Russia artwork replaces the earlier flat postcard and is clearly labeled as an imagined landscape. About opens with a boat photograph from Instagram and includes a TIMUN assembly photo, the personal narrative, portraits and a captured GloboExpats work-video still with its original clip link. Both Instagram profiles were visually reviewed in authenticated Chrome. Four photographs have owner-authorized AI-assisted clarity variants; originals are preserved as source records. The viewer shows only the selected photo, with no original comparison controls. AI reconstruction may change fine details. See `docs/PHOTOS-AND-DISPLAYS.md` for photo sources, actual dimensions and the editing prompt, and `docs/CINEMATIC-REFINEMENT.md` for hero artwork details.
 
 Sources, public-display approval and placement are recorded in `public/images/profile/manifest.json`. Update that manifest alongside `src/content/profile.ts` when replacing a photo. Next Image provides responsive formats and sizes; the hero is prioritized. See `docs/REFINEMENT.md`, `PRODUCT.md` and `DESIGN.md` for design decisions and verification.
 

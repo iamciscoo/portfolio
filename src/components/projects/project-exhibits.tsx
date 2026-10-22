@@ -6,11 +6,18 @@ import type { Locale } from "@/i18n/routing";
 import { projects } from "@/content/projects";
 import { text } from "@/lib/localize";
 import { ProjectScene } from "@/components/portfolio/scroll-scenes";
+import { HorizontalShowcase } from "@/components/common/horizontal-showcase";
+import { showcase } from "@/content/showcase";
 
 export async function ProjectExhibits({ locale }: { locale: Locale }) {
   const t = await getTranslations();
   return (
-    <div className="project-exhibits">
+    <HorizontalShowcase
+      className="project-exhibits"
+      label={text(showcase.projects, locale)}
+      previous={text(showcase.previous, locale)}
+      next={text(showcase.next, locale)}
+    >
       {projects.map((project) => (
         <ProjectScene
           key={project.slug}
@@ -30,7 +37,7 @@ export async function ProjectExhibits({ locale }: { locale: Locale }) {
                 alt={`${project.name} — ${t("projects.desktop")}`}
                 width={1440}
                 height={1000}
-                sizes="(max-width: 700px) 88vw, 78vw"
+                sizes="(max-width: 700px) 72vw, (max-width: 1000px) 70vw, 684px"
               />
             </Link>
           }
@@ -40,7 +47,7 @@ export async function ProjectExhibits({ locale }: { locale: Locale }) {
               alt={`${project.name} — ${t("projects.mobile")}`}
               width={390}
               height={844}
-              sizes="(max-width: 700px) 22vw, 17vw"
+              sizes="(max-width: 700px) 20vw, 167px"
             />
           }
         >
@@ -51,12 +58,18 @@ export async function ProjectExhibits({ locale }: { locale: Locale }) {
             <h3 data-sc-cue>{project.name}</h3>
             <p>{text(project.intro, locale)}</p>
           </div>
-          <Link className="text-link" href={`/projects/${project.slug}`}>
-            {t("common.view")}
-            <ArrowUpRight size={19} />
-          </Link>
+          <div className="exhibit-actions">
+            <Link className="text-link" href={`/projects/${project.slug}`}>
+              {t("common.view")}
+              <ArrowUpRight size={17} />
+            </Link>
+            <Link className="text-link" href="/contact?service=business">
+              {text(showcase.build, locale)}
+              <ArrowUpRight size={17} />
+            </Link>
+          </div>
         </ProjectScene>
       ))}
-    </div>
+    </HorizontalShowcase>
   );
 }

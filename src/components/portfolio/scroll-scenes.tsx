@@ -56,28 +56,12 @@ export function ProjectScene({
   desktop: ReactNode;
   phone: ReactNode;
 }) {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "center center"],
-  });
-  const scale = useTransform(scrollYProgress, [0, 1], [0.92, 1]);
-  const y = useTransform(scrollYProgress, [0, 1], [48, 0]);
-  const phoneY = useTransform(scrollYProgress, [0, 1], [78, 0]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [3, -3]);
   return (
-    <article ref={ref} className="project-exhibit" data-sc-act="project">
+    <article className="project-exhibit" data-sc-act="project">
       <div className="exhibit-copy">{children}</div>
       <div className="exhibit-stage" data-sc-stage>
-        <motion.div className="exhibit-desktop" style={{ scale: scale, y: y }}>
-          {desktop}
-        </motion.div>
-        <motion.div
-          className="exhibit-phone"
-          style={{ y: phoneY, rotate: rotate }}
-        >
-          {phone}
-        </motion.div>
+        <div className="exhibit-desktop">{desktop}</div>
+        <div className="exhibit-phone">{phone}</div>
       </div>
     </article>
   );

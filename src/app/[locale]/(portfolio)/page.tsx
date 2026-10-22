@@ -14,6 +14,7 @@ import { ContactBand } from "@/components/common/contact-band";
 import { Reveal } from "@/components/common/reveal";
 import { pageMetadata } from "@/lib/metadata";
 import { text } from "@/lib/localize";
+import { showcase } from "@/content/showcase";
 
 export async function generateMetadata({
   params,
@@ -50,6 +51,13 @@ export default async function Home({
           </div>
         </div>
         <ProjectExhibits locale={locale} />
+        <div className="showcase-offer">
+          <p>{text(showcase.offer, locale)}</p>
+          <Link className="text-link" href="/contact?service=business">
+            {text(showcase.build, locale)}
+            <ArrowUpRight size={17} />
+          </Link>
+        </div>
       </section>
       <Reveal>
         <section className="studio-section">
@@ -67,7 +75,7 @@ export default async function Home({
                 </Link>
               </div>
             </div>
-            <StudioGrid locale={locale} />
+            <StudioGrid locale={locale} compact />
           </div>
         </section>
       </Reveal>

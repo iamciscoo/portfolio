@@ -4,6 +4,7 @@
 @import "./home-notes.css";
 @import "./interactions.css";
 @import "./photo-refinement.css";
+@import "./horizontal-showcase.css";
 h1,
 h2 {
   letter-spacing: -0.04em;

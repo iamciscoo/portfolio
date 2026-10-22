@@ -5,6 +5,8 @@ import { Link } from "@/i18n/navigation";
 import { PageHeading } from "@/components/common/page-heading";
 import { StudioGrid } from "@/components/portfolio/studio-grid";
 import { pageMetadata } from "@/lib/metadata";
+import { showcase } from "@/content/showcase";
+import { text } from "@/lib/localize";
 export async function generateMetadata({
   params,
 }: {
@@ -37,9 +39,9 @@ export default async function Studio({
         <StudioGrid locale={locale} />
         <div className="studio-more">
           <h2>{t("studio.more")}</h2>
-          <p>{t("studio.moreBody")}</p>
-          <Link href="/contact" className="button primary">
-            {t("common.start")} ↗
+          <p>{text(showcase.offer, locale)}</p>
+          <Link href="/contact?service=business" className="button primary">
+            {text(showcase.build, locale)} ↗
           </Link>
         </div>
       </section>

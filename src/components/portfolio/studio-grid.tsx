@@ -5,10 +5,18 @@ import { Link } from "@/i18n/navigation";
 import { demos } from "@/content/demos";
 import type { Locale } from "@/i18n/routing";
 import { text } from "@/lib/localize";
-export async function StudioGrid({ locale }: { locale: Locale }) {
+import { HorizontalShowcase } from "@/components/common/horizontal-showcase";
+import { showcase } from "@/content/showcase";
+export async function StudioGrid({
+  locale,
+  compact = false,
+}: {
+  locale: Locale;
+  compact?: boolean;
+}) {
   const t = await getTranslations();
-  return (
-    <div className="studio-grid" data-sc-act="studio">
+  const tiles = (
+    <>
       {demos.map((demo, index) => (
         <article className={`studio-tile tile-${demo.slug}`} key={demo.slug}>
           <Link href={`/studio/${demo.slug}`} className="studio-image">
@@ -38,6 +46,20 @@ export async function StudioGrid({ locale }: { locale: Locale }) {
           </div>
         </article>
       ))}
+    </>
+  );
+  return compact ? (
+    <HorizontalShowcase
+      className="studio-grid studio-showcase"
+      label={text(showcase.concepts, locale)}
+      previous={text(showcase.previous, locale)}
+      next={text(showcase.next, locale)}
+    >
+      {tiles}
+    </HorizontalShowcase>
+  ) : (
+    <div className="studio-grid" data-sc-act="studio">
+      {tiles}
     </div>
   );
 }

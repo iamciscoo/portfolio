@@ -171,7 +171,10 @@ test("content, project links and photographs remain readable without JavaScript"
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await expect(page.locator(".hero-photo-print img")).toBeVisible();
   await expect(page.locator(".story-chapter")).toHaveCount(0);
-  const project = page.locator(".exhibit-copy").first().getByRole("link");
+  const project = page
+    .locator(".exhibit-copy")
+    .first()
+    .getByRole("link", { name: "View case study", exact: true });
   await project.scrollIntoViewIfNeeded();
   await expect(project).toBeVisible();
   await project.click();

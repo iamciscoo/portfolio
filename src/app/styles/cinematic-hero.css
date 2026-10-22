@@ -164,7 +164,7 @@
 }
 @media (max-width: 900px) {
   .cinematic-hero {
-    min-height: 740px;
+    min-height: 620px;
   }
   .hero-shade {
     background:
@@ -180,10 +180,10 @@
 }
 @media (max-width: 600px) {
   .cinematic-hero {
-    min-height: min(830px, calc(100svh - 76px));
+    min-height: 0;
   }
   .cinematic-inner {
-    padding-block: 24px;
+    padding-block: 20px;
   }
   .cinematic-top {
     align-items: flex-start;
@@ -198,19 +198,20 @@
     flex-shrink: 0;
   }
   .cinematic-hero .personal-hero-copy {
-    padding-block: 55px 40px;
+    padding-block: 28px 26px;
   }
   .cinematic-hero .personal-kicker {
     font-size: 10px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
   .cinematic-hero h1 {
-    font-size: clamp(40px, 10.3vw, 60px);
+    font-size: clamp(36px, 9.8vw, 52px);
   }
   .cinematic-hero .personal-hero-copy > p {
     font-size: 14px;
     max-width: 350px;
-    margin: 22px 0;
+    margin: 18px 0;
+    line-height: 1.75;
   }
   .cinematic-hero .hero-actions {
     gap: 18px;
@@ -227,6 +228,7 @@
   }
   .cinematic-footer {
     gap: 15px;
+    padding-top: 14px;
   }
   .hero-about-link {
     max-width: 100%;

@@ -1,5 +1,7 @@
 # Image provenance
 
+Current presentation: all published photos use WebP and Next Image serves WebP. Personal photo dialogs show just the selected enhanced image, with no Original/Enhanced controls. Originals remain source records. New fictional shop and tour artwork, actual dimensions and complete Imagegen prompts are recorded in `COMPACT-STUDIO.md`.
+
 ## Real projects
 
 `public/images/projects/` contains actual browser screenshots captured 22 October 2026 from the owner-supplied live project URLs. Desktop viewport: 1440×1000. Mobile viewport: 390×844. Screenshots were converted to WebP without changing content. Browser/device frames in the case studies are CSS presentation around these captures.
@@ -11,7 +13,7 @@ The photos, products and testimonials inside these captures belong to those live
 
 ## Personal imagery
 
-Both Instagram profiles were visually reviewed in authenticated Chrome during refinement. Personal photography includes the glasses upload, the just.cisco candid portrait and the i.amcisco TIMUN event portrait. The latest Chrome review retrieved two additional actual photos from just.cisco: a boat portrait and a TIMUN assembly in the Dodoma collection. About opens with the boat image. Four photos have owner-authorized AI-assisted clarity derivatives, preserved alongside originals and labeled with an Original/Enhanced comparison in all five languages. Reconstructed texture and fine details are not additional camera evidence. The assembly photo retains its original motion blur and placard text. See `PHOTOS-AND-DISPLAYS.md` for exact sources, dimensions and the editing prompt.
+Both Instagram profiles were visually reviewed in authenticated Chrome during refinement. Personal photography includes the glasses upload, the just.cisco candid portrait and the i.amcisco TIMUN event portrait. The latest Chrome review retrieved two additional actual photos from just.cisco: a boat portrait and a TIMUN assembly in the Dodoma collection. About opens with the boat image. Four photos have owner-authorized AI-assisted clarity derivatives, preserved alongside original source records; the viewer displays the selected enhanced photo only. Reconstructed texture and fine details are not additional camera evidence. The assembly photo retains its original motion blur and placard text. See `PHOTOS-AND-DISPLAYS.md` for exact sources, dimensions and the editing prompt.
 
 The owner-requested Tanzania–Russia artwork replaced the outdoor upload; the current `journey-cinematic.webp` is 1672 × 941 and labeled as an imagined landscape. Its prompt and source path are in `CINEMATIC-REFINEMENT.md`. A still of the actual GloboExpats work video was captured from its visible player and cropped to exclude Instagram controls and account details; About links to the original clip. The blob video itself was not downloaded or generatively enhanced. The manifest records current sources and placements. WebP conversion strips metadata and CSS supplies crops. No Russia-specific photo location is assumed. The private CV remains outside public assets.
 
