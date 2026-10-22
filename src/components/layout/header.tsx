@@ -3,19 +3,15 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import * as Dialog from "@radix-ui/react-dialog";
 import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { LocaleSwitcher } from "./locale-switcher";
+import { DesktopNav, portfolioLinks } from "./desktop-nav";
+import { motion, useScroll, useSpring } from "motion/react";
 
-const links = [
-  ["about", "/about"],
-  ["projects", "/projects"],
-  ["studio", "/studio"],
-  ["journey", "/journey"],
-  ["services", "/services"],
-] as const;
 export function Header() {
   const t = useTranslations("nav");
-  const pathname = usePathname();
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 180, damping: 35 });
   const [open, setOpen] = useState(false);
   function toggleTheme() {
     const next =
@@ -36,17 +32,7 @@ export function Header() {
         <Link className="wordmark" href="/" aria-label="Cisco — Home">
           cisco<span>*</span>
         </Link>
-        <nav className="desktop-nav" aria-label={t("menu")}>
-          {links.map(([key, url]) => (
-            <Link
-              key={key}
-              href={url}
-              aria-current={pathname.startsWith(url) ? "page" : undefined}
-            >
-              {t(key)}
-            </Link>
-          ))}
-        </nav>
+        <DesktopNav />
         <div className="header-actions">
           <LocaleSwitcher />
           <button
@@ -84,14 +70,16 @@ export function Header() {
                   <X />
                 </Dialog.Close>
                 <nav>
-                  {[["home", "/"], ...links, ["contact", "/contact"]].map(
-                    ([key, url]) => (
-                      <Link href={url} key={key} onClick={() => setOpen(false)}>
-                        {t(key)}
-                        <ArrowUpRight size={20} />
-                      </Link>
-                    ),
-                  )}
+                  {[
+                    ["home", "/"],
+                    ...portfolioLinks,
+                    ["contact", "/contact"],
+                  ].map(([key, url]) => (
+                    <Link href={url} key={key} onClick={() => setOpen(false)}>
+                      {t(key)}
+                      <ArrowUpRight size={20} />
+                    </Link>
+                  ))}
                 </nav>
                 <div className="mobile-languages">
                   <LocaleSwitcher expanded onSwitch={() => setOpen(false)} />
@@ -100,6 +88,11 @@ export function Header() {
             </Dialog.Portal>
           </Dialog.Root>
         </div>
+        <motion.div
+          className="reading-progress"
+          style={{ scaleX: progress }}
+          aria-hidden="true"
+        />
       </header>
     </>
   );

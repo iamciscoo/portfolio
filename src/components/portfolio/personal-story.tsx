@@ -38,8 +38,8 @@ export async function PersonalStory({ locale }: { locale: Locale }) {
                 <h3 data-sc-cue>{text(chapter.title, locale)}</h3>
                 <p>{text(chapter.body, locale)}</p>
                 {index === 2 && (
-                  <Link href="/about" className="text-link">
-                    {t("nav.about")}
+                  <Link href="/projects" className="text-link">
+                    {t("nav.projects")}
                     <ArrowUpRight size={16} />
                   </Link>
                 )}

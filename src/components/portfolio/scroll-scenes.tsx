@@ -18,31 +18,31 @@ export function HeroScene({
     target: ref,
     offset: ["start start", "end start"],
   });
-  const backY = useTransform(scrollYProgress, [0, 1], [0, 65]);
-  const photoY = useTransform(scrollYProgress, [0, 1], [0, 30]);
-  const captionY = useTransform(scrollYProgress, [0, 1], [0, -24]);
-  const copyY = useTransform(scrollYProgress, [0, 1], [0, -15]);
+  const photoY = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const photoScale = useTransform(scrollYProgress, [0, 1], [1.03, 1.16]);
+  const copyY = useTransform(scrollYProgress, [0, 1], [0, -45]);
   return (
-    <section ref={ref} className="personal-hero wrap" data-sc-act="hero">
-      {top}
-      <div className="personal-hero-main">
+    <section ref={ref} className="cinematic-hero" data-sc-act="hero">
+      <motion.div
+        className="hero-photo-print"
+        data-sc-stage
+        style={{ y: photoY, scale: photoScale }}
+      >
+        {photo}
+      </motion.div>
+      <div className="hero-shade" aria-hidden="true" />
+      <div className="cinematic-inner wrap">
+        {top}
         <motion.div className="personal-hero-copy" style={{ y: copyY }}>
           {copy}
         </motion.div>
-        <div className="personal-hero-art" data-sc-stage>
-          <motion.div
-            aria-hidden="true"
-            className="hero-blue-plane"
-            style={{ y: backY }}
-          />
-          <motion.div className="hero-photo-print" style={{ y: photoY }}>
-            {photo}
-          </motion.div>
-          <motion.div className="hero-person-caption" style={{ y: captionY }}>
-            {caption}
-          </motion.div>
-        </div>
+        <div className="cinematic-footer">{caption}</div>
       </div>
+      <motion.div
+        className="hero-bottom-line"
+        aria-hidden="true"
+        style={{ scaleX: scrollYProgress }}
+      />
     </section>
   );
 }

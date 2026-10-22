@@ -4,19 +4,19 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { profile } from "@/content/profile";
-import { personalStory } from "@/content/refinement";
 import { homeNotes } from "@/content/home-notes";
 import { text } from "@/lib/localize";
 import { HeroScene } from "./scroll-scenes";
+import { cinematic } from "@/content/cinematic";
 
 export async function PersonalHero({ locale }: { locale: Locale }) {
   const t = await getTranslations();
   return (
     <HeroScene
       top={
-        <div className="personal-hero-top">
-          <span>{text(personalStory.greeting, locale)}</span>
-          <span>{t("home.location")}</span>
+        <div className="cinematic-top">
+          <span>{text(cinematic.role, locale)}</span>
+          <span className="hero-art-credit">{text(cinematic.art, locale)}</span>
         </div>
       }
       copy={
@@ -39,28 +39,36 @@ export async function PersonalHero({ locale }: { locale: Locale }) {
               {t("common.download")} ↓
             </a>
           )}
-          <p className="hero-person-note">
-            {text(personalStory.heroNote, locale)}
-          </p>
         </>
       }
       photo={
         <Image
           src={profile.photos.hero.src}
-          alt="Illustrated postcard of the journey from Tanzania to Russia along the 39°E meridian"
+          alt={text(cinematic.alt, locale)}
           fill
           loading="eager"
           fetchPriority="high"
-          sizes="(max-width: 700px) 85vw, 38vw"
+          sizes="(max-width: 900px) 1500px, 100vw"
         />
       }
       caption={
         <>
-          <span>Francis Jacob Mwambene</span>
-          <strong>
-            <em>Cisco.</em>
-          </strong>
-          <span>{t("home.location")}</span>
+          <Link className="hero-about-link" href="/about">
+            <Image
+              src={profile.photos.headshot.src}
+              alt=""
+              width={44}
+              height={44}
+            />
+            <span>{text(cinematic.meet, locale)}</span>
+            <ArrowUpRight size={18} />
+          </Link>
+          <a className="hero-scroll-link" href="#selected-work">
+            <span>{text(cinematic.scroll, locale)}</span>
+            <span className="scroll-arrow" aria-hidden="true">
+              ↓
+            </span>
+          </a>
         </>
       }
     />

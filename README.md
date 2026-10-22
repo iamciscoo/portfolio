@@ -11,7 +11,7 @@ npm ci --ignore-scripts
 npm run dev
 ```
 
-Open http://127.0.0.1:3000/en. The supported locales are `/en`, `/ru`, and `/sw`; navigation and demo return links preserve the selected language. `/` negotiates the locale with English as fallback.
+Open http://127.0.0.1:3000/en. The supported locales are `/en`, `/ru`, `/sw`, `/fr` and `/es`; navigation and demo return links preserve the selected language. `/` negotiates the locale with English as fallback. Keep the local preview on port 3000.
 
 To run the production server locally, use `npm run build` followed by `npm start`. Public pages work without email credentials; the inquiry endpoint stays unavailable until its production configuration is complete.
 
@@ -36,14 +36,14 @@ The Playwright configuration uses installed Chrome on Windows. For other systems
 - `src/content/projects.ts`: roles, contributions, case studies and confirmed technology stacks.
 - `src/content/skills.ts`: verified capabilities and an unpublished list of technologies awaiting confirmation.
 - `src/content/services.ts`, `demos.ts`: services and studio catalogue.
-- `src/messages/{en,ru,sw}.json`: UI, metadata and validation copy.
+- `src/messages/{en,ru,sw,fr,es}.json`: UI, metadata and validation copy.
 - `src/demos/<industry>/content.ts`: localized, explicitly fictional demonstration content.
 
-Update content files without changing React components. No CMS or database is required. Localized long-form content uses `{en, ru, sw}` objects with English fallback. Dictionary completeness is tested.
+Update content files without changing React components. No CMS or database is required. Localized long-form content uses complete `{en, ru, sw, fr, es}` objects; the `l` helper requires all five translations. Dictionary completeness is tested.
 
 ### Add authentic photos
 
-The pages preserve the owner-requested Tanzania-to-Russia postcard artwork from the parallel agent. Personal photography includes the glasses upload, a candid portrait, the TIMUN photograph and a captured work-video still showing GloboExpats. The outdoor upload was replaced as requested. Both Instagram profiles were visually inspected in authenticated Chrome; the latest work and city-light videos informed the homepage update. No generated face or altered likeness is used.
+The owner-requested cinematic Tanzania-to-Russia artwork replaces the earlier flat postcard. It is clearly labeled as an imagined landscape. The About page holds the Instagram-inspired personal narrative, candid portrait, TIMUN and glasses photographs, and a captured GloboExpats work-video still with its original clip link. Both Instagram profiles were visually reviewed in authenticated Chrome. Authentic faces and documentary content remain unchanged. See `docs/CINEMATIC-REFINEMENT.md` for the built-in Imagegen prompt, actual artwork dimensions and current design.
 
 Sources, public-display approval and placement are recorded in `public/images/profile/manifest.json`. Update that manifest alongside `src/content/profile.ts` when replacing a photo. Next Image provides responsive formats and sizes; the hero is prioritized. See `docs/REFINEMENT.md`, `PRODUCT.md` and `DESIGN.md` for design decisions and verification.
 
@@ -110,7 +110,7 @@ src/components/              Shared accessible presentation and interactions
 src/content/                 Owner-editable structured content
 src/demos/                   Four fictional brands and shared preview primitives
 src/i18n/                    next-intl routing, navigation and request configuration
-src/messages/                English, Russian and Kiswahili dictionaries
+src/messages/                English, Russian, Kiswahili, French and Spanish dictionaries
 src/lib/                     Metadata, validation, email and rate limiting
 tests/                       Unit/API and browser tests
 public/                      Local fonts, real project captures and concept photography

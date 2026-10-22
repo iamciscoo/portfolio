@@ -13,6 +13,8 @@ The photos, products and testimonials inside these captures belong to those live
 
 Both Instagram profiles were visually reviewed in authenticated Chrome during refinement. Personal photography includes the glasses upload, the just.cisco candid portrait and the i.amcisco TIMUN event portrait. The owner-requested original Tanzania–Russia artwork replaced the outdoor upload. A further Chrome review of the work and city-light videos informed the homepage update. A still of the actual GloboExpats work video was captured from its visible player and cropped to exclude Instagram controls and account details; the site links to the original clip. The blob video itself was not downloaded. See public/images/profile/manifest.json for sources, dimensions and approval. Faces are unchanged; WebP conversion strips metadata and CSS supplies crops. No Russia-specific photo location is assumed. The private CV remains outside public assets.
 
+Latest revision: the flat postcard artwork was replaced with built-in Imagegen's detailed `journey-cinematic.webp` (1672 × 941). It is labeled as an imagined landscape. The personal narrative, work-video still and gallery now live on About. No authentic portrait was generated or retouched. Full prompt, source path and resolution notes are in `CINEMATIC-REFINEMENT.md`; the manifest reflects current placements.
+
 ## Fictional studio concepts
 
 Downloaded from the Unsplash image CDN, resized and saved locally as WebP. These photos illustrate fictional brands and are not representations of Francis, real client commissions, actual FORMWORK projects, or the named fictional model/team members. Retain a provenance record when replacing them.

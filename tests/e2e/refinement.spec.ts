@@ -32,7 +32,6 @@ for (const width of [1440, 1280, 768, 390, 320]) {
       .not.toBe(before);
     await page.screenshot({ path: `${output}/${width}-hero-middle.png` });
     for (const [name, selector] of [
-      ["story", ".story-layout"],
       ["project-desktop-phone", ".exhibit-stage"],
       ["studio", ".studio-grid"],
       ["contact", ".personal-contact"],
@@ -52,6 +51,8 @@ for (const width of [1440, 1280, 768, 390, 320]) {
       ).toBeLessThanOrEqual(width + 1);
     }
     await page.goto("/en/about");
+    await expect(page.locator(".story-chapter")).toHaveCount(3);
+    await expect(page.locator(".work-note-photo img")).toBeVisible();
     const photo = page.getByRole("button", {
       name: /Gallery: Francis wearing glasses/,
     });
@@ -74,7 +75,7 @@ test("language menu supports keyboard, selection, query and hash", async ({
   await expect(
     page.getByRole("menuitemradio", { name: "English", exact: true }),
   ).toHaveAttribute("aria-checked", "true");
-  await expect(page.getByRole("menu").locator(".language-flag")).toHaveCount(3);
+  await expect(page.getByRole("menu").locator(".language-flag")).toHaveCount(5);
   await page.keyboard.press("Escape");
   await expect(trigger).toBeFocused();
   await trigger.click();
@@ -119,8 +120,7 @@ test("reduced motion removes decorative travel and sticky holds", async ({
   await expect(page.locator(".personal-hero-copy")).toBeVisible();
   for (const selector of [
     ".hero-photo-print",
-    ".hero-blue-plane",
-    ".hero-person-caption",
+    ".personal-hero-copy",
     ".exhibit-desktop",
     ".exhibit-phone",
   ]) {
@@ -131,6 +131,7 @@ test("reduced motion removes decorative travel and sticky holds", async ({
         .evaluate((el) => getComputedStyle(el).transform),
     ).toBe("none");
   }
+  await page.goto("/en/about");
   expect(
     await page
       .locator(".story-photo")
@@ -138,6 +139,7 @@ test("reduced motion removes decorative travel and sticky holds", async ({
   ).toBe("relative");
   await fs.mkdir(output, { recursive: true });
   await page.screenshot({ path: `${output}/reduced-opening.png` });
+  await page.goto("/en");
   await page.locator(".exhibit-stage").first().scrollIntoViewIfNeeded();
   await page.screenshot({ path: `${output}/reduced-project.png` });
   expect(errors).toEqual([]);
@@ -168,11 +170,14 @@ test("content, project links and photographs remain readable without JavaScript"
   await page.goto("http://127.0.0.1:3000/en");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await expect(page.locator(".hero-photo-print img")).toBeVisible();
-  await expect(page.locator(".story-chapter")).toHaveCount(3);
+  await expect(page.locator(".story-chapter")).toHaveCount(0);
   const project = page.locator(".exhibit-copy").first().getByRole("link");
   await project.scrollIntoViewIfNeeded();
   await expect(project).toBeVisible();
   await project.click();
   await expect(page).toHaveURL(/\/en\/projects\/globoexpats$/);
+  await page.goto("http://127.0.0.1:3000/en/about");
+  await expect(page.locator(".story-chapter")).toHaveCount(3);
+  await expect(page.locator(".work-note-photo img")).toBeVisible();
   await context.close();
 });

@@ -1,6 +1,6 @@
 import { test, expect } from "./fixtures";
 import AxeBuilder from "@axe-core/playwright";
-const locales = ["en", "ru", "sw"];
+const locales = ["en", "ru", "sw", "fr", "es"];
 test("metadata endpoints bypass locale redirects", async ({ request }) => {
   for (const [path, type] of [
     ["/sitemap.xml", "application/xml"],

@@ -61,7 +61,7 @@ test("phone is optional and invalid formats are explained", async ({
 test("software services and localized templates are available in all locales", async ({
   page,
 }) => {
-  for (const locale of ["en", "ru", "sw"]) {
+  for (const locale of ["en", "ru", "sw", "fr", "es"]) {
     await page.goto(`/${locale}/contact?service=software`);
     await expect(page.locator("#service")).toHaveValue("software");
     await page.locator("#inquiry-template").selectOption("windows");
@@ -86,19 +86,18 @@ for (const width of [1440, 1280, 768, 390, 320])
     await page.setViewportSize({ width, height });
     const errors: string[] = [];
     page.on("pageerror", (error) => errors.push(error.message));
-    for (const locale of ["en", "ru", "sw"]) {
+    for (const locale of ["en", "ru", "sw", "fr", "es"]) {
       await page.goto(`/${locale}`);
       await expect(page.locator(".hero-photo-print img")).toHaveAttribute(
         "src",
-        /journey-art/,
+        /journey-cinematic/,
       );
       if (height === 630) {
         const actions = await page.locator(".hero-actions").boundingBox();
         expect(actions).not.toBeNull();
         expect(actions!.y + actions!.height).toBeLessThanOrEqual(height);
       }
-      await page.locator(".work-notes").scrollIntoViewIfNeeded();
-      await expect(page.locator(".work-note-photo img")).toBeVisible();
+      await expect(page.locator(".work-notes")).toHaveCount(0);
       expect(
         await page.evaluate(() => document.documentElement.scrollWidth),
       ).toBeLessThanOrEqual(width + 1);

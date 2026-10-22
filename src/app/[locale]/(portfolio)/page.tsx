@@ -8,8 +8,6 @@ import { skillGroups } from "@/content/skills";
 import { milestones } from "@/content/experience";
 import { ProjectExhibits } from "@/components/projects/project-exhibits";
 import { PersonalHero } from "@/components/portfolio/personal-hero";
-import { PersonalStory } from "@/components/portfolio/personal-story";
-import { WorkNotes } from "@/components/portfolio/work-notes";
 import { SoftwareSupport } from "@/components/portfolio/software-support";
 import { StudioGrid } from "@/components/portfolio/studio-grid";
 import { ContactBand } from "@/components/common/contact-band";
@@ -37,9 +35,7 @@ export default async function Home({
   return (
     <>
       <PersonalHero locale={locale} />
-      <PersonalStory locale={locale} />
-      <WorkNotes locale={locale} />
-      <section className="work-section wrap">
+      <section id="selected-work" className="work-section wrap">
         <div className="section-heading">
           <div>
             <span className="eyebrow">{t("common.work")}</span>
