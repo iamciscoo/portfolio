@@ -1,6 +1,7 @@
 @import "./language-menu.css";
 @import "./personal-hero.css";
 @import "./personal-story.css";
+@import "./home-notes.css";
 h1,
 h2 {
   letter-spacing: -0.04em;

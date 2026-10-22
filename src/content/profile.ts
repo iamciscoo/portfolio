@@ -14,13 +14,13 @@ export const profile = {
   // Add an approved, privacy-reviewed PDF to public/ and set its URL here.
   cvUrl: null as string | null,
   photos: {
-    hero: { src: "/images/profile/cisco-outdoors.webp", confirmed: true },
+    hero: { src: "/images/profile/journey-art.webp", confirmed: true },
     headshot: {
       src: "/images/profile/cisco-candid.webp",
       confirmed: true,
     },
     lifestyle: {
-      src: "/images/profile/cisco-outdoors.webp",
+      src: "/images/profile/journey-art-wide.webp",
       confirmed: true,
     },
     gallery: [

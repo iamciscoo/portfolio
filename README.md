@@ -43,7 +43,7 @@ Update content files without changing React components. No CMS or database is re
 
 ### Add authentic photos
 
-The refinement uses four authentic photographs: both owner uploads, a candid portrait from just.cisco, and a TIMUN photograph from i.amcisco. Both profiles were visually inspected using the already authenticated Chrome session. No generated face or altered likeness is used.
+The pages preserve the owner-requested Tanzania-to-Russia postcard artwork from the parallel agent. Personal photography includes the glasses upload, a candid portrait, the TIMUN photograph and a captured work-video still showing GloboExpats. The outdoor upload was replaced as requested. Both Instagram profiles were visually inspected in authenticated Chrome; the latest work and city-light videos informed the homepage update. No generated face or altered likeness is used.
 
 Sources, public-display approval and placement are recorded in `public/images/profile/manifest.json`. Update that manifest alongside `src/content/profile.ts` when replacing a photo. Next Image provides responsive formats and sizes; the hero is prioritized. See `docs/REFINEMENT.md`, `PRODUCT.md` and `DESIGN.md` for design decisions and verification.
 
@@ -60,6 +60,10 @@ Case studies use the public [GloboExpats](https://globoexpats.com/), its [team p
 Studio concepts are fictional, with illustrative stock photography. They do not claim to be paying clients. Their forms validate and preview requests locally, without storage, email or real reservations. Photo origins are recorded in `docs/ASSETS.md`.
 
 ## Contact email
+
+The inquiry form includes an optional phone/WhatsApp number and five editable brief templates. Windows installation, software troubleshooting and game setup are available alongside web/product services. Selecting a template previews it; applying it changes only the service and brief, with an explicit replacement label when a brief already exists. Both HTML and plain-text inquiry emails include a supplied phone number. Numbers are validated on the client and server and are not written to browser storage.
+
+Browser regression tests intercept contact POSTs so a configured local Resend account cannot send test messages. Unit/API tests use provider doubles. See `docs/SOFTWARE-INQUIRIES.md` for the latest verification and the one sample inquiry accepted before this safeguard was added.
 
 Create a new `.env.local` manually from `.env.example`; never overwrite an existing environment file. Set:
 

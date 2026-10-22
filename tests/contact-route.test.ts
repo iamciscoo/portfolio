@@ -43,6 +43,25 @@ beforeEach(() => {
 });
 afterEach(() => vi.unstubAllEnvs());
 describe("contact HTTP contract", () => {
+  it("passes an optional phone and software service into both provider email formats", async () => {
+    mocks.send.mockResolvedValue({
+      error: null,
+      data: { id: "phone-test-id" },
+    });
+    const input = { ...valid, phone: "+255 712 345 678", service: "gaming" };
+    expect((await POST(request(input))).status).toBe(200);
+    const email = mocks.send.mock.calls[0][0];
+    expect(email.subject).toContain("Game installation");
+    expect(email.html).toContain(input.phone);
+    expect(email.text).toContain(`Phone: ${input.phone}`);
+    expect(email.replyTo).toBe(valid.email);
+  });
+  it("rejects an invalid phone before calling the provider", async () => {
+    expect(
+      (await POST(request({ ...valid, phone: "email me instead" }))).status,
+    ).toBe(400);
+    expect(mocks.send).not.toHaveBeenCalled();
+  });
   it("accepts the browser Host in development when no canonical origin is configured", async () => {
     vi.stubEnv("NODE_ENV", "development");
     vi.stubEnv("NEXT_PUBLIC_SITE_URL", "");

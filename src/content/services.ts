@@ -97,6 +97,60 @@ export const services = [
     ),
   },
   {
+    id: "windows",
+    title: l(
+      "Windows installation & setup",
+      "Установка и настройка Windows",
+      "Usakinishaji na usanidi wa Windows",
+    ),
+    body: l(
+      "A clean Windows installation or a fresh start for an existing PC, with drivers, updates and essential setup.",
+      "Чистая установка Windows или новая настройка компьютера: драйверы, обновления и необходимые программы.",
+      "Usakinishaji mpya wa Windows au kuandaa upya kompyuta, pamoja na viendeshi, masasisho na mipangilio muhimu.",
+    ),
+    deliverables: l(
+      "Windows installation · Driver setup · Updates · File-backup planning",
+      "Установка Windows · Драйверы · Обновления · План резервного копирования",
+      "Windows · Viendeshi · Masasisho · Mpango wa kuhifadhi faili",
+    ),
+  },
+  {
+    id: "software",
+    title: l(
+      "Software setup & troubleshooting",
+      "Установка и поддержка программ",
+      "Usanidi na utatuzi wa programu",
+    ),
+    body: l(
+      "Help installing everyday applications, resolving software errors and getting a computer ready for work or study.",
+      "Помощь с установкой приложений, устранением ошибок и подготовкой компьютера к работе или учёбе.",
+      "Msaada wa kusakinisha programu, kutatua hitilafu na kuandaa kompyuta kwa kazi au masomo.",
+    ),
+    deliverables: l(
+      "Application installation · Configuration · Software troubleshooting",
+      "Установка приложений · Настройка · Устранение ошибок",
+      "Usakinishaji wa programu · Mipangilio · Utatuzi wa hitilafu",
+    ),
+  },
+  {
+    id: "gaming",
+    title: l(
+      "Game installation & PC setup",
+      "Установка игр и настройка ПК",
+      "Usakinishaji wa michezo na usanidi wa PC",
+    ),
+    body: l(
+      "Get your games installed and configured, with help for launch errors, required components and controller setup.",
+      "Установка и настройка игр, помощь с ошибками запуска, нужными компонентами и подключением контроллера.",
+      "Usakinishaji na mipangilio ya michezo, msaada kwa hitilafu za kuanzisha, vipengele vinavyohitajika na vidhibiti.",
+    ),
+    deliverables: l(
+      "Game installation · Launch troubleshooting · Drivers & controllers",
+      "Установка игр · Ошибки запуска · Драйверы и контроллеры",
+      "Usakinishaji wa michezo · Hitilafu za kuanza · Viendeshi na vidhibiti",
+    ),
+  },
+  {
     id: "consultation",
     title: l(
       "Product & technical guidance",

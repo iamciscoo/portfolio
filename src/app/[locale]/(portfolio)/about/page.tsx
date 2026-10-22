@@ -97,11 +97,7 @@ export default async function About({
         <div className="about-lifestyle">
           <Image
             src={profile.photos.lifestyle.src}
-            alt={
-              profile.photos.lifestyle.confirmed
-                ? `${profile.shortName} outdoors in evening sunlight`
-                : t("home.portraitNote")
-            }
+            alt="Illustrated postcard of the journey from Tanzania to Russia along the 39°E meridian"
             fill
             sizes="90vw"
           />

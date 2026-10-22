@@ -1,18 +1,24 @@
 {
   "reviewedOn": "2026-10-22",
   "approvalBasis": "Owner explicitly requested selecting and publicly using his attached and accessible Instagram photographs in this portfolio.",
-  "processing": "Orientation correction and WebP encoding; metadata stripped. Responsive crops use CSS and Next Image. No face generation, facial alteration, retouching or background replacement.",
+  "processing": "Owner photographs: orientation correction and WebP encoding; metadata stripped. journey-art is an original SVG illustration created at the owner's request (no likeness used), rasterized with Sharp. Responsive crops use CSS and Next Image. No face generation, facial alteration, retouching or background replacement.",
   "images": [
     {
-      "file": "cisco-outdoors.webp",
-      "source": "Owner upload: WhatsApp Image 2026-10-22 at 17.10.11.jpeg",
-      "width": 1080,
-      "height": 1080,
-      "placement": [
-        "Homepage hero",
-        "About lifestyle"
-      ],
-      "captionLimit": "Outdoors in evening sunlight; no specific location established.",
+      "file": "journey-art.webp",
+      "source": "Original SVG illustration (journey-art.svg in this folder), created 2026-10-22 at the owner's request to replace the owner's outdoors photograph.",
+      "width": 1620,
+      "height": 2160,
+      "placement": ["Homepage hero"],
+      "captionLimit": "Original artwork, no photographic likeness.",
+      "approvedForPublicDisplay": true
+    },
+    {
+      "file": "journey-art-wide.webp",
+      "source": "Original SVG illustration (journey-art-wide.svg in this folder), landscape variant created 2026-10-22 at the owner's request.",
+      "width": 3240,
+      "height": 1640,
+      "placement": ["About lifestyle"],
+      "captionLimit": "Original artwork, no photographic likeness.",
       "approvedForPublicDisplay": true
     },
     {
@@ -20,9 +26,7 @@
       "source": "Owner upload: WhatsApp Image 2026-10-22 at 17.10.12.jpeg",
       "width": 810,
       "height": 1080,
-      "placement": [
-        "About personal gallery"
-      ],
+      "placement": ["About personal gallery"],
       "captionLimit": "Candid close-up wearing glasses.",
       "approvedForPublicDisplay": true
     },
@@ -45,12 +49,18 @@
       "source": "https://www.instagram.com/i.amcisco/p/DM2G1E3o8Jy/",
       "width": 720,
       "height": 960,
-      "placement": [
-        "Journey introduction",
-        "About personal gallery"
-      ],
+      "placement": ["Journey introduction", "About personal gallery"],
       "captionLimit": "TIMUN, Tanzania, 2025; post caption and event frame support this description.",
       "approvedForPublicDisplay": true
+    },
+    {
+      "file": "cisco-work-video-still.webp",
+      "source": "https://www.instagram.com/just.cisco/p/Dc5gNH_gKNEmMgPZ_0TybTpHbm4GSFgkMcbhEM0/",
+      "width": 400,
+      "height": 570,
+      "placement": ["Homepage behind-the-build section"],
+      "approvedForPublicDisplay": true,
+      "captionLimit": "Still captured from the owner video showing GloboExpats on his monitor. Cropped from a Chrome screenshot to exclude Instagram controls, comments and account details. Video and city-light video visually reviewed; blob video download unsupported. No audio republished."
     }
   ]
 }

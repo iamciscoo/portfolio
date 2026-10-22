@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import { createHash } from "node:crypto";
 import { contactSchema } from "@/lib/contact-schema";
-import { inquiryEmail } from "@/lib/inquiry-email";
+import { inquiryEmail, inquiryText } from "@/lib/inquiry-email";
 import { allowInquiry } from "@/lib/rate-limit";
 import { services } from "@/content/services";
 export const runtime = "nodejs";
@@ -96,7 +96,7 @@ export async function POST(request: Request) {
         replyTo: input.email,
         subject: `New Portfolio Inquiry — ${service.title.en}`,
         html: inquiryEmail(input),
-        text: `${input.name}\n${input.email}\n${input.company || ""}\n${service.title.en}\nBudget: ${input.budget}\nTimeline: ${input.timeline}\nLanguage: ${input.locale}\nConsent: granted\n\n${input.description}`,
+        text: inquiryText(input),
       },
       { idempotencyKey },
     );

@@ -7,6 +7,9 @@ export const serviceIds = [
   "redesign",
   "integration",
   "consultation",
+  "windows",
+  "software",
+  "gaming",
 ] as const;
 const singleLine = (max: number) =>
   z
@@ -22,6 +25,19 @@ export const contactSchema = z
     name: singleLine(100).pipe(z.string().min(2, "required")),
     email: z.email("invalidEmail").max(254),
     company: singleLine(150).optional(),
+    phone: z
+      .string()
+      .trim()
+      .max(40, "invalidPhone")
+      .refine(
+        (value) =>
+          value === "" ||
+          (/^\+?[0-9 ().-]+$/.test(value) &&
+            value.replace(/\D/g, "").length >= 7 &&
+            value.replace(/\D/g, "").length <= 15),
+        "invalidPhone",
+      )
+      .optional(),
     service: z.enum(serviceIds),
     budget: z.enum(["discuss", "short", "medium", "large"]).optional(),
     timeline: z.enum(["discuss", "soon", "quarter", "flexible"]).optional(),

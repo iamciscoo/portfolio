@@ -1,0 +1,62 @@
+.inquiry-templates {
+  margin: 28px 0 32px;
+  padding: 23px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.inquiry-templates > label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 9px;
+}
+.inquiry-templates > p {
+  font-size: 12px;
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+.inquiry-templates select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 13px;
+}
+.template-preview {
+  padding-top: 20px;
+}
+.template-preview > p {
+  white-space: pre-line;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--text);
+}
+.template-preview > button {
+  margin-top: 18px;
+  background: transparent;
+  color: var(--text);
+  border-top: 0;
+  border-inline: 0;
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.6;
+  min-height: 44px;
+}
+.template-preview > small,
+.field-help {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 10px;
+}
+@media (max-width: 600px) {
+  .inquiry-templates {
+    padding: 18px;
+  }
+  .inquiry-templates select {
+    font-size: 16px;
+  }
+}

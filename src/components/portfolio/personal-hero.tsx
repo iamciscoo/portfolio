@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { profile } from "@/content/profile";
 import { personalStory } from "@/content/refinement";
+import { homeNotes } from "@/content/home-notes";
 import { text } from "@/lib/localize";
 import { HeroScene } from "./scroll-scenes";
 
@@ -21,8 +22,8 @@ export async function PersonalHero({ locale }: { locale: Locale }) {
       copy={
         <>
           <span className="personal-kicker">{t("home.eyebrow")}</span>
-          <h1 data-sc-cue>{text(personalStory.heroTitle, locale)}</h1>
-          <p>{t("home.intro")}</p>
+          <h1 data-sc-cue>{text(homeNotes.title, locale)}</h1>
+          <p>{text(homeNotes.intro, locale)}</p>
           <div className="hero-actions">
             <Link href="/projects" className="button primary">
               {t("common.explore")}
@@ -46,7 +47,7 @@ export async function PersonalHero({ locale }: { locale: Locale }) {
       photo={
         <Image
           src={profile.photos.hero.src}
-          alt={profile.name + " outdoors in the evening sun"}
+          alt="Illustrated postcard of the journey from Tanzania to Russia along the 39°E meridian"
           fill
           loading="eager"
           fetchPriority="high"

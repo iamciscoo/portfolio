@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
@@ -12,6 +12,9 @@ import {
 import { services } from "@/content/services";
 import type { Locale } from "@/i18n/routing";
 import { text } from "@/lib/localize";
+import { ContactDetails } from "./contact-details";
+import { InquiryTemplates } from "./inquiry-templates";
+import "./inquiry-templates.css";
 export function InquiryForm({ initialService }: { initialService?: string }) {
   const locale = useLocale() as Locale;
   const t = useTranslations("form");
@@ -23,6 +26,8 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
     register,
     handleSubmit,
     setValue,
+    control,
+    setFocus,
     formState: { errors, isSubmitting },
   } = useForm<ContactInput>({
     resolver: zodResolver(contactSchema),
@@ -30,6 +35,7 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
       name: "",
       email: "",
       company: "",
+      phone: "",
       service: serviceIds.find((s) => s === initialService) || "business",
       budget: "discuss",
       timeline: "discuss",
@@ -40,13 +46,17 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
       requestId: "00000000-0000-4000-8000-000000000000",
     },
   });
+  const description = useWatch({ control, name: "description" });
   const error = (key: keyof ContactInput) =>
     errors[key] ? (
       <span role="alert" className="field-error" id={`${key}-error`}>
         {t(
-          ["invalidEmail", "descriptionError", "consentError"].includes(
-            errors[key]?.message || "",
-          )
+          [
+            "invalidEmail",
+            "invalidPhone",
+            "descriptionError",
+            "consentError",
+          ].includes(errors[key]?.message || "")
             ? errors[key]!.message!
             : "required",
         )}
@@ -93,44 +103,19 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
     >
       <span className="eyebrow">{t("step")}</span>
       <p>{t("detail")}</p>
+      <InquiryTemplates
+        hasBrief={!!description.trim()}
+        onApply={(service, brief) => {
+          setValue("service", service, { shouldDirty: true });
+          setValue("description", brief, {
+            shouldDirty: true,
+            shouldValidate: true,
+          });
+          setFocus("description");
+        }}
+      />
       <div className="form-grid">
-        <div className="form-field">
-          <label htmlFor="name">{t("name")} *</label>
-          <input
-            id="name"
-            autoComplete="name"
-            placeholder={t("namePlaceholder")}
-            {...register("name")}
-            aria-invalid={!!errors.name}
-            aria-describedby={errors.name ? "name-error" : undefined}
-          />
-          {error("name")}
-        </div>
-        <div className="form-field">
-          <label htmlFor="email">{common("email")} *</label>
-          <input
-            id="email"
-            type="email"
-            autoComplete="email"
-            placeholder="you@company.com"
-            {...register("email")}
-            aria-invalid={!!errors.email}
-            aria-describedby={errors.email ? "email-error" : undefined}
-          />
-          {error("email")}
-        </div>
-        <div className="form-field full">
-          <label htmlFor="company">
-            {t("company")} <span>({common("optional")})</span>
-          </label>
-          <input
-            id="company"
-            autoComplete="organization"
-            {...register("company")}
-            maxLength={150}
-          />
-          {error("company")}
-        </div>
+        <ContactDetails register={register} errors={errors} error={error} />
         <div className="form-field full">
           <label htmlFor="service">{t("service")} *</label>
           <select id="service" {...register("service")}>

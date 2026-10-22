@@ -11,7 +11,7 @@ The photos, products and testimonials inside these captures belong to those live
 
 ## Personal imagery
 
-Both Instagram profiles were visually reviewed in authenticated Chrome during refinement. Four real photos are used: two owner uploads, the just.cisco candid portrait and the i.amcisco TIMUN event portrait. See public/images/profile/manifest.json for sources, placements, dimensions and public-display approval. Faces are unchanged; WebP conversion strips metadata and CSS supplies crops. The workstation video cover was viewed but not downloaded successfully and is not published. No Russia-specific photo location is assumed. The private CV remains outside public assets.
+Both Instagram profiles were visually reviewed in authenticated Chrome during refinement. Personal photography includes the glasses upload, the just.cisco candid portrait and the i.amcisco TIMUN event portrait. The owner-requested original Tanzania–Russia artwork replaced the outdoor upload. A further Chrome review of the work and city-light videos informed the homepage update. A still of the actual GloboExpats work video was captured from its visible player and cropped to exclude Instagram controls and account details; the site links to the original clip. The blob video itself was not downloaded. See public/images/profile/manifest.json for sources, dimensions and approval. Faces are unchanged; WebP conversion strips metadata and CSS supplies crops. No Russia-specific photo location is assumed. The private CV remains outside public assets.
 
 ## Fictional studio concepts
 
