@@ -30,6 +30,18 @@ export function LanguageFlag({ locale }: { locale: Locale }) {
             <path fill="#1948a3" d="M0 6.67h30v6.67H0z" />
             <path fill="#d52c32" d="M0 13.33h30V20H0z" />
           </>
+        ) : locale === "fr" ? (
+          <>
+            <path fill="#fff" d="M0 0h30v20H0z" />
+            <path fill="#153c91" d="M0 0h10v20H0z" />
+            <path fill="#e53b43" d="M20 0h10v20H20z" />
+          </>
+        ) : locale === "es" ? (
+          <>
+            <path fill="#b51e35" d="M0 0h30v20H0z" />
+            <path fill="#ffcf43" d="M0 5h30v10H0z" />
+            <path fill="#b51e35" d="M8 8h3v5H8z" />
+          </>
         ) : (
           <>
             <path fill="#22a95c" d="M0 0h30v20H0z" />

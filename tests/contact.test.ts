@@ -58,7 +58,7 @@ describe("inquiry boundary", () => {
       [...serviceIds].sort(),
     );
     for (const preset of inquiryPresets)
-      for (const locale of ["en", "ru", "sw"] as const) {
+      for (const locale of ["en", "ru", "sw", "fr", "es"] as const) {
         expect(
           contactSchema.safeParse({
             ...validInquiry,

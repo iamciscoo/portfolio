@@ -171,6 +171,8 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
             <option value="en">English</option>
             <option value="ru">Русский</option>
             <option value="sw">Kiswahili</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
           </select>
         </div>
         <div className="honeypot" aria-hidden="true">

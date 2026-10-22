@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { locales } from "@/i18n/routing";
 export const serviceIds = [
   "business",
   "personal",
@@ -46,7 +47,7 @@ export const contactSchema = z
       .trim()
       .min(30, "descriptionError")
       .max(5000, "descriptionError"),
-    locale: z.enum(["en", "ru", "sw"]),
+    locale: z.enum(locales),
     consent: z.boolean().refine((value) => value, "consentError"),
     website: z.string().max(0),
     requestId: z.uuid(),

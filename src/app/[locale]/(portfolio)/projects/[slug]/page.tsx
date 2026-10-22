@@ -3,7 +3,7 @@ import Script from "next/script";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { isLocale } from "@/i18n/routing";
+import { isLocale, locales } from "@/i18n/routing";
 import { projects } from "@/content/projects";
 import { ImageGallery } from "@/components/common/image-gallery";
 import { ContactBand } from "@/components/common/contact-band";
@@ -30,7 +30,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}/projects/${slug}`,
       languages: Object.fromEntries(
-        ["en", "ru", "sw"].map((lang) => [lang, `/${lang}/projects/${slug}`]),
+        locales.map((lang) => [lang, `/${lang}/projects/${slug}`]),
       ),
     },
     openGraph: {

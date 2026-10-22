@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { isLocale } from "@/i18n/routing";
+import { isLocale, locales } from "@/i18n/routing";
 import { demos } from "@/content/demos";
 import { text } from "@/lib/localize";
 import { DemoBar } from "@/demos/shared/demo-bar";
@@ -34,7 +34,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}/studio/${slug}`,
       languages: Object.fromEntries(
-        ["en", "ru", "sw"].map((lang) => [lang, `/${lang}/studio/${slug}`]),
+        locales.map((lang) => [lang, `/${lang}/studio/${slug}`]),
       ),
     },
     openGraph: {

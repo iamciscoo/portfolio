@@ -9,6 +9,8 @@ export const demos = [
       "Seasonal dining, slow evenings, and a table worth coming back to.",
       "Сезонная кухня, неспешные вечера и столик, к которому хочется вернуться.",
       "Chakula cha msimu, jioni tulivu na meza ya kurudia.",
+      "Cuisine de saison, soirées tranquilles et une table où l’on aime revenir.",
+      "Cocina de temporada, veladas sin prisa y una mesa a la que apetece volver.",
     ),
   },
   {
@@ -20,6 +22,8 @@ export const demos = [
       "An editorial world for a model with a point of view.",
       "Редакционный взгляд на портфолио модели с характером.",
       "Ulimwengu wa mitindo kwa mwanamitindo mwenye mtazamo wake.",
+      "Un univers de mode pour un mannequin au regard singulier.",
+      "Un universo editorial para una modelo con mirada propia.",
     ),
   },
   {
@@ -31,6 +35,8 @@ export const demos = [
       "Precision, purpose, and places built to last.",
       "Точность, смысл и пространства на долгие годы.",
       "Usahihi, kusudi na majengo ya kudumu.",
+      "Précision, sens et espaces conçus pour durer.",
+      "Precisión, propósito y espacios hechos para durar.",
     ),
   },
   {
@@ -42,6 +48,8 @@ export const demos = [
       "Clear thinking for the decisions that shape what comes next.",
       "Ясное мышление для решений, определяющих будущее.",
       "Fikra zilizo wazi kwa maamuzi yanayounda hatua inayofuata.",
+      "Des idées claires pour les décisions qui dessinent la suite.",
+      "Ideas claras para las decisiones que definen el futuro.",
     ),
   },
 ] as const;

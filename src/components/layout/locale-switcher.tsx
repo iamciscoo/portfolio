@@ -11,6 +11,8 @@ const languages = [
   { locale: "en", name: "English", code: "EN" },
   { locale: "ru", name: "Русский", code: "RU" },
   { locale: "sw", name: "Kiswahili", code: "SW" },
+  { locale: "fr", name: "Français", code: "FR" },
+  { locale: "es", name: "Español", code: "ES" },
 ] as const;
 
 export function LocaleSwitcher({
