@@ -41,7 +41,7 @@ export default async function About({
         <figure>
           <ImageGallery
             src={profile.photos.boat.src}
-            originalSrc={profile.photos.boat.originalSrc}
+
             alt={text(profile.photos.boat.alt, locale)}
             width={profile.photos.boat.width}
             height={profile.photos.boat.height}
@@ -92,9 +92,6 @@ export default async function About({
             <figure key={photo.src}>
               <ImageGallery
                 src={photo.src}
-                originalSrc={
-                  "originalSrc" in photo ? photo.originalSrc : undefined
-                }
                 alt={text(photo.alt, locale)}
                 width={photo.width}
                 height={photo.height}

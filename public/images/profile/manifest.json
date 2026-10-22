@@ -1,16 +1,14 @@
 {
   "reviewedOn": "2026-10-22",
   "approvalBasis": "Owner explicitly requested selecting and publicly using his attached and accessible Instagram photographs in this portfolio.",
-  "processing": "Owner-requested AI-assisted clarity restoration for four personal photos, saved as separate enhanced files. Original photos remain available in comparison viewers. AI may reconstruct fine details; the original remains the reference. New event image uses WebP conversion only. Cinematic artwork is unchanged.",
+  "processing": "Owner-requested AI-assisted clarity restoration for four personal photos, saved as separate enhanced WebP files. Original source files are retained for provenance and are not shown in the gallery. AI may reconstruct fine details; the original remains the reference. The event photo uses WebP conversion only. The viewer displays only the selected photo.",
   "images": [
     {
       "file": "journey-cinematic.webp",
       "source": "Built-in Imagegen; full prompt and source path in docs/CINEMATIC-REFINEMENT.md",
       "width": 1672,
       "height": 941,
-      "placement": [
-        "Homepage cinematic hero"
-      ],
+      "placement": ["Homepage cinematic hero"],
       "captionLimit": "Imagined Tanzania-to-Russia landscape; not a photograph or literal geographic depiction.",
       "approvedForPublicDisplay": true
     },
@@ -19,9 +17,7 @@
       "source": "Owner upload: WhatsApp Image 2026-10-22 at 17.10.12.jpeg",
       "width": 810,
       "height": 1080,
-      "placement": [
-        "Original photo comparison viewer"
-      ],
+      "placement": ["Retained source asset; not shown in the gallery"],
       "captionLimit": "Candid close-up wearing glasses.",
       "approvedForPublicDisplay": true
     },
@@ -30,9 +26,7 @@
       "source": "https://www.instagram.com/just.cisco/p/DeExbaBAPhCbuBgekkSXS2JjvxGmRjrS69gIFo0/",
       "width": 720,
       "height": 960,
-      "placement": [
-        "Original photo comparison viewer"
-      ],
+      "placement": ["Retained source asset; not shown in the gallery"],
       "captionLimit": "Indoor portrait in a white T-shirt; no specific location established.",
       "approvedForPublicDisplay": true
     },
@@ -41,9 +35,7 @@
       "source": "https://www.instagram.com/i.amcisco/p/DM2G1E3o8Jy/",
       "width": 720,
       "height": 960,
-      "placement": [
-        "Original photo comparison viewer"
-      ],
+      "placement": ["Retained source asset; not shown in the gallery"],
       "captionLimit": "TIMUN, Tanzania, 2025; post caption and event frame support this description.",
       "approvedForPublicDisplay": true
     },
@@ -52,9 +44,7 @@
       "source": "https://www.instagram.com/just.cisco/p/Dc5gNH_gKNEmMgPZ_0TybTpHbm4GSFgkMcbhEM0/",
       "width": 400,
       "height": 570,
-      "placement": [
-        "About behind-the-build section"
-      ],
+      "placement": ["About behind-the-build section"],
       "approvedForPublicDisplay": true,
       "captionLimit": "Still captured from the owner video showing GloboExpats on his monitor. Cropped from a Chrome screenshot to exclude Instagram controls, comments and account details. Video and city-light video visually reviewed; blob video download unsupported. No audio republished."
     },
@@ -63,9 +53,7 @@
       "source": "https://www.instagram.com/just.cisco/p/DQUvsETgDE22V2USaZgOfCBy46cTHC-439P3fU0/?img_index=2",
       "width": 1080,
       "height": 609,
-      "placement": [
-        "Original boat-photo comparison"
-      ],
+      "placement": ["Retained source asset; not shown in the gallery"],
       "approvedForPublicDisplay": true,
       "captionLimit": "Owner on a boat in an orange life jacket; no precise geographic location is claimed."
     },
@@ -74,9 +62,7 @@
       "source": "https://www.instagram.com/just.cisco/p/DM3EVlDCb_n3_gL8lQ_QmQWFfmpttDouHFut140/?img_index=9",
       "width": 1440,
       "height": 1920,
-      "placement": [
-        "About personal gallery"
-      ],
+      "placement": ["About personal gallery"],
       "approvedForPublicDisplay": true,
       "captionLimit": "Country placards raised at TIMUN. The owner post identifies the Dodoma collection. No new role, award or office is claimed."
     },
@@ -102,9 +88,7 @@
       "originalFile": "cisco-glasses.webp",
       "width": 1086,
       "height": 1448,
-      "placement": [
-        "About gallery"
-      ],
+      "placement": ["About gallery"],
       "aiEnhanced": true,
       "processing": "Built-in Imagegen clarity restoration; source identity, framing and scene used as constraints. Original is retained and selectable in the viewer. Fine detail can be reconstructed by AI.",
       "approvedForPublicDisplay": true
@@ -115,10 +99,7 @@
       "originalFile": "cisco-timun.webp",
       "width": 1086,
       "height": 1448,
-      "placement": [
-        "About gallery",
-        "Journey introduction"
-      ],
+      "placement": ["About gallery", "Journey introduction"],
       "aiEnhanced": true,
       "processing": "Built-in Imagegen clarity restoration; source identity, framing and scene used as constraints. Original is retained and selectable in the viewer. Fine detail can be reconstructed by AI.",
       "approvedForPublicDisplay": true
@@ -129,9 +110,7 @@
       "originalFile": "cisco-boat-original.webp",
       "width": 1670,
       "height": 941,
-      "placement": [
-        "About opening photograph"
-      ],
+      "placement": ["About opening photograph"],
       "aiEnhanced": true,
       "processing": "Built-in Imagegen clarity restoration; source identity, framing and scene used as constraints. Original is retained and selectable in the viewer. Fine detail can be reconstructed by AI.",
       "approvedForPublicDisplay": true

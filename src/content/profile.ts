@@ -19,14 +19,12 @@ export const profile = {
     hero: { src: "/images/profile/journey-cinematic.webp", confirmed: true },
     headshot: {
       src: "/images/profile/cisco-candid-enhanced.webp",
-      originalSrc: "/images/profile/cisco-candid.webp",
       width: 1086,
       height: 1448,
       confirmed: true,
     },
     boat: {
       src: "/images/profile/cisco-boat-enhanced.webp",
-      originalSrc: "/images/profile/cisco-boat-original.webp",
       width: 1670,
       height: 941,
       alt: l(
@@ -70,7 +68,6 @@ export const profile = {
       },
       {
         src: "/images/profile/cisco-timun-enhanced.webp",
-        originalSrc: "/images/profile/cisco-timun.webp",
         width: 1086,
         height: 1448,
         alt: l(
@@ -91,7 +88,6 @@ export const profile = {
       },
       {
         src: "/images/profile/cisco-glasses-enhanced.webp",
-        originalSrc: "/images/profile/cisco-glasses.webp",
         width: 1086,
         height: 1448,
         alt: l(

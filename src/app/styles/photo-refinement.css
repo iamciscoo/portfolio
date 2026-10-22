@@ -46,36 +46,6 @@
 .about-moments figure:nth-child(2) {
   margin-top: 65px;
 }
-.photo-version {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin: 8px 45px 10px;
-}
-.photo-version button {
-  min-height: 44px;
-  padding: 8px 18px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  background: transparent;
-  color: var(--text);
-}
-.photo-version button[aria-pressed="true"] {
-  background: var(--button);
-  color: var(--button-text);
-  border-color: var(--button);
-}
-.photo-version-note {
-  text-align: center;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.6;
-  margin: 0 auto 15px;
-  max-width: 65ch;
-}
-.comparison-dialog > img {
-  max-height: calc(85dvh - 145px);
-}
 .project-card .project-visual {
   padding: 0;
   aspect-ratio: auto;
@@ -126,16 +96,6 @@
   }
   .about-moments figure:nth-child(2) {
     margin-top: 0;
-  }
-  .photo-version {
-    margin-inline: 30px;
-  }
-  .photo-version button {
-    padding-inline: 12px;
-    font-size: 13px;
-  }
-  .photo-version-note {
-    font-size: 11px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

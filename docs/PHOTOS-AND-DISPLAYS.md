@@ -1,5 +1,7 @@
 # Personal photos and frameless project displays
 
+Historical revision: the owner subsequently requested horizontal homepage showcases and removal of original comparisons. The current viewer shows only the selected photograph, with originals retained as source records. See `COMPACT-STUDIO.md` for current behavior.
+
 ## Scope
 
 The owner requested removing the coloured mats behind real project showcases, adding genuinely new photographs from `just.cisco`, and enhancing the current photographs. The homepage now shows browser and phone displays directly on the page. Their natural height is retained instead of clipping the bottom of the desktop capture. The project listing uses the same treatment. Motion, case-study links and mobile displays remain.

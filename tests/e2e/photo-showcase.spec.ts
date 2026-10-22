@@ -28,7 +28,7 @@ test("website showcases have transparent stages and complete browser displays", 
   await expect(page).toHaveURL(/\/en\/projects\/globoexpats$/);
 });
 
-test("About opens with a new Instagram photo and allows original/enhanced comparison", async ({
+test("About uses new Instagram photos without original comparison controls", async ({
   page,
 }) => {
   await page.goto("/en/about");
@@ -40,25 +40,18 @@ test("About opens with a new Instagram photo and allows original/enhanced compar
   await expect(
     page.locator('.photo-collection-grid img[src*="cisco-timun-assembly"]'),
   ).toHaveCount(1);
-  await expect(
-    page.locator('.photo-collection-grid img[src*="-enhanced"]'),
-  ).toHaveCount(2);
   await photo.click();
   const dialog = page.getByRole("dialog");
-  await expect(
-    dialog.getByRole("button", { name: "Enhanced", exact: true }),
-  ).toHaveAttribute("aria-pressed", "true");
-  await dialog.getByRole("button", { name: "Original", exact: true }).click();
-  await expect(dialog.locator("img")).toHaveAttribute(
-    "src",
-    /cisco-boat-original/,
-  );
-  await expect(dialog.getByRole("status")).toHaveText("Original photograph.");
-  await dialog.getByRole("button", { name: "Enhanced", exact: true }).click();
+  await dialog
+    .locator("img")
+    .evaluate((image: HTMLImageElement) => image.decode());
   await expect(dialog.locator("img")).toHaveAttribute(
     "src",
     /cisco-boat-enhanced/,
   );
+  await expect(
+    dialog.getByRole("button", { name: "Original", exact: true }),
+  ).toHaveCount(0);
   const scan = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
     .analyze();
@@ -67,25 +60,18 @@ test("About opens with a new Instagram photo and allows original/enhanced compar
   await expect(photo).toBeFocused();
 });
 
-test("photo comparison is translated and works on a small phone", async ({
+test("photo viewer fits a small phone in all five languages", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 320, height: 844 });
-  for (const [locale, original, enhanced] of [
-    ["ru", "Оригинал", "Улучшенная"],
-    ["sw", "Asili", "Iliyoboreshwa"],
-    ["fr", "Original", "Améliorée"],
-    ["es", "Original", "Mejorada"],
-  ]) {
+  for (const locale of ["en", "ru", "sw", "fr", "es"]) {
     await page.goto(`/${locale}/about`);
     await page.locator(".about-photo-intro .gallery-trigger").click();
     const dialog = page.getByRole("dialog");
-    await dialog.getByRole("button", { name: original, exact: true }).click();
-    await expect(dialog.locator("img")).toHaveAttribute(
-      "src",
-      /cisco-boat-original/,
-    );
-    await dialog.getByRole("button", { name: enhanced, exact: true }).click();
+    await dialog
+      .locator("img")
+      .evaluate((image: HTMLImageElement) => image.decode());
+    await expect(dialog.locator(".photo-version")).toHaveCount(0);
     const bounds = await dialog.boundingBox();
     expect(bounds!.x).toBeGreaterThanOrEqual(0);
     expect(bounds!.x + bounds!.width).toBeLessThanOrEqual(321);

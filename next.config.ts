@@ -3,7 +3,7 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const config: NextConfig = {
   poweredByHeader: false,
-  images: { formats: ["image/avif", "image/webp"] },
+  images: { formats: ["image/webp"] },
   async headers() {
     return [
       {

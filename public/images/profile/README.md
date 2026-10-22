@@ -1,5 +1,7 @@
 # Authentic personal photography
 
+Current presentation: the owner requested removing original comparisons. The viewer now shows only the selected photograph; originals remain preserved as source files. All published photos are WebP and Next Image serves WebP. This supersedes the comparison interface described below.
+
 Authentic photographs were selected on 22 October 2026. Both Instagram profiles were visually inspected through the already authenticated Chrome session, including the normally accessible private profile. No credentials or cookies were extracted and no access controls were bypassed.
 
 See manifest.json for sources, dimensions, approval and placements. The detailed cinematic Tanzania–Russia artwork replaces the earlier flat postcards and is labeled as imagined. About opens with a newly retrieved boat photograph from just.cisco and adds an actual TIMUN assembly photograph. The glasses upload, candid portrait, TIMUN portrait and boat photograph have separate AI-assisted clarity variants. The About page also carries the personal story and a still captured from the visible GloboExpats work video, cropped to exclude Instagram controls and account details. Its underlying blob video was viewed but could not be downloaded through the browser tool; About links to the original clip. Photo sources and the full editing prompt are in `docs/PHOTOS-AND-DISPLAYS.md`; hero artwork details are in `docs/CINEMATIC-REFINEMENT.md`.

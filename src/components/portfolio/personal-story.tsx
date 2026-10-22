@@ -21,7 +21,7 @@ export async function PersonalStory({ locale }: { locale: Locale }) {
           <div>
             <ImageGallery
               src={profile.photos.headshot.src}
-              originalSrc={profile.photos.headshot.originalSrc}
+
               alt="Francis in a white T-shirt, photographed indoors"
               width={profile.photos.headshot.width}
               height={profile.photos.headshot.height}
