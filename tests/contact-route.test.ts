@@ -33,10 +33,10 @@ function request(body: unknown = valid, headers: Record<string, string> = {}) {
   });
 }
 beforeEach(() => {
-  vi.stubEnv("NEXT_PUBLIC_SITE_URL", "http://localhost:3000");
+  vi.stubEnv("NEXT_PUBLIC_SITE_URL", "");
   vi.stubEnv("RESEND_API_KEY", "test-only");
   vi.stubEnv("CONTACT_TO_EMAIL", "owner@example.com");
-  vi.stubEnv("CONTACT_FROM_EMAIL", "inquiries@example.com");
+  vi.stubEnv("CONTACT_FROM_EMAIL", "");
   mocks.send.mockReset();
   mocks.allow.mockReset();
   mocks.allow.mockResolvedValue(true);
@@ -74,15 +74,61 @@ describe("contact HTTP contract", () => {
     );
     expect(result.status).toBe(200);
   });
-  it("requires a configured canonical origin in production", async () => {
+  it("requires only the API key and destination in production", async () => {
     vi.stubEnv("NODE_ENV", "production");
-    vi.stubEnv("NEXT_PUBLIC_SITE_URL", "");
-    expect((await POST(request())).status).toBe(503);
+    mocks.send.mockResolvedValue({ error: null, data: { id: "test-id" } });
+    const result = await POST(
+      new Request("https://cisco.vercel.app/api/contact", {
+        method: "POST",
+        headers: {
+          Origin: "https://cisco.vercel.app",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(valid),
+      }),
+    );
+    expect(result.status).toBe(200);
+    expect(mocks.send.mock.calls[0][0].from).toBe(
+      "Cisco Portfolio <onboarding@resend.dev>",
+    );
+  });
+  it("accepts the current custom or preview host without a canonical variable", async () => {
+    vi.stubEnv("NODE_ENV", "production");
+    mocks.send.mockResolvedValue({ error: null, data: { id: "test-id" } });
+    expect(
+      (
+        await POST(
+          request(valid, {
+            Host: "portfolio.example",
+            Origin: "http://portfolio.example",
+          }),
+        )
+      ).status,
+    ).toBe(200);
+  });
+  it("rejects a forged forwarded host that differs from the actual host", async () => {
+    expect(
+      (
+        await POST(
+          request(valid, {
+            Host: "localhost:3000",
+            Origin: "https://evil.example",
+            "X-Forwarded-Host": "evil.example",
+          }),
+        )
+      ).status,
+    ).toBe(403);
     expect(mocks.send).not.toHaveBeenCalled();
   });
   it("rejects cross-origin submissions", async () => {
     expect(
       (await POST(request(valid, { Origin: "https://evil.example" }))).status,
+    ).toBe(403);
+    expect(mocks.send).not.toHaveBeenCalled();
+  });
+  it("rejects browser requests marked as cross-site", async () => {
+    expect(
+      (await POST(request(valid, { "Sec-Fetch-Site": "cross-site" }))).status,
     ).toBe(403);
     expect(mocks.send).not.toHaveBeenCalled();
   });
@@ -107,6 +153,11 @@ describe("contact HTTP contract", () => {
     expect(await result.json()).toEqual({ code: "unavailable" });
     expect(mocks.send).not.toHaveBeenCalled();
   });
+  it("returns unavailable without a destination", async () => {
+    vi.stubEnv("CONTACT_TO_EMAIL", "");
+    expect((await POST(request())).status).toBe(503);
+    expect(mocks.send).not.toHaveBeenCalled();
+  });
   it("requires rate limiting to allow the request", async () => {
     mocks.allow.mockResolvedValue(false);
     const result = await POST(request());
@@ -114,7 +165,7 @@ describe("contact HTTP contract", () => {
     expect(result.headers.get("Retry-After")).toBe("600");
     expect(mocks.send).not.toHaveBeenCalled();
   });
-  it("fails closed when the shared limiter is unavailable", async () => {
+  it("does not send when the limiter check fails", async () => {
     mocks.allow.mockRejectedValue(new Error("offline"));
     expect((await POST(request())).status).toBe(503);
     expect(mocks.send).not.toHaveBeenCalled();

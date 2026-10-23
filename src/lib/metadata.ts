@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { locales, type Locale } from "@/i18n/routing";
-export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "http://127.0.0.1:3000";
+const deploymentHost =
+  process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
+export const siteUrl = deploymentHost
+  ? `https://${deploymentHost}`
+  : "http://127.0.0.1:3000";
 export async function pageMetadata(
   locale: Locale,
   page: string,

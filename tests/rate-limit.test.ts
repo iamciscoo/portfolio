@@ -1,8 +1,8 @@
 import { beforeEach, afterEach, describe, it, expect, vi } from "vitest";
-import { allowInquiry } from "@/lib/rate-limit";
-beforeEach(() => {
-  vi.stubEnv("UPSTASH_REDIS_REST_URL", "");
-  vi.stubEnv("UPSTASH_REDIS_REST_TOKEN", "");
+let allowInquiry: typeof import("@/lib/rate-limit").allowInquiry;
+beforeEach(async () => {
+  vi.resetModules();
+  ({ allowInquiry } = await import("@/lib/rate-limit"));
   vi.stubEnv("NODE_ENV", "development");
 });
 afterEach(() => {
@@ -24,37 +24,33 @@ describe("rate limiting", () => {
     vi.advanceTimersByTime(600001);
     expect(await allowInquiry("expiry-test")).toBe(true);
   });
-  it("requires shared configuration in production", async () => {
+  it("limits production requests without Redis configuration", async () => {
     vi.stubEnv("NODE_ENV", "production");
-    await expect(allowInquiry("client")).rejects.toThrow("unavailable");
+    for (let i = 0; i < 5; i++)
+      expect(await allowInquiry("production-client")).toBe(true);
+    expect(await allowInquiry("production-client")).toBe(false);
   });
-  it("uses an atomic shared counter without retaining a plain IP", async () => {
-    vi.stubEnv("UPSTASH_REDIS_REST_URL", "https://redis.example");
-    vi.stubEnv("UPSTASH_REDIS_REST_TOKEN", "test-token");
-    const fetch = vi.fn().mockResolvedValue(Response.json({ result: 5 }));
+  it("keeps client limits separate without an external service", async () => {
+    const fetch = vi.fn();
     vi.stubGlobal("fetch", fetch);
-    expect(await allowInquiry("192.0.2.123")).toBe(true);
-    const body = JSON.parse(fetch.mock.calls[0][1].body);
-    expect(body[0]).toBe("EVAL");
-    expect(body[1]).toContain("EXPIRE");
-    expect(body[3]).not.toContain("192.0.2.123");
+    for (let i = 0; i < 5; i++) await allowInquiry("client-a");
+    expect(await allowInquiry("client-a")).toBe(false);
+    expect(await allowInquiry("client-b")).toBe(true);
+    expect(fetch).not.toHaveBeenCalled();
   });
-  it("rejects requests over the shared limit", async () => {
-    vi.stubEnv("UPSTASH_REDIS_REST_URL", "https://redis.example");
-    vi.stubEnv("UPSTASH_REDIS_REST_TOKEN", "test-token");
-    vi.stubGlobal(
-      "fetch",
-      vi.fn().mockResolvedValue(Response.json({ result: 6 })),
-    );
+  it("bounds stored client buckets and frees expired entries", async () => {
+    vi.useFakeTimers();
+    for (let i = 0; i < 1000; i++)
+      expect(await allowInquiry(`client-${i}`)).toBe(true);
+    expect(await allowInquiry("one-too-many")).toBe(false);
+    vi.advanceTimersByTime(600001);
+    expect(await allowInquiry("one-too-many")).toBe(true);
+  });
+  it("uses a fresh counter in each process instance", async () => {
+    for (let i = 0; i < 5; i++) await allowInquiry("client");
     expect(await allowInquiry("client")).toBe(false);
-  });
-  it("fails closed when the shared service errors", async () => {
-    vi.stubEnv("UPSTASH_REDIS_REST_URL", "https://redis.example");
-    vi.stubEnv("UPSTASH_REDIS_REST_TOKEN", "test-token");
-    vi.stubGlobal(
-      "fetch",
-      vi.fn().mockResolvedValue(Response.json({ error: "offline" })),
-    );
-    await expect(allowInquiry("client")).rejects.toThrow("unavailable");
+    vi.resetModules();
+    const fresh = await import("@/lib/rate-limit");
+    expect(await fresh.allowInquiry("client")).toBe(true);
   });
 });

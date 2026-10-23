@@ -74,21 +74,17 @@ Create a new `.env.local` manually from `.env.example`; never overwrite an exist
 ```dotenv
 RESEND_API_KEY=your_server_side_key
 CONTACT_TO_EMAIL=your_destination_address
-CONTACT_FROM_EMAIL=Cisco Portfolio <inquiries@your-verified-domain.example>
-NEXT_PUBLIC_SITE_URL=https://your-domain.example
-UPSTASH_REDIS_REST_URL=https://your-shared-rate-limit-instance.example
-UPSTASH_REDIS_REST_TOKEN=your_server_side_token
 ```
 
-No real secret belongs in Git. Resend must verify your sending domain before a production sender can be used. The destination is configurable. The CV-derived public email is used only for the direct `mailto` alternative.
+These are the only two variables you need to add in Vercel. The sender is `Cisco Portfolio <onboarding@resend.dev>`, so the destination must be the email address associated with your Resend account. [Resend documents this restriction](https://resend.com/docs/knowledge-base/403-error-resend-dev-domain). The sender can be changed in the contact route if a verified domain is added later. No real secret belongs in Git. The public profile email is used only for the direct `mailto` alternative.
 
 The server checks Origin, JSON content type, actual streamed body size (16 KiB), strict Zod validation and a honeypot. Email HTML escapes user input. Resend idempotency keys make retries of the same submission safe; the browser also prevents simultaneous submissions. Success requires a provider message ID. Missing credentials return HTTP 503 rather than a false success. No client confirmation email is sent by default.
 
-### Production rate limiting
+### Request limits and deployment URLs
 
-Local development has an expiring in-memory limiter. Production **requires** the shared Redis REST variables above and fails closed without them. An atomic Redis script permits five submissions per ten-minute bucket per HMAC-hashed IP; keys expire after 20 minutes. Redis stores only a hashed key and count, not inquiry contents. This small shared store is necessary for consistent limiting across Vercel instances. Provision Upstash Redis through Vercel Marketplace or your own account, then add the REST URL and token.
+An expiring in-memory limiter permits five submissions per ten-minute bucket per HMAC-hashed IP, with at most 1,000 stored buckets per process. It uses a process-local random secret, stores no inquiry contents, and requires no Redis account or credentials. This is best-effort protection per running instance: counters reset on cold starts and are not shared across Vercel instances. It is not a deployment-wide quota.
 
-Vercel supplies trusted forwarded IP headers. If you deploy elsewhere, update the trusted-proxy boundary in the route before enabling production email. The Origin must match `NEXT_PUBLIC_SITE_URL`, including scheme and port; set the variable separately in each Vercel environment. If you need live email in preview deployments, use that preview's exact URL.
+Vercel supplies trusted forwarded IP headers. If you deploy elsewhere, review the trusted-proxy boundary before enabling email. The browser Origin must match the current request host, so production domains and previews work without a manually configured URL. Explicit cross-site browser requests are rejected. Metadata, sitemap and sharing URLs use Vercel's automatic production-domain variable, falling back to the deployment URL and then the local development URL. Keep access to Vercel's system environment variables enabled; there is no site-URL variable to add manually.
 
 Inquiry contents are sent only to the configured Resend destination; the app does not persist them or log PII. Set mailbox/Resend retention to suit your operational policy (suggested: delete unsuccessful inquiries after 90 days). The contact form explains its purpose and requires consent.
 

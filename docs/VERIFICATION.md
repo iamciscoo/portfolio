@@ -2,7 +2,15 @@
 
 Verified locally on Windows, 22 October 2026, with Node.js 22.23.2 and npm 10.9.8.
 
-## Current mobile clarity revision
+## Two-variable contact revision, 23 October 2026
+
+The current contact setup requires only `RESEND_API_KEY` and `CONTACT_TO_EMAIL`. The sender is fixed to Resend's default domain, so the destination must be the Resend account email. Vercel supplies deployment-domain values automatically. The earlier shared-Redis records below describe a retired configuration.
+
+All 63 unit/API tests pass, including the complete production route with only those two configured values, a real in-memory limiter and a mocked email provider. Tests cover acknowledgements, five allowed requests followed by refusal, separate clients, bucket capacity/expiry, cold-start resets, cross-origin rejection, forwarded-host spoofing and automatic metadata domains. The five focused browser checks pass for contact validation, templates, optional phone, form accessibility and metadata endpoints. No real email was sent.
+
+ESLint, strict TypeScript and the production build with 81 generated routes pass. The production dependency audit reports no vulnerabilities. The limiter is bounded best-effort per instance, not a shared deployment-wide quota. Existing `.env.local` contents are unchanged. See `DEPLOYMENT.md` for the two-variable Vercel setup and provider restrictions.
+
+## Previous mobile clarity revision
 
 52 unit/API tests, ESLint and the 81-route production build pass. The full expanded browser suite passed all 64 cases, including 75 localized route combinations, five viewport widths, accessibility, templates, new concepts, themes, keyboard navigation, reduced motion and no-JavaScript content. Phone checks at 320px and 390px cover all five languages, larger body type, less repeated copy, earlier website displays and zero page overflow.
 

@@ -49,14 +49,12 @@ async function readBody(request: Request) {
 }
 export async function POST(request: Request) {
   const url = new URL(request.url);
-  const configuredOrigin = process.env.NEXT_PUBLIC_SITE_URL;
-  if (process.env.NODE_ENV === "production" && !configuredOrigin)
-    return reply("unavailable", 503);
   // Next dev can normalize request.url to localhost even when opened at 127.0.0.1.
-  const expectedOrigin = configuredOrigin
-    ? new URL(configuredOrigin).origin
-    : `${url.protocol}//${request.headers.get("host") || url.host}`;
-  if (request.headers.get("origin") !== expectedOrigin)
+  const expectedOrigin = `${url.protocol}//${request.headers.get("host") || url.host}`;
+  if (
+    request.headers.get("origin") !== expectedOrigin ||
+    request.headers.get("sec-fetch-site") === "cross-site"
+  )
     return reply("error", 403);
   if (
     request.headers.get("content-type")?.split(";")[0].trim() !==
@@ -73,8 +71,8 @@ export async function POST(request: Request) {
   if (!parsed.success) return reply("required", 400);
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL;
-  const from = process.env.CONTACT_FROM_EMAIL;
-  if (!apiKey || !to || !from) return reply("unavailable", 503);
+  const from = "Cisco Portfolio <onboarding@resend.dev>";
+  if (!apiKey || !to) return reply("unavailable", 503);
   try {
     // Vercel overwrites forwarded IP headers. Other deployments must use a trusted proxy.
     const ip = process.env.VERCEL
