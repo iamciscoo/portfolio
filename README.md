@@ -23,6 +23,8 @@ Dependency lifecycle scripts are disabled in `.npmrc`. Next.js and Sharp use the
 
 ## Checks
 
+The GitHub Quality workflow is manual-only because hosted jobs currently cannot start due to an account billing lock (run `40028822025`). Pushes still deploy through Vercel. Run the checks below before pushing; after resolving GitHub billing, the workflow can be run from Actions or its push/pull-request triggers restored.
+
 ```sh
 npm run lint
 npm run typecheck

@@ -1,7 +1,8 @@
 name: Quality
 on:
-  push:
-  pull_request:
+  # Hosted jobs cannot start while the account has a billing lock.
+  # Keep verification available on demand without failing every deployment.
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
