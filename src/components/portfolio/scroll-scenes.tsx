@@ -25,11 +25,11 @@ export function HeroScene({
     damping: 32,
     mass: 0.35,
   });
-  const photoY = useTransform(travel, [0, 1], [0, compact ? 24 : 72]);
+  const photoY = useTransform(travel, [0, 1], [0, compact ? 24 : 110]);
   const photoScale = useTransform(
     travel,
     [0, 1],
-    [1.03, compact ? 1.06 : 1.12],
+    [1.03, compact ? 1.06 : 1.16],
   );
   return (
     <section ref={ref} className="cinematic-hero" data-sc-act="hero">
@@ -73,15 +73,19 @@ export function ProjectScene({
   const desktopScale = useTransform(
     settled,
     [0, 1],
-    [compact ? 0.985 : 0.96, 1],
+    [compact ? 0.985 : 0.92, 1],
   );
-  const phoneY = useTransform(settled, [0, 1], [compact ? 12 : 28, 0]);
-  const phoneRotate = useTransform(settled, [0, 1], [compact ? 0.8 : 2, 0]);
+  const desktopRotate = useTransform(settled, [0, 1], [compact ? 0 : 5, 0]);
+  const phoneY = useTransform(settled, [0, 1], [compact ? 12 : 52, 0]);
+  const phoneRotate = useTransform(settled, [0, 1], [compact ? 0.8 : 4, 0]);
   return (
     <article className="project-exhibit" data-sc-act="project">
       <div className="exhibit-copy">{children}</div>
       <div ref={ref} className="exhibit-stage" data-sc-stage>
-        <motion.div className="exhibit-desktop" style={{ scale: desktopScale }}>
+        <motion.div
+          className="exhibit-desktop"
+          style={{ scale: desktopScale, rotateX: desktopRotate }}
+        >
           {desktop}
         </motion.div>
         <motion.div

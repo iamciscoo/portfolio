@@ -1,6 +1,14 @@
 "use client";
-import { useEffect, useId, useRef, useState, type ReactNode } from "react";
+import {
+  Children,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { motion, useScroll, useTransform } from "motion/react";
 
 export function HorizontalShowcase({
   children,
@@ -17,6 +25,13 @@ export function HorizontalShowcase({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const id = useId();
+  const count = Children.count(children);
+  const { scrollXProgress } = useScroll({ container: ref });
+  const progress = useTransform(
+    scrollXProgress,
+    [0, 1],
+    [1 / Math.max(1, count), 1],
+  );
   const [edges, setEdges] = useState({ start: true, end: false });
   useEffect(() => {
     const rail = ref.current;
@@ -50,6 +65,7 @@ export function HorizontalShowcase({
     );
     const target =
       slides[Math.max(0, Math.min(slides.length - 1, current + direction))];
+    if (!target) return;
     rail.scrollTo({
       left: target.offsetLeft - rail.offsetLeft,
       behavior:
@@ -82,6 +98,9 @@ export function HorizontalShowcase({
             <ArrowRight size={20} />
           </button>
         </div>
+      </div>
+      <div className="showcase-progress" aria-hidden="true">
+        <motion.span style={{ scaleX: progress }} />
       </div>
       <div
         ref={ref}

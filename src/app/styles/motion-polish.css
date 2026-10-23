@@ -1,0 +1,209 @@
+/* Native scrolling stays in charge. All decoration is progressively enhanced. */
+.cinematic-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, #aec3ff, #537dff 35%, transparent 85%);
+  pointer-events: none;
+}
+
+.hero-name {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0.08em;
+  bottom: -0.06em;
+  height: 0.035em;
+  background: currentColor;
+  transform-origin: left;
+}
+
+.exhibit-stage {
+  perspective: 1200px;
+}
+
+.exhibit-stage:focus-within .exhibit-desktop,
+.exhibit-stage:focus-within .exhibit-phone,
+.personal-hero-copy:focus-within {
+  transform: none !important;
+}
+
+.personal-hero-copy:focus-within .hero-actions {
+  animation: none;
+}
+
+.showcase-progress {
+  height: 2px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.showcase-progress > span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left;
+}
+
+.showcase-controls .icon-button {
+  width: 44px;
+  height: 44px;
+}
+
+.service-row {
+  position: relative;
+  isolation: isolate;
+  transition: color 220ms;
+}
+
+.service-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--surface);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-row h3,
+.service-row > svg {
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-row:hover {
+  padding-inline: 0;
+  color: var(--text);
+}
+
+.service-row:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.mobile-panel {
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-introduction,
+  .hero-statement,
+  .personal-hero-copy > p,
+  .hero-actions {
+    animation: hero-rise 850ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+  .hero-statement {
+    animation-delay: 90ms;
+  }
+  .personal-hero-copy > p {
+    animation-delay: 170ms;
+  }
+  .hero-actions {
+    animation-delay: 240ms;
+  }
+  .hero-name::after {
+    animation: signature-line 900ms 300ms cubic-bezier(0.22, 1, 0.36, 1)
+      backwards;
+  }
+  .scroll-arrow {
+    animation: scroll-invitation 1600ms 800ms ease-in-out 2;
+  }
+  .mobile-panel[data-state="open"] {
+    animation: menu-enter 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .mobile-panel[data-state="closed"] {
+    animation: menu-exit 180ms ease-in;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .service-row:hover::before {
+    transform: scaleX(1);
+  }
+  .service-row:hover h3 {
+    transform: translateX(12px);
+  }
+  .service-row:hover > svg {
+    transform: translate(-8px, -3px) rotate(45deg);
+  }
+  .showcase-controls .icon-button:not(:disabled):hover {
+    background: var(--button);
+    color: var(--button-text);
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    transform: translateY(22px);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes signature-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes scroll-invitation {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 5px;
+  }
+}
+@keyframes menu-enter {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes menu-exit {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 700px) {
+  .showcase-progress {
+    margin-bottom: 8px;
+  }
+  .hero-introduction,
+  .hero-statement,
+  .personal-hero-copy > p,
+  .hero-actions {
+    animation-duration: 600ms;
+  }
+  @keyframes hero-rise {
+    from {
+      transform: translateY(10px);
+    }
+    to {
+      transform: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-row h3,
+  .service-row > svg,
+  .showcase-controls .icon-button:hover {
+    transform: none !important;
+  }
+}
