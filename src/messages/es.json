@@ -171,11 +171,8 @@
     "phoneHelp": "Opcional. Puedo usar este número para dar seguimiento a tu consulta.",
     "invalidPhone": "Introduce un número de 7 a 15 dígitos, con el prefijo del país si corresponde.",
     "templateLabel": "¿Necesitas una idea para empezar?",
-    "templateHelp": "Elige lo que necesitas y usa el texto editable de abajo.",
+    "templateHelp": "Al elegir una plantilla se rellenan el servicio y el mensaje al instante. Puedes editar el texto de abajo.",
     "templateChoose": "Escribir mi propia consulta",
-    "useTemplate": "Usar esta plantilla",
-    "replaceBrief": "Sustituir mi texto por esta plantilla",
-    "templateNotice": "Establece el servicio y el texto. Tus datos de contacto no cambian.",
     "optionalDetails": "Más detalles (opcional)",
     "briefHelp": "Unas frases bastan. Usa una plantilla de arriba si no sabes por dónde empezar.",
     "nextStep": "Leeré tu mensaje y te responderé por correo para hablar de los detalles."

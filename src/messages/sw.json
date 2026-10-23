@@ -171,11 +171,8 @@
     "phoneHelp": "Si lazima. Ninaweza kutumia namba hii kufuatilia ombi lako.",
     "invalidPhone": "Weka namba sahihi yenye tarakimu 7–15, ikiwemo msimbo wa nchi inapohitajika.",
     "templateLabel": "Unahitaji pa kuanzia?",
-    "templateHelp": "Chagua unachohitaji, kisha tumia maelezo unayoweza kuhariri hapa chini.",
+    "templateHelp": "Ukichagua mfano, huduma na maelezo hujazwa mara moja. Unaweza kuhariri maelezo hapa chini.",
     "templateChoose": "Nitaandika maelezo yangu",
-    "useTemplate": "Tumia mfano huu",
-    "replaceBrief": "Badilisha maelezo yangu kwa mfano huu",
-    "templateNotice": "Huweka huduma na maelezo. Taarifa zako za mawasiliano hazibadiliki.",
     "optionalDetails": "Maelezo zaidi (hiari)",
     "briefHelp": "Sentensi chache zinatosha. Tumia mfano hapo juu kama hujui uanzie wapi.",
     "nextStep": "Nitasoma ujumbe wako na kujibu kwa barua pepe ili tujadili maelezo."

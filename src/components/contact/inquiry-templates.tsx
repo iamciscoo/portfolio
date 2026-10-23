@@ -1,23 +1,17 @@
 "use client";
-import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { ArrowDown } from "lucide-react";
 import { inquiryPresets } from "@/content/inquiry-presets";
 import type { Locale } from "@/i18n/routing";
 import type { ContactInput } from "@/lib/contact-schema";
 import { text } from "@/lib/localize";
 
 export function InquiryTemplates({
-  onApply,
-  hasBrief,
+  onSelect,
 }: {
-  onApply: (service: ContactInput["service"], brief: string) => void;
-  hasBrief: boolean;
+  onSelect: (service: ContactInput["service"], brief: string) => void;
 }) {
-  const [selected, setSelected] = useState("");
   const locale = useLocale() as Locale;
   const t = useTranslations("form");
-  const preset = inquiryPresets.find((item) => item.id === selected);
   return (
     <div className="inquiry-templates">
       <div className="template-picker">
@@ -27,8 +21,13 @@ export function InquiryTemplates({
         </p>
         <select
           id="inquiry-template"
-          value={selected}
-          onChange={(event) => setSelected(event.target.value)}
+          defaultValue=""
+          onChange={(event) => {
+            const preset = inquiryPresets.find(
+              (item) => item.id === event.target.value,
+            );
+            if (preset) onSelect(preset.service, text(preset.brief, locale));
+          }}
           aria-describedby="template-help"
         >
           <option value="">{t("templateChoose")}</option>
@@ -39,20 +38,6 @@ export function InquiryTemplates({
           ))}
         </select>
       </div>
-      {preset && (
-        <div className="template-preview">
-          <p>{text(preset.brief, locale)}</p>
-          <button
-            className="text-link"
-            type="button"
-            onClick={() => onApply(preset.service, text(preset.brief, locale))}
-          >
-            {t(hasBrief ? "replaceBrief" : "useTemplate")}
-            <ArrowDown size={15} />
-          </button>
-          <small>{t("templateNotice")}</small>
-        </div>
-      )}
     </div>
   );
 }

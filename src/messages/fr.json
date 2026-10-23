@@ -171,11 +171,8 @@
     "phoneHelp": "Facultatif. Je peux utiliser ce numéro pour donner suite à votre demande.",
     "invalidPhone": "Saisissez un numéro de 7 à 15 chiffres, avec l’indicatif si nécessaire.",
     "templateLabel": "Besoin d’un point de départ ?",
-    "templateHelp": "Choisissez votre besoin, puis utilisez le texte modifiable ci-dessous.",
+    "templateHelp": "Choisir un modèle remplit immédiatement le service et le message. Vous pouvez modifier le texte ci-dessous.",
     "templateChoose": "Rédiger ma propre demande",
-    "useTemplate": "Utiliser ce modèle",
-    "replaceBrief": "Remplacer ma demande par ce modèle",
-    "templateNotice": "Définit le service et le texte. Vos coordonnées restent inchangées.",
     "optionalDetails": "Plus de détails (facultatif)",
     "briefHelp": "Quelques phrases suffisent. Choisissez un modèle ci-dessus si vous ne savez pas par où commencer.",
     "nextStep": "Je lirai votre message et vous répondrai par e-mail pour en discuter."

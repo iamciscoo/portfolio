@@ -61,12 +61,10 @@ test("templates sit with the brief and apply without losing contact details", as
       (await page.locator(".inquiry-templates").boundingBox())!.height,
     ).toBeLessThan(150);
     await picker.selectOption("windows");
-    await expect(page.locator("#description")).toHaveValue(/^Keep my existing/);
-    await page.locator(".template-preview button").click();
     await expect(page.locator("#description")).not.toHaveValue(
       /^Keep my existing/,
     );
-    await expect(page.locator("#description")).toBeFocused();
+    await expect(page.locator(".template-preview")).toHaveCount(0);
     await expect(page.locator("#name")).toHaveValue("Template Visitor");
     expect(
       await page.evaluate(() => document.documentElement.scrollWidth),

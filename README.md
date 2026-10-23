@@ -1,6 +1,6 @@
 # Francis Mwambene / Cisco
 
-The mobile reading pass shortens repeated copy, improves type spacing and keeps hero text steady during gentle background movement. Inquiry templates now sit directly above "Tell me what you need" and preserve existing text until explicitly applied. Em dashes are removed from tracked source and documentation. See `docs/MOBILE-CLARITY.md` for behavior and proof.
+The mobile reading pass shortens repeated copy, improves type spacing and keeps hero text steady during gentle background movement. Inquiry templates sit directly above "Tell me what you need" and fill the editable brief immediately when selected. Em dashes are removed from tracked source and documentation. See `docs/MOBILE-CLARITY.md` for behavior and proof.
 
 A multilingual personal portfolio and interactive design studio with six industry concepts, built with Next.js App Router, React, TypeScript, Tailwind, next-intl, Motion, Radix Dialog, React Hook Form, Zod and Resend. Prepared for Vercel. No application database is required.
 
@@ -65,7 +65,7 @@ Studio concepts are fictional, with illustrative stock photography. They do not 
 
 ## Contact email
 
-The inquiry form includes an optional phone/WhatsApp number and five editable brief templates. Windows installation, software troubleshooting and game setup are available alongside web/product services. Selecting a template previews it; applying it changes only the service and brief, with an explicit replacement label when a brief already exists. Both HTML and plain-text inquiry emails include a supplied phone number. Numbers are validated on the client and server and are not written to browser storage.
+The inquiry form includes an optional phone/WhatsApp number and five editable brief templates. Windows installation, software troubleshooting and game setup are available alongside web/product services. Selecting a template immediately replaces the service and brief; contact details and other options remain unchanged. The text stays editable. Selecting the write-your-own option keeps the current brief. Both HTML and plain-text inquiry emails include a supplied phone number. Numbers are validated on the client and server and are not written to browser storage.
 
 Browser regression tests intercept contact POSTs so a configured local Resend account cannot send test messages. Unit/API tests use provider doubles. See `docs/SOFTWARE-INQUIRIES.md` for the latest verification and the one sample inquiry accepted before this safeguard was added.
 

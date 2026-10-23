@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import { useForm, useWatch } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
@@ -27,8 +27,6 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
     register,
     handleSubmit,
     setValue,
-    control,
-    setFocus,
     formState: { errors, isSubmitting },
   } = useForm<ContactInput>({
     resolver: zodResolver(contactSchema),
@@ -47,7 +45,6 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
       requestId: "00000000-0000-4000-8000-000000000000",
     },
   });
-  const description = useWatch({ control, name: "description" });
   const error = (key: keyof ContactInput) =>
     errors[key] ? (
       <span role="alert" className="field-error" id={`${key}-error`}>
@@ -118,14 +115,12 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
         <div className="form-field full inquiry-brief">
           <label htmlFor="description">{t("description")} *</label>
           <InquiryTemplates
-            hasBrief={!!description.trim()}
-            onApply={(service, brief) => {
+            onSelect={(service, brief) => {
               setValue("service", service, { shouldDirty: true });
               setValue("description", brief, {
                 shouldDirty: true,
                 shouldValidate: true,
               });
-              setFocus("description");
             }}
           />
           <textarea

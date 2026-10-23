@@ -171,11 +171,8 @@
     "phoneHelp": "Optional. I can use this number to follow up on your inquiry.",
     "invalidPhone": "Enter a valid number with 7–15 digits, including the country code if applicable.",
     "templateLabel": "Need a starting point?",
-    "templateHelp": "Choose what you need, then use the editable brief below.",
+    "templateHelp": "Selecting a template fills the service and brief immediately. You can edit the text below.",
     "templateChoose": "Write my own brief",
-    "useTemplate": "Use this template",
-    "replaceBrief": "Replace my brief with this template",
-    "templateNotice": "Sets the service and brief. Your contact details stay unchanged.",
     "optionalDetails": "More details (optional)",
     "briefHelp": "A few sentences are enough. You can use a template above if you're not sure where to start.",
     "nextStep": "I'll read your message and reply by email to talk through the details."

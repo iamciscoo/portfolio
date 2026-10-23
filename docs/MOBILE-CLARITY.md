@@ -20,14 +20,21 @@ Phone rails use native proximity snapping. Buttons still move to a specific slid
 
 The existing native template picker is immediately above the message textarea, after its label. The separate introductory card at the top of the form is removed. The phone picker spans the same width as the textarea. All five templates and the write-your-own option remain.
 
-Selecting a template previews its text. Only the explicit apply/replace button changes the service and brief; name, email, phone and company remain intact. Applying focuses the editable textarea. Existing validation, consent and email handling are preserved.
+Selecting a template immediately fills its service and editable brief. There is no separate preview or apply button. Name, email, phone, company and other preferences remain intact. Choosing the write-your-own option preserves the current text. Focus stays on the native dropdown, allowing keyboard browsing and a normal Tab into the textarea. Existing validation, consent and email handling are preserved.
+
+| Before                                                        | After                                                     | Why                                                |
+| ------------------------------------------------------------- | --------------------------------------------------------- | -------------------------------------------------- |
+| Choose a template, read a duplicate preview, then click Apply | Choosing a template fills the actual textarea immediately | Remove the redundant action requested by the owner |
+| Applying moves focus into the textarea                        | Focus stays on the select; Tab reaches the textarea       | Keep native keyboard browsing predictable          |
 
 ## Verification and proof
 
-Focused browser coverage checks 320px and 390px layouts in all five languages, body type size, bounded hero height, earlier project displays, no page overflow, native-template placement and width, explicit replacement, preserved contacts, stationary copy, limited background travel and reduced motion. The existing suite covers forms, metadata, all routes, accessibility, themes, galleries and no-JavaScript navigation.
+Focused browser coverage checks 320px and 390px layouts in all five languages, body type size, bounded hero height, earlier project displays, no page overflow, native-template placement and width, automatic filling, preserved contacts, stationary copy, limited background travel and reduced motion. All five templates are checked in all five languages. The existing suite covers forms, metadata, all routes, accessibility, themes, galleries and no-JavaScript navigation.
 
 A browser-only mutation inverted the compact background-travel branch. The travel-limit assertion rejected it; no source or server file was changed by that experiment. Browser contact POSTs remain intercepted. This task sends no live inquiry emails.
 
 Final production previews are in `refinement-preview/mobile-clear-home.webp`, `mobile-clear-projects.webp`, `mobile-clear-fr-320.webp`, `mobile-brief-template.webp`, `mobile-template-preview.webp` and `desktop-brief-template.webp`. Results are recorded in `VERIFICATION.md`. The preview uses port 3000 only.
 
-Verification: 52 unit/API tests, ESLint and the 81-route production build pass. The full browser run passed 64 cases. After the final accessible-name adjustment, all five mobile clarity cases passed on the final build, including the new phone accessibility scan. The English 390px hero measured 455.5px; the template selector and textarea both measured 350px wide. All checks use isolated browser contexts and intercept contact submissions.
+Earlier mobile-reading verification: 52 unit/API tests, ESLint and the 81-route production build passed. The full browser run passed 64 cases. After the accessible-name adjustment, all five mobile clarity cases passed, including the phone accessibility scan. The English 390px hero measured 455.5px; the template selector and textarea both measured 350px wide. All checks use isolated browser contexts and intercept contact submissions.
+
+Automatic-template verification, 24 October 2026: 63 unit/API tests, six focused browser cases, ESLint, strict TypeScript and the 81-route production build pass. The browser checks cover immediate replacement, preserved contacts, manual editing, write-your-own preservation, keyboard focus/Tab, all 25 template/language combinations, the compact mobile picker and form accessibility. The initial new behavior check failed against the old apply-button flow. The final phone form was visually inspected and independent code review passed. No real email was sent.

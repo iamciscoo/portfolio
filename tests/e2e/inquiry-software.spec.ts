@@ -1,8 +1,9 @@
 import { test, expect } from "./fixtures";
 import AxeBuilder from "@axe-core/playwright";
 import fs from "node:fs/promises";
+import { inquiryPresets } from "../../src/content/inquiry-presets";
 
-test("templates preserve contacts and require explicit brief replacement", async ({
+test("templates fill the brief immediately and preserve contact details", async ({
   page,
 }) => {
   await page.goto("/en/contact?service=windows");
@@ -15,16 +16,14 @@ test("templates preserve contacts and require explicit brief replacement", async
     .fill(
       "My own existing project details must stay until I choose to replace them.",
     );
-  await page.locator("#inquiry-template").selectOption("gaming");
-  await expect(page.locator("#description")).toHaveValue(/^My own existing/);
-  await page
-    .getByRole("button", {
-      name: "Replace my brief with this template",
-      exact: true,
-    })
-    .click();
+  const picker = page.locator("#inquiry-template");
+  await picker.focus();
+  await picker.selectOption("gaming");
   await expect(page.locator("#service")).toHaveValue("gaming");
   await expect(page.locator("#description")).toHaveValue(/Game and launcher/);
+  await expect(picker).toBeFocused();
+  await expect(page.locator(".template-preview")).toHaveCount(0);
+  await page.keyboard.press("Tab");
   await expect(page.locator("#description")).toBeFocused();
   await expect(page.locator("#name")).toHaveValue("Template Visitor");
   await expect(page.locator("#email")).toHaveValue("visitor@example.com");
@@ -34,6 +33,10 @@ test("templates preserve contacts and require explicit brief replacement", async
     .fill(
       "Please help me configure a game that currently fails to launch on my computer.",
     );
+  await picker.selectOption("");
+  await expect(page.locator("#description")).toHaveValue(
+    /^Please help me configure/,
+  );
   await page.getByRole("checkbox").check();
   const submitted = page.waitForRequest(
     (request) =>
@@ -61,13 +64,16 @@ test("phone is optional and invalid formats are explained", async ({
 test("software services and localized templates are available in all locales", async ({
   page,
 }) => {
-  for (const locale of ["en", "ru", "sw", "fr", "es"]) {
+  for (const locale of ["en", "ru", "sw", "fr", "es"] as const) {
     await page.goto(`/${locale}/contact?service=software`);
     await expect(page.locator("#service")).toHaveValue("software");
-    await page.locator("#inquiry-template").selectOption("windows");
-    await page.locator(".template-preview button").click();
-    await expect(page.locator("#service")).toHaveValue("windows");
-    await expect(page.locator("#description")).toHaveValue(/Windows/);
+    for (const preset of inquiryPresets) {
+      await page.locator("#inquiry-template").selectOption(preset.id);
+      await expect(page.locator("#service")).toHaveValue(preset.service);
+      await expect(page.locator("#description")).toHaveValue(
+        preset.brief[locale],
+      );
+    }
     await page.goto(`/${locale}/services`);
     await expect(
       page.locator('a[href$="/contact?service=windows"]'),
@@ -107,7 +113,7 @@ for (const width of [1440, 1280, 768, 390, 320])
         .click();
       await expect(page.locator("#service")).toHaveValue("windows");
       await page.locator("#inquiry-template").selectOption("windows");
-      await page.locator(".template-preview button").click();
+      await expect(page.locator("#description")).toHaveValue(/Windows/);
       expect(
         await page.evaluate(() => document.documentElement.scrollWidth),
       ).toBeLessThanOrEqual(width + 1);

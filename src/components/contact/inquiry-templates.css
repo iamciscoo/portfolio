@@ -24,30 +24,6 @@
   padding: 12px;
   font-size: 14px;
 }
-.template-preview {
-  margin-top: 12px;
-  padding: 18px;
-  background: var(--surface);
-  border-radius: 4px;
-}
-.template-preview > p {
-  white-space: pre-line;
-  font-size: 13px;
-  line-height: 1.9;
-  color: var(--text);
-}
-.template-preview > button {
-  margin-top: 18px;
-  background: transparent;
-  color: var(--text);
-  border-top: 0;
-  border-inline: 0;
-  cursor: pointer;
-  text-align: left;
-  line-height: 1.6;
-  min-height: 44px;
-}
-.template-preview > small,
 .field-help {
   display: block;
   font-size: 11px;

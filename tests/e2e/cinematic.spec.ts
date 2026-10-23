@@ -37,7 +37,6 @@ for (const [locale, name, label] of [
     await expect(page.locator("html")).toHaveAttribute("lang", locale);
     await expect(page.locator("#service")).toHaveValue("software");
     await page.locator("#inquiry-template").selectOption("windows");
-    await page.locator(".template-preview button").click();
     await expect(page.locator("#description")).toHaveValue(new RegExp(label));
     await expect(page.locator("#language")).toHaveValue(locale);
     await expect(page.locator('link[hreflang="fr"]')).toHaveCount(1);
