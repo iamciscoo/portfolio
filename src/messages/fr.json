@@ -42,7 +42,12 @@
     "source": "Source de recherche",
     "gallery": "Galerie",
     "close": "Fermer",
-    "download": "Télécharger le CV"
+    "download": "Télécharger le CV",
+    "zoomIn": "Agrandir",
+    "fitImage": "Ajuster l’image",
+    "imageZoom": "Zoom de l’image",
+    "zoomHelp": "Balayez ou utilisez les barres de défilement pour explorer. Appuyez sur 0 pour ajuster l’image.",
+    "zoomIntro": "Agrandissez pour voir les détails. Le zoom à deux doigts du navigateur reste disponible."
   },
   "home": {
     "eyebrow": "FRANCIS JACOB MWAMBENE · CISCO",
@@ -110,7 +115,11 @@
     "evidence": "Ces captures montrent les sites en ligne. Mon rôle est décrit plus haut.",
     "screenshots": "Captures du site réel",
     "mobile": "L’expérience mobile",
-    "desktop": "L’expérience sur ordinateur"
+    "desktop": "L’expérience sur ordinateur",
+    "conceptsTitle": "Envie de voir d’autres idées ?",
+    "conceptsBody": "J’ai créé six exemples de sites, dont une boutique et une agence de voyages. Essayez-les, puis dites-moi quel style correspond à votre idée.",
+    "conceptsLink": "Explorer les exemples de sites",
+    "conceptsNote": "Ces marques sont fictives. Je peux adapter une idée similaire à votre activité."
   },
   "studio": {
     "notice": "MARQUES FICTIVES · INTERACTIONS RÉELLES",

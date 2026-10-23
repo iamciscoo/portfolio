@@ -42,7 +42,12 @@
     "source": "Chanzo cha taarifa",
     "gallery": "Picha",
     "close": "Funga",
-    "download": "Pakua CV"
+    "download": "Pakua CV",
+    "zoomIn": "Kuza picha",
+    "fitImage": "Picha nzima",
+    "imageZoom": "Ukuzaji wa picha",
+    "zoomHelp": "Telezesha au tumia pau za kusogeza kuona sehemu nyingine. Bonyeza 0 kuona picha nzima.",
+    "zoomIntro": "Kuza picha kuona maelezo. Unaweza pia kukuza kwa vidole viwili kwenye kivinjari."
   },
   "home": {
     "eyebrow": "FRANCIS JACOB MWAMBENE · CISCO",
@@ -110,7 +115,11 @@
     "evidence": "Picha hizi zinaonyesha tovuti zinazofanya kazi. Nimeeleza mchango wangu hapo juu.",
     "screenshots": "Picha za tovuti halisi",
     "mobile": "Uzoefu wa simu",
-    "desktop": "Uzoefu wa kompyuta"
+    "desktop": "Uzoefu wa kompyuta",
+    "conceptsTitle": "Ungependa kuona mawazo mengine?",
+    "conceptsBody": "Nimeandaa mifano sita ya tovuti, ikiwemo duka na kampuni ya utalii. Ijaribu, kisha niambie mtindo unaofaa wazo lako.",
+    "conceptsLink": "Tazama mifano ya tovuti",
+    "conceptsNote": "Hizi ni chapa za mfano, si miradi ya wateja. Ninaweza kubadilisha wazo kama hili kwa biashara yako."
   },
   "studio": {
     "notice": "CHAPA ZA KUBUNI · MIINGILIANO HALISI",

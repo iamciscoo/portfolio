@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/projects/project-card";
 import { ProjectFilter } from "@/components/projects/project-filter";
 import { ContactBand } from "@/components/common/contact-band";
 import { pageMetadata } from "@/lib/metadata";
+import { StudioInvitation } from "@/components/projects/studio-invitation";
 export async function generateMetadata({
   params,
 }: {
@@ -46,6 +47,7 @@ export default async function Projects({
           }))}
         />
       </section>
+      <StudioInvitation />
       <ContactBand />
     </>
   );

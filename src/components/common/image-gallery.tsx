@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import * as Dialog from "@radix-ui/react-dialog";
-import { X, ZoomIn } from "lucide-react";
+import { ZoomIn } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { GalleryViewer } from "./gallery-viewer";
 export function ImageGallery({
   src,
   alt,
@@ -47,19 +48,7 @@ export function ImageGallery({
           <Dialog.Description className="sr-only">
             {t("gallery")}
           </Dialog.Description>
-          <Dialog.Close
-            className="icon-button dialog-close"
-            aria-label={t("close")}
-          >
-            <X />
-          </Dialog.Close>
-          <Image
-            src={src}
-            alt={alt}
-            width={width}
-            height={height}
-            sizes="90vw"
-          />
+          <GalleryViewer src={src} alt={alt} width={width} height={height} />
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>

@@ -148,3 +148,30 @@
     display: none;
   }
 }
+
+/* The native rail remains usable when scroll-driven CSS is unavailable. */
+@supports (animation-timeline: view(inline)) {
+  @media (prefers-reduced-motion: no-preference) {
+    .studio-showcase .studio-tile {
+      view-timeline: --concept-window inline;
+    }
+    .studio-showcase .studio-image > img {
+      animation: concept-window linear both;
+      animation-timeline: --concept-window;
+    }
+    .studio-showcase .studio-image:focus-visible > img {
+      animation: none;
+      transform: none;
+    }
+  }
+}
+@keyframes concept-window {
+  0%,
+  100% {
+    transform: scale(1.035);
+  }
+  30%,
+  70% {
+    transform: scale(1);
+  }
+}

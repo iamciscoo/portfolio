@@ -42,7 +42,12 @@
     "source": "Fuente de investigación",
     "gallery": "Galería",
     "close": "Cerrar",
-    "download": "Descargar CV"
+    "download": "Descargar CV",
+    "zoomIn": "Ampliar",
+    "fitImage": "Ajustar imagen",
+    "imageZoom": "Zoom de imagen",
+    "zoomHelp": "Desliza o usa las barras de desplazamiento para explorar. Pulsa 0 para ajustar la imagen.",
+    "zoomIntro": "Amplía para ver los detalles. El zoom con dos dedos del navegador sigue disponible."
   },
   "home": {
     "eyebrow": "FRANCIS JACOB MWAMBENE · CISCO",
@@ -110,7 +115,11 @@
     "evidence": "Estas capturas muestran los sitios en línea. Mi contribución está descrita arriba.",
     "screenshots": "Capturas del sitio real",
     "mobile": "La experiencia móvil",
-    "desktop": "La experiencia en ordenador"
+    "desktop": "La experiencia en ordenador",
+    "conceptsTitle": "¿Quieres ver más ideas?",
+    "conceptsBody": "He creado seis sitios de ejemplo, entre ellos una tienda y una agencia de viajes. Pruébalos y dime qué estilo encaja con tu idea.",
+    "conceptsLink": "Explorar sitios de ejemplo",
+    "conceptsNote": "Son marcas de demostración, no proyectos de clientes. Puedo adaptar una idea similar a tu negocio."
   },
   "studio": {
     "notice": "MARCAS FICTICIAS · INTERACCIONES REALES",

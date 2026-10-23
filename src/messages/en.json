@@ -42,7 +42,12 @@
     "source": "Research source",
     "gallery": "Gallery",
     "close": "Close",
-    "download": "Download CV"
+    "download": "Download CV",
+    "zoomIn": "Zoom in",
+    "fitImage": "Fit image",
+    "imageZoom": "Image zoom",
+    "zoomHelp": "Swipe or use the scrollbars to look around. Press 0 to fit the image.",
+    "zoomIntro": "Zoom in for a closer look. Your browser’s pinch zoom still works."
   },
   "home": {
     "eyebrow": "FRANCIS JACOB MWAMBENE · CISCO",
@@ -110,7 +115,11 @@
     "evidence": "These screenshots show the live websites. I've described my own contribution above.",
     "screenshots": "Captured from the live website",
     "mobile": "The mobile experience",
-    "desktop": "The desktop experience"
+    "desktop": "The desktop experience",
+    "conceptsTitle": "Want to see a few more ideas?",
+    "conceptsBody": "I've put together six concept websites, including a shop and a tour company. Try them out, then tell me which style fits what you have in mind.",
+    "conceptsLink": "Explore concept websites",
+    "conceptsNote": "These are demo brands, not client projects. I can adapt a similar idea for your business."
   },
   "studio": {
     "notice": "FICTIONAL BRANDS · REAL INTERACTIONS",
