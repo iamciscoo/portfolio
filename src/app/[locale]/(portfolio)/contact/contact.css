@@ -27,6 +27,22 @@
   font-size: 14px;
   line-height: 1.7;
 }
+.contact-whatsapp {
+  margin-top: 12px;
+  min-height: 44px;
+  font-size: 14px;
+}
+.brief-help {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.inquiry-form > .request-next-step {
+  margin: 12px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 52ch;
+}
 .contact-layout aside {
   padding-top: 20px;
 }

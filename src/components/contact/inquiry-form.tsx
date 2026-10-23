@@ -135,9 +135,14 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
             {...register("description")}
             aria-invalid={!!errors.description}
             aria-describedby={
-              errors.description ? "description-error" : undefined
+              errors.description
+                ? "description-help description-error"
+                : "description-help"
             }
           />
+          <small id="description-help" className="brief-help">
+            {t("briefHelp")}
+          </small>
           {error("description")}
         </div>
         <InquiryOptions register={register} />
@@ -175,6 +180,7 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
         {isSubmitting ? t("sending") : common("send")}
         <ArrowUpRight size={17} />
       </button>
+      <p className="request-next-step">{t("nextStep")}</p>
     </form>
   );
 }

@@ -44,11 +44,11 @@ export const cinematic = {
     "La vida entre proyectos.",
   ),
   momentsBody: l(
-    "The work is one part of the story. These personal photographs and moments from my own videos show a little more of the person behind it.",
-    "Работа - лишь часть истории. Личные фотографии и моменты из моих видео помогают узнать человека за проектами.",
-    "Kazi ni sehemu moja ya hadithi. Picha binafsi na matukio kutoka video zangu yanaonyesha zaidi mtu aliye nyuma yake.",
-    "Le travail ne raconte pas tout. Ces photographies personnelles et instants de mes vidéos montrent un peu plus la personne derrière les projets.",
-    "El trabajo es solo una parte de la historia. Estas fotos personales y momentos de mis vídeos muestran algo más de quien está detrás.",
+    "A few photos from my camera roll. Basketball, family, travel and days away from the laptop.",
+    "Несколько фото из моего телефона: баскетбол, близкие, поездки и дни без ноутбука.",
+    "Picha chache kutoka simu yangu. Mpira wa kikapu, familia, safari na siku mbali na kompyuta.",
+    "Quelques photos de mon téléphone : basket, famille, voyages et journées loin du portable.",
+    "Algunas fotos de mi móvil: baloncesto, familia, viajes y días lejos del ordenador.",
   ),
   instagram: l(
     "More moments on Instagram",

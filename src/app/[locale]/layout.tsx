@@ -11,7 +11,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Francis Mwambene - Cisco",
   description: "Developer and product builder. From Tanzania, based in Russia.",
-  icons: { icon: "/icon.svg" },
+  icons: {
+    icon: [
+      { url: "/icon.svg?v=c", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=c", sizes: "32x32", type: "image/x-icon" },
+    ],
+  },
 };
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

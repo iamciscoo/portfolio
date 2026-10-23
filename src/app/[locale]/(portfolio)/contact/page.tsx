@@ -50,6 +50,14 @@ export default async function Contact({
               {profile.email} ↗
             </a>
             <p>{t("footer.based")}</p>
+            <a
+              className="contact-whatsapp text-link"
+              href={`https://wa.me/${profile.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("whatsapp.direct")}
+            </a>
           </div>
         </aside>
         <InquiryForm initialService={service} />

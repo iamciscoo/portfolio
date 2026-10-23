@@ -23,18 +23,18 @@ export const personalStory = {
     "Desarrollador. Visión de producto. Siempre curioso.",
   ),
   title: l(
-    "A little context.\nA wider perspective.",
-    "Немного контекста.\nШире взгляд.",
-    "Historia kidogo.\nMtazamo mpana.",
-    "Un peu de contexte.\nUn regard plus large.",
-    "Un poco de contexto.\nUna mirada más amplia.",
+    "A bit more\nabout me.",
+    "Ещё немного\nобо мне.",
+    "Zaidi kidogo\nkuhusu mimi.",
+    "Un peu plus\nsur moi.",
+    "Un poco más\nsobre mí.",
   ),
   photoCaption: l(
-    "Away from the screen, still myself.",
-    "Вне экрана - всё тот же я.",
-    "Mbali na skrini, bado ni mimi.",
-    "Loin de l’écran, toujours moi-même.",
-    "Lejos de la pantalla, sigo siendo yo.",
+    "Just me, away from the keyboard.",
+    "Просто я, без клавиатуры.",
+    "Mimi tu, mbali na kibodi.",
+    "Moi, loin du clavier.",
+    "Yo, lejos del teclado.",
   ),
   chapters: [
     {

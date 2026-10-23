@@ -118,7 +118,7 @@ test("contact validates and does not claim unconfigured delivery", async ({
 }) => {
   await page.goto("/en/contact?service=redesign");
   await expect(page.locator("#service")).toHaveValue("redesign");
-  await page.getByRole("button", { name: "Send inquiry" }).click();
+  await page.getByRole("button", { name: "Send message" }).click();
   await expect(page.getByRole("alert").first()).toBeVisible();
   await page.locator("#name").fill("Portfolio QA");
   await page.locator("#email").fill("qa@example.com");
@@ -128,7 +128,7 @@ test("contact validates and does not claim unconfigured delivery", async ({
       "A sample inquiry used only for testing the unconfigured local contact endpoint.",
     );
   await page.getByRole("checkbox").check();
-  await page.getByRole("button", { name: "Send inquiry" }).click();
+  await page.getByRole("button", { name: "Send message" }).click();
   await expect(page.locator(".form-status")).toContainText(
     "Email delivery isn't configured",
   );

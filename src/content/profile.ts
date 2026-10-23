@@ -6,6 +6,7 @@ export const profile = {
   shortName: "Francis Mwambene",
   alias: "Cisco",
   email: "francisjac21@gmail.com",
+  whatsapp: "255693749306",
   origin: "Tanzania",
   location: "Russia",
   github: "https://github.com/iamciscoo",

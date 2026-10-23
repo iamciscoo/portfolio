@@ -174,7 +174,7 @@ test("content, project links and photographs remain readable without JavaScript"
   const project = page
     .locator(".exhibit-copy")
     .first()
-    .getByRole("link", { name: "View case study", exact: true });
+    .getByRole("link", { name: "See how I built it", exact: true });
   await project.scrollIntoViewIfNeeded();
   await expect(project).toBeVisible();
   await project.click();

@@ -4,6 +4,48 @@ import { l } from "@/lib/localize";
 // Keep these documentary images faithful to their source, including composites.
 export const personalMoments = [
   {
+    src: "/images/profile/cisco-skyline.webp",
+    width: 1800,
+    height: 2400,
+    alt: l(
+      "A distant city skyline seen from above through haze",
+      "Панорама города с высоты сквозь дымку",
+      "Mandhari ya jiji kutoka juu kupitia ukungu",
+      "Une ville vue d’en haut à travers la brume",
+      "Una ciudad vista desde arriba entre la bruma",
+    ),
+    caption: l(
+      "A view from above.",
+      "Взгляд с высоты.",
+      "Mandhari kutoka juu.",
+      "La vue d’en haut.",
+      "Una vista desde arriba.",
+    ),
+    source:
+      "https://www.instagram.com/p/DeExbaBAPhCbuBgekkSXS2JjvxGmRjrS69gIFo0/?img_index=6",
+  },
+  {
+    src: "/images/profile/cisco-mountain.webp",
+    width: 1440,
+    height: 1920,
+    alt: l(
+      "A snow-capped mountain under blue skies, with a person in the foreground",
+      "Заснеженная гора под голубым небом и человек на переднем плане",
+      "Mlima wenye theluji chini ya anga la buluu, na mtu mbele",
+      "Une montagne enneigée sous un ciel bleu, avec une personne au premier plan",
+      "Una montaña nevada bajo el cielo azul, con una persona en primer plano",
+    ),
+    caption: l(
+      "That mountain view.",
+      "Тот самый вид на гору.",
+      "Mandhari ya mlima.",
+      "Cette vue sur la montagne.",
+      "Esa vista a la montaña.",
+    ),
+    source:
+      "https://www.instagram.com/p/DWovX4YF-6iEwvuqjVqKX_fNdeS5UAgcUp8tLs0/?img_index=10",
+  },
+  {
     src: "/images/profile/cisco-headphones.webp",
     width: 2000,
     height: 1502,

@@ -46,7 +46,7 @@
 .about-moments figure:nth-child(2) {
   margin-top: 65px;
 }
-.about-moments figure:first-child .gallery-trigger img {
+.about-moments .gallery-trigger img[src*="cisco-headphones"] {
   object-position: 25% center;
 }
 .project-card .project-visual {

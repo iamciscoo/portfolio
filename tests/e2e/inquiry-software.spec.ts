@@ -39,7 +39,7 @@ test("templates preserve contacts and require explicit brief replacement", async
     (request) =>
       request.url().endsWith("/api/contact") && request.method() === "POST",
   );
-  await page.getByRole("button", { name: "Send inquiry", exact: true }).click();
+  await page.getByRole("button", { name: "Send message", exact: true }).click();
   const body = (await submitted).postDataJSON();
   expect(body.phone).toBe("+255 712 345 678");
   expect(body.service).toBe("gaming");
@@ -51,10 +51,10 @@ test("phone is optional and invalid formats are explained", async ({
 }) => {
   await page.goto("/en/contact");
   await page.locator("#phone").fill("not a phone");
-  await page.getByRole("button", { name: "Send inquiry", exact: true }).click();
+  await page.getByRole("button", { name: "Send message", exact: true }).click();
   await expect(page.locator("#phone-error")).toContainText("7–15 digits");
   await page.locator("#phone").fill("");
-  await page.getByRole("button", { name: "Send inquiry", exact: true }).click();
+  await page.getByRole("button", { name: "Send message", exact: true }).click();
   await expect(page.locator("#phone-error")).toHaveCount(0);
 });
 
