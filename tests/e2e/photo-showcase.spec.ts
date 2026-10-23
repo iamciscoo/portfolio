@@ -33,10 +33,7 @@ test("About uses new Instagram photos without original comparison controls", asy
 }) => {
   await page.goto("/en/about");
   const photo = page.locator(".about-photo-intro .gallery-trigger");
-  await expect(photo.locator("img")).toHaveAttribute(
-    "src",
-    /cisco-boat-enhanced/,
-  );
+  await expect(photo.locator("img")).toHaveAttribute("src", /cisco-boat-smile/);
   await expect(
     page.locator('.photo-collection-grid img[src*="cisco-timun-assembly"]'),
   ).toHaveCount(1);
@@ -47,7 +44,7 @@ test("About uses new Instagram photos without original comparison controls", asy
     .evaluate((image: HTMLImageElement) => image.decode());
   await expect(dialog.locator("img")).toHaveAttribute(
     "src",
-    /cisco-boat-enhanced/,
+    /cisco-boat-smile/,
   );
   await expect(
     dialog.getByRole("button", { name: "Original", exact: true }),

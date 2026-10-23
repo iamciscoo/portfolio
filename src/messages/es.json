@@ -81,7 +81,7 @@
     "services": "De tu primera idea\nal siguiente capítulo.",
     "servicesIntro": "Sitios web, productos full-stack y soporte práctico: Windows, aplicaciones y juegos.",
     "contact": "Las buenas ideas empiezan\ncon una conversación.",
-    "contactIntro": "¿Un sitio, un producto o ayuda con tu equipo? Comparte lo que necesitas y encontremos el siguiente paso.",
+    "contactIntro": "Un sitio, un producto o ayuda informática. Cuéntame qué necesitas.",
     "notFound": "Un pequeño desvío.",
     "notFoundBody": "Esta página no existe. Volvamos a un lugar conocido.",
     "metadata": "Francis Mwambene - Cisco | Desarrollador y creador de productos"
@@ -166,7 +166,8 @@
     "templateChoose": "Escribir mi propia consulta",
     "useTemplate": "Usar esta plantilla",
     "replaceBrief": "Sustituir mi texto por esta plantilla",
-    "templateNotice": "Establece el servicio y el texto. Tus datos de contacto no cambian."
+    "templateNotice": "Establece el servicio y el texto. Tus datos de contacto no cambian.",
+    "optionalDetails": "Más detalles (opcional)"
   },
   "footer": {
     "tagline": "Diseñado con intención. Desarrollado con cuidado.",

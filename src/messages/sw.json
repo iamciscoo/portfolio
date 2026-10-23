@@ -81,7 +81,7 @@
     "services": "Kutoka wazo lako la kwanza\nhadi hatua inayofuata.",
     "servicesIntro": "Tovuti, bidhaa za full-stack na msaada wa programu - ikiwa ni pamoja na Windows, programu na michezo.",
     "contact": "Mambo mazuri huanza\nkwa mazungumzo.",
-    "contactIntro": "Niambie unachohitaji: tovuti, bidhaa au msaada wa kompyuta. Toa maelezo ili tujadili hatua inayofuata.",
+    "contactIntro": "Tovuti, bidhaa au msaada wa kompyuta. Niambie kwa ufupi unachohitaji.",
     "notFound": "Tumepotea kidogo.",
     "notFoundBody": "Ukurasa huu haupo. Turudi mwanzo.",
     "metadata": "Francis Mwambene - Cisco | Msanidi Programu na Mbunifu wa Bidhaa"
@@ -166,7 +166,8 @@
     "templateChoose": "Nitaandika maelezo yangu",
     "useTemplate": "Tumia mfano huu",
     "replaceBrief": "Badilisha maelezo yangu kwa mfano huu",
-    "templateNotice": "Huweka huduma na maelezo. Taarifa zako za mawasiliano hazibadiliki."
+    "templateNotice": "Huweka huduma na maelezo. Taarifa zako za mawasiliano hazibadiliki.",
+    "optionalDetails": "Maelezo zaidi (hiari)"
   },
   "footer": {
     "tagline": "Ubunifu wenye fikra. Ujenzi wa makini.",

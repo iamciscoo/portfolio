@@ -43,7 +43,7 @@ export function ContactDetails({
         />
         {error("email")}
       </div>
-      <div className="form-field full">
+      <div className="form-field">
         <label htmlFor="phone">
           {t("phone")} <span>({common("optional")})</span>
         </label>
@@ -60,22 +60,10 @@ export function ContactDetails({
             errors.phone ? "phone-help phone-error" : "phone-help"
           }
         />
-        <small id="phone-help" className="field-help">
+        <small id="phone-help" className="sr-only">
           {t("phoneHelp")}
         </small>
         {error("phone")}
-      </div>
-      <div className="form-field full">
-        <label htmlFor="company">
-          {t("company")} <span>({common("optional")})</span>
-        </label>
-        <input
-          id="company"
-          autoComplete="organization"
-          maxLength={150}
-          {...register("company")}
-        />
-        {error("company")}
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import { l } from "@/lib/localize";
+import { personalMoments } from "./personal-moments";
 
 export const profile = {
   name: "Francis Jacob Mwambene",
@@ -18,15 +19,15 @@ export const profile = {
   photos: {
     hero: { src: "/images/profile/journey-cinematic.webp", confirmed: true },
     headshot: {
-      src: "/images/profile/cisco-candid-enhanced.webp",
+      src: "/images/profile/cisco-candid-smile.webp",
       width: 1086,
       height: 1448,
       confirmed: true,
     },
     boat: {
-      src: "/images/profile/cisco-boat-enhanced.webp",
+      src: "/images/profile/cisco-boat-smile.webp",
       width: 1670,
-      height: 941,
+      height: 942,
       alt: l(
         "Francis on a boat wearing an orange life jacket",
         "Фрэнсис в лодке в оранжевом спасательном жилете",
@@ -45,6 +46,7 @@ export const profile = {
         "https://www.instagram.com/just.cisco/p/DQUvsETgDE22V2USaZgOfCBy46cTHC-439P3fU0/?img_index=2",
     },
     gallery: [
+      ...personalMoments,
       {
         src: "/images/profile/cisco-timun-assembly.webp",
         width: 1440,

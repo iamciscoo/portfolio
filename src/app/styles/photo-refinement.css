@@ -46,6 +46,9 @@
 .about-moments figure:nth-child(2) {
   margin-top: 65px;
 }
+.about-moments figure:first-child .gallery-trigger img {
+  object-position: 25% center;
+}
 .project-card .project-visual {
   padding: 0;
   aspect-ratio: auto;
@@ -91,8 +94,8 @@
     margin-top: 24px;
   }
   .about-moments .photo-collection-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 16px;
   }
   .about-moments figure:nth-child(2) {
     margin-top: 0;

@@ -28,7 +28,7 @@ export default async function Contact({
   const t = await getTranslations();
   const { service } = await searchParams;
   return (
-    <>
+    <div className="contact-page">
       <PageHeading
         label={t("nav.contact")}
         title={t("pages.contact")}
@@ -41,22 +41,19 @@ export default async function Contact({
               src={profile.photos.headshot.src}
               alt={profile.shortName}
               fill
-              sizes="(max-width: 700px) 130px, 280px"
+              sizes="(max-width: 600px) 64px, 96px"
             />
           </div>
-          <span className="eyebrow">{t("form.direct")}</span>
-          <a className="contact-email" href={`mailto:${profile.email}`}>
-            {profile.email} ↗
-          </a>
-          <p>{t("footer.based")}</p>
-          <div className="contact-aside-mark">
-            Let’s
-            <br />
-            build<span>.</span>
+          <div className="contact-direct">
+            <p>{t("form.direct")}</p>
+            <a className="contact-email" href={`mailto:${profile.email}`}>
+              {profile.email} ↗
+            </a>
+            <p>{t("footer.based")}</p>
           </div>
         </aside>
         <InquiryForm initialService={service} />
       </section>
-    </>
+    </div>
   );
 }

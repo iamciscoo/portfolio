@@ -14,6 +14,7 @@ import type { Locale } from "@/i18n/routing";
 import { text } from "@/lib/localize";
 import { ContactDetails } from "./contact-details";
 import { InquiryTemplates } from "./inquiry-templates";
+import { InquiryOptions } from "./inquiry-options";
 import "./inquiry-templates.css";
 export function InquiryForm({ initialService }: { initialService?: string }) {
   const locale = useLocale() as Locale;
@@ -101,11 +102,9 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
       onSubmit={(event) => void handleSubmit(submit)(event)}
       noValidate
     >
-      <span className="eyebrow">{t("step")}</span>
-      <p>{t("detail")}</p>
       <div className="form-grid">
         <ContactDetails register={register} errors={errors} error={error} />
-        <div className="form-field full">
+        <div className="form-field">
           <label htmlFor="service">{t("service")} *</label>
           <select id="service" {...register("service")}>
             {services.map((service) => (
@@ -115,26 +114,6 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
             ))}
           </select>
           {error("service")}
-        </div>
-        <div className="form-field">
-          <label htmlFor="budget">{t("budget")}</label>
-          <select id="budget" {...register("budget")}>
-            {["discuss", "short", "medium", "large"].map((v) => (
-              <option value={v} key={v}>
-                {t(v === "discuss" ? "unsure" : v)}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="form-field">
-          <label htmlFor="timeline">{t("timeline")}</label>
-          <select id="timeline" {...register("timeline")}>
-            {["discuss", "soon", "quarter", "flexible"].map((v) => (
-              <option value={v} key={v}>
-                {t(v === "discuss" ? "unsure" : v)}
-              </option>
-            ))}
-          </select>
         </div>
         <div className="form-field full inquiry-brief">
           <label htmlFor="description">{t("description")} *</label>
@@ -151,7 +130,7 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
           />
           <textarea
             id="description"
-            rows={5}
+            rows={4}
             placeholder={t("descriptionPlaceholder")}
             {...register("description")}
             aria-invalid={!!errors.description}
@@ -161,20 +140,7 @@ export function InquiryForm({ initialService }: { initialService?: string }) {
           />
           {error("description")}
         </div>
-        <div className="form-field full">
-          <label htmlFor="language">{t("language")}</label>
-          <select
-            id="language"
-            {...register("locale")}
-            onChange={(e) => setValue("locale", e.target.value as Locale)}
-          >
-            <option value="en">English</option>
-            <option value="ru">Русский</option>
-            <option value="sw">Kiswahili</option>
-            <option value="fr">Français</option>
-            <option value="es">Español</option>
-          </select>
-        </div>
+        <InquiryOptions register={register} />
         <div className="honeypot" aria-hidden="true">
           <label htmlFor="website">
             Website

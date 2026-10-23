@@ -81,7 +81,7 @@
     "services": "From your first idea\nto your next chapter.",
     "servicesIntro": "Websites, full-stack products and practical software support - including Windows, applications and game setup.",
     "contact": "Good things start\nwith a conversation.",
-    "contactIntro": "Tell me what you need: a website, a product, or help with your computer. Share the details and we can work out the next step.",
+    "contactIntro": "A website, a product, or computer help. Tell me a little about it.",
     "notFound": "A small detour.",
     "notFoundBody": "This page isn't here. Let's get you back to familiar ground.",
     "metadata": "Francis Mwambene - Cisco | Developer & Product Builder"
@@ -166,7 +166,8 @@
     "templateChoose": "Write my own brief",
     "useTemplate": "Use this template",
     "replaceBrief": "Replace my brief with this template",
-    "templateNotice": "Sets the service and brief. Your contact details stay unchanged."
+    "templateNotice": "Sets the service and brief. Your contact details stay unchanged.",
+    "optionalDetails": "More details (optional)"
   },
   "footer": {
     "tagline": "Thoughtfully designed. Carefully built.",
