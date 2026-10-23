@@ -1,12 +1,19 @@
 import { l } from "@/lib/localize";
 
 export const homeNotes = {
+  greeting: l(
+    "Hi, I'm",
+    "Привет, я",
+    "Habari, mimi",
+    "Salut, moi c’est",
+    "Hola, soy",
+  ),
   title: l(
-    "Hi, I'm Cisco.\nI build websites.",
-    "Привет, я Cisco.\nЯ делаю сайты.",
-    "Habari, mimi Cisco.\nNinajenga tovuti.",
-    "Salut, moi c’est Cisco.\nJe crée des sites.",
-    "Hola, soy Cisco.\nCreo sitios web.",
+    "I build websites.",
+    "Я делаю сайты.",
+    "Ninajenga tovuti.",
+    "Je crée des sites.",
+    "Creo sitios web.",
   ),
   intro: l(
     "I build websites and apps. I can also help you set up Windows, software and games.",

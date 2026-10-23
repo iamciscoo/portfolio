@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Onest;
+  src: url("/fonts/onest-variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.cinematic-hero h1 {
+  font-family: Onest, Manrope, Arial, sans-serif;
+  font-style: normal;
+}
+.hero-introduction {
+  display: block;
+  margin-bottom: 0.18em;
+  color: #dce5f3;
+  font-size: 0.8em;
+  font-weight: 450;
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+.hero-name {
+  color: #aec3ff;
+  font-style: normal;
+  font-weight: 650;
+}
+.hero-statement {
+  display: block;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}

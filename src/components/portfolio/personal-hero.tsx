@@ -21,8 +21,16 @@ export async function PersonalHero({ locale }: { locale: Locale }) {
       }
       copy={
         <>
-          <span className="personal-kicker">{t("home.eyebrow")}</span>
-          <h1 data-sc-cue>{text(homeNotes.title, locale)}</h1>
+          <span className="personal-kicker">{profile.name}</span>
+          <h1 data-sc-cue>
+            <span className="hero-introduction">
+              {text(homeNotes.greeting, locale)}{" "}
+              <span className="hero-name">{profile.alias}.</span>
+            </span>{" "}
+            <span className="hero-statement">
+              {text(homeNotes.title, locale)}
+            </span>
+          </h1>
           <p>{text(homeNotes.intro, locale)}</p>
           <div className="hero-actions">
             <Link href="/projects" className="button primary">
