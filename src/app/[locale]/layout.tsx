@@ -48,7 +48,8 @@ export default async function LocaleLayout({
           }}
         />
       </head>
-      <body>
+      {/* Extensions such as Grammarly add body attributes before hydration. */}
+      <body suppressHydrationWarning>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
