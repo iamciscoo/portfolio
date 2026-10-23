@@ -1,6 +1,8 @@
 "use client";
 import { motion, useReducedMotion } from "motion/react";
+import { useState } from "react";
 import { useCompactMotion } from "./use-compact-motion";
+import "./reveal.css";
 export function Reveal({
   children,
   className = "",
@@ -10,17 +12,22 @@ export function Reveal({
 }) {
   const reduced = useReducedMotion();
   const compact = useCompactMotion();
+  const [entered, setEntered] = useState(false);
   return (
     <motion.div
-      className={className}
+      className={`text-reveal ${className}`.trim()}
+      data-entered={entered}
       initial={false}
       whileInView={
         reduced
-          ? {}
-          : { opacity: [compact ? 0.92 : 0.65, 1], y: [compact ? 8 : 15, 0] }
+          ? { transform: "none" }
+          : {
+              transform: [`translateY(${compact ? 10 : 18}px)`, "none"],
+            }
       }
-      viewport={{ once: true, amount: 0.12 }}
-      transition={{ duration: compact ? 0.28 : 0.55, ease: [0.22, 1, 0.36, 1] }}
+      onViewportEnter={() => setEntered(true)}
+      viewport={{ once: true, amount: 0.12, margin: "0px 0px -24px 0px" }}
+      transition={{ duration: compact ? 0.36 : 0.48, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>

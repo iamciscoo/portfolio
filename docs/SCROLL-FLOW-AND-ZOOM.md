@@ -34,10 +34,23 @@ The invitation follows the real project grid, outside the project filters. All f
 
 The existing Radix dialog retains Escape, focus trapping and focus return. The photo viewer adds a 44px zoom control, a fit state, a live zoom label and help in all five languages. `+`/`=` zoom in; `-`/`0` fit the image. Browser Ctrl/Command zoom shortcuts are left alone. Panning uses the scrollable image area without pointer lock or custom gesture capture. Closing the dialog resets zoom on the next open. Its flex layout keeps controls and instructions visible on short landscape screens.
 
+## Text entrances
+
+Section introductions use the existing Reveal component for one short entrance when they reach the viewport. Desktop text rises 18px over 480ms; compact screens use 10px over 360ms. Large headings fade from 65% to full opacity. Paragraphs, buttons and captions retain full contrast throughout. There are no delays or repeated fades when scrolling back. Content is visible in the server-rendered HTML, including when JavaScript is disabled. Reduced motion removes both effects; keyboard focus keeps the block still.
+
+| Before                                                       | After                                                                                     | Why                                                               |
+| ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Most home section introductions appeared without an entrance | Work, concepts, expertise, journey, services and software introductions gently enter once | Give the page a consistent reading rhythm                         |
+| The entire home concept section moved together               | Only its introductory text moves                                                          | Keep the horizontal previews and controls steady                  |
+| Existing reveals faded whole blocks                          | Only large headings fade; the block travels 10px on phones                                | Keep body text and button contrast intact throughout the entrance |
+| The Work concept invitation appeared immediately             | Its text uses the same entrance, with focus and reduced-motion overrides                  | Connect the invitation to the rest of the site's motion           |
+
 ## Evidence
 
 - Lint, strict TypeScript and 55 unit/API tests passed.
 - Initial browser pass: all 34 relevant cases passed. After the inline concept-image enhancement and short-screen viewer adjustment, all 22 affected cases passed, including the two added cases.
+- The subsequent full browser sweep passed 81 cases and exposed five cumulative layout-test timeouts plus a contrast issue during the whole-block fade. The layout test retains its 45 routes and width assertions, using visible content and loaded fonts instead of the [discouraged network-idle readiness wait](https://playwright.dev/docs/api/class-page#page-wait-for-load-state). The fade now affects headings only. All 10 corrective checks passed, followed by all 14 final scroll, zoom and text-entrance cases.
+- Text verification samples actual entrance frames and return scrolling, checks reduced motion on headings as well as wrappers, and freezes the heading fade at its dimmest frame for contrast scans in both themes at 390px and 1440px. Final independent code review passed with no blocking findings.
 - Checks cover 320px, 390px and 1440px, all five locales, concept navigation, complete project frames, keyboard and native rail browsing, zoom/pan dimensions, dialog focus return, accessibility and reduced motion. Existing no-JavaScript, mobile spacing, theme and navigation checks passed.
 - Production build passed with all 81 routes generated.
 - Captured actual hero opening, intermediate and exit frames on desktop and phone, plus phone reduced motion. `refinement-preview/scroll-flow.webp` is the contact sheet; measurements and original frames are in ignored `tmp/scroll-zoom-qa/frames/`.

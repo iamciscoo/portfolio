@@ -37,7 +37,7 @@ export default async function Home({
     <>
       <PersonalHero locale={locale} />
       <section id="selected-work" className="work-section wrap">
-        <div className="section-heading">
+        <Reveal className="section-heading">
           <div>
             <span className="eyebrow">{t("common.work")}</span>
             <h2>{t("home.workTitle")}</h2>
@@ -49,7 +49,7 @@ export default async function Home({
               <ArrowUpRight size={17} />
             </Link>
           </div>
-        </div>
+        </Reveal>
         <ProjectExhibits locale={locale} />
         <div className="showcase-offer">
           <p>{text(showcase.offer, locale)}</p>
@@ -59,29 +59,29 @@ export default async function Home({
           </Link>
         </div>
       </section>
-      <Reveal>
-        <section className="studio-section">
-          <div className="wrap">
-            <div className="section-heading">
-              <div>
-                <span className="eyebrow">{t("common.studio")}</span>
-                <h2>{t("home.studioTitle")}</h2>
-              </div>
-              <div>
-                <p>{t("home.studioBody")}</p>
-                <Link href="/studio" className="text-link">
-                  {t("common.studio")}
-                  <ArrowUpRight size={17} />
-                </Link>
-              </div>
+      <section className="studio-section">
+        <div className="wrap">
+          <Reveal className="section-heading">
+            <div>
+              <span className="eyebrow">{t("common.studio")}</span>
+              <h2>{t("home.studioTitle")}</h2>
             </div>
-            <StudioGrid locale={locale} compact />
-          </div>
-        </section>
-      </Reveal>
+            <div>
+              <p>{t("home.studioBody")}</p>
+              <Link href="/studio" className="text-link">
+                {t("common.studio")}
+                <ArrowUpRight size={17} />
+              </Link>
+            </div>
+          </Reveal>
+          <StudioGrid locale={locale} compact />
+        </div>
+      </section>
       <section className="expertise-section wrap">
-        <span className="eyebrow">{t("home.expertise")}</span>
-        <h2>{t("home.expertiseTitle")}</h2>
+        <Reveal>
+          <span className="eyebrow">{t("home.expertise")}</span>
+          <h2>{t("home.expertiseTitle")}</h2>
+        </Reveal>
         <div className="expertise-grid">
           {skillGroups.map((group, i) => (
             <div key={i}>
@@ -94,14 +94,14 @@ export default async function Home({
         </div>
       </section>
       <section className="journey-preview wrap">
-        <div>
+        <Reveal>
           <span className="eyebrow">{t("nav.journey")}</span>
           <h2>{t("home.journeyTitle")}</h2>
           <Link href="/journey" className="text-link">
             {t("nav.journey")}
             <ArrowUpRight size={17} />
           </Link>
-        </div>
+        </Reveal>
         <div>
           {milestones
             .filter((m) => m.type === "experience")
@@ -115,7 +115,7 @@ export default async function Home({
         </div>
       </section>
       <section className="services-preview wrap">
-        <div className="section-heading">
+        <Reveal className="section-heading">
           <div>
             <span className="eyebrow">{t("nav.services")}</span>
             <h2>{t("home.servicesTitle")}</h2>
@@ -124,7 +124,7 @@ export default async function Home({
             {t("nav.services")}
             <ArrowUpRight size={17} />
           </Link>
-        </div>
+        </Reveal>
         {services.slice(0, 4).map((s, i) => (
           <Link
             className="service-row"

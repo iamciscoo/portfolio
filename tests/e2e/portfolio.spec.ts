@@ -66,7 +66,8 @@ for (const width of [320, 390, 768, 1280, 1440])
         "/studio/tours",
       ]) {
         await page.goto(`/${locale}${route}`);
-        await page.waitForLoadState("networkidle");
+        await expect(page.locator("main")).toBeVisible();
+        await page.evaluate(() => document.fonts.ready.then(() => undefined));
         const size = await page.evaluate(() => ({
           scroll: document.documentElement.scrollWidth,
           viewport: innerWidth,

@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { demos } from "@/content/demos";
 import { CaseVisual } from "@/components/portfolio/scroll-scenes";
+import { Reveal } from "@/components/common/reveal";
 import "./studio-invitation.css";
 
 export async function StudioInvitation() {
@@ -13,7 +14,7 @@ export async function StudioInvitation() {
       className="studio-invitation wrap"
       aria-labelledby="studio-invitation-title"
     >
-      <div>
+      <Reveal>
         <h2 id="studio-invitation-title">{t("projects.conceptsTitle")}</h2>
         <p>{t("projects.conceptsBody")}</p>
         <Link className="button primary" href="/studio">
@@ -21,7 +22,7 @@ export async function StudioInvitation() {
           <ArrowUpRight size={18} />
         </Link>
         <small>{t("projects.conceptsNote")}</small>
-      </div>
+      </Reveal>
       <CaseVisual>
         <div className="studio-invitation-previews">
           {demos.slice(0, 2).map((demo) => (

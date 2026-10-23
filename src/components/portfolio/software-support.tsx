@@ -4,6 +4,7 @@ import { homeNotes } from "@/content/home-notes";
 import { services } from "@/content/services";
 import { text } from "@/lib/localize";
 import type { Locale } from "@/i18n/routing";
+import { Reveal } from "@/components/common/reveal";
 
 const softwareOptions = [
   { id: "windows", icon: MonitorCog },
@@ -14,13 +15,13 @@ const softwareOptions = [
 export function SoftwareSupport({ locale }: { locale: Locale }) {
   return (
     <section className="software-support wrap" data-sc-act="software-support">
-      <div>
+      <Reveal>
         <span className="personal-kicker">
           {text(homeNotes.supportLabel, locale)}
         </span>
         <h2>{text(homeNotes.supportTitle, locale)}</h2>
         <p>{text(homeNotes.supportBody, locale)}</p>
-      </div>
+      </Reveal>
       <div className="software-options">
         {softwareOptions.map(({ id, icon: Icon }) => {
           const service = services.find((item) => item.id === id)!;
