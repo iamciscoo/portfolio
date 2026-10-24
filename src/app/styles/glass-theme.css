@@ -154,7 +154,7 @@
 :root[data-theme-transition] .cinematic-hero::before {
   transition: opacity 350ms ease;
 }
-@media (max-width: 700px) {
+@media (min-width: 601px) and (max-width: 700px) {
   :root[data-theme="light"] .hero-photo-print {
     opacity: 0.94;
   }

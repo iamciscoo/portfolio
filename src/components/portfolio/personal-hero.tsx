@@ -31,7 +31,14 @@ export async function PersonalHero({ locale }: { locale: Locale }) {
               {text(homeNotes.title, locale)}
             </span>
           </h1>
-          <p>{text(homeNotes.intro, locale)}</p>
+          <p>
+            <span className="hero-intro-full">
+              {text(homeNotes.intro, locale)}
+            </span>
+            <span className="hero-intro-compact">
+              {text(homeNotes.mobileIntro, locale)}
+            </span>
+          </p>
           <div className="hero-actions">
             <Link href="/projects" className="button primary">
               {t("common.explore")}

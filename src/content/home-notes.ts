@@ -22,6 +22,13 @@ export const homeNotes = {
     "Je crée des sites et des applications. Je peux aussi vous aider à installer Windows, vos logiciels et vos jeux.",
     "Creo sitios y aplicaciones. También puedo ayudarte a instalar Windows, programas y juegos.",
   ),
+  mobileIntro: l(
+    "And apps. Plus Windows, software & game setup.",
+    "И приложения. Установка Windows, программ и игр.",
+    "Na programu. Pia usakinishaji wa Windows, programu na michezo.",
+    "Et des applis. Installation de Windows, logiciels et jeux.",
+    "Y apps. Instalación de Windows, programas y juegos.",
+  ),
   workLabel: l(
     "Behind the build",
     "За кадром разработки",

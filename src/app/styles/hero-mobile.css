@@ -1,0 +1,138 @@
+/* A photo-led composition shared by both themes on phones. */
+@media (max-width: 600px) {
+  :root[data-theme] .cinematic-hero {
+    min-height: 420px;
+    background: #071322;
+    color: #f7f8fa;
+  }
+  :root[data-theme] .cinematic-hero::before {
+    opacity: 0;
+  }
+  :root[data-theme] .hero-photo-print {
+    opacity: 1;
+  }
+  .hero-photo-print img {
+    object-position: 64% center;
+  }
+  :root[data-theme] .hero-shade {
+    opacity: 1;
+    background: linear-gradient(
+      180deg,
+      #04101f0a 5%,
+      #04101f14 22%,
+      #04101fbf 48%,
+      #04101fe8 74%,
+      #04101ff5 100%
+    );
+  }
+  .cinematic-inner {
+    padding-block: 20px;
+    gap: 24px;
+  }
+  .cinematic-top {
+    display: block;
+  }
+  .cinematic-top > span:first-child,
+  .cinematic-hero .personal-kicker,
+  .hero-intro-full,
+  .hero-scroll-link > span:first-child {
+    display: none;
+  }
+  .hero-art-credit {
+    display: inline-block;
+    max-width: 100%;
+    padding: 5px 9px;
+    font-size: 10px;
+  }
+  .cinematic-hero .personal-hero-copy {
+    margin-block: auto;
+    padding-block: 0;
+  }
+  /* The photo surface stays light-on-dark, including pending scroll reveals. */
+  :root[data-theme] .cinematic-hero h1 {
+    color: inherit;
+    font-size: clamp(32px, 9.7vw, 46px);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+  }
+  :root[data-theme] .hero-introduction {
+    margin-bottom: 8px;
+    color: #f7f8fa;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  :root[data-theme] .hero-name {
+    color: #aec3ff;
+  }
+  .hero-name::after {
+    content: none;
+  }
+  :root[data-theme] .cinematic-hero .personal-hero-copy > p {
+    max-width: none;
+    margin: 12px 0 20px;
+    color: #e7edf7;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 1.65;
+    text-wrap: balance;
+  }
+  .hero-intro-compact {
+    display: inline;
+  }
+  .cinematic-hero .hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+  }
+  .cinematic-hero .hero-actions > a {
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+  .cinematic-hero .button {
+    min-height: 46px;
+    padding: 13px 12px;
+    font-size: 13px;
+  }
+  :root[data-theme] .cinematic-hero .hero-actions .text-link {
+    min-height: 46px;
+    padding: 10px 0;
+    border-color: #ffffff80;
+    border-radius: 0;
+    background: transparent;
+    color: #f7f8fa;
+    font-size: 13px;
+  }
+  :root[data-theme] .cinematic-footer {
+    gap: 12px;
+    padding-top: 12px;
+    border-color: #bed4f040;
+    color: #e7edf7;
+  }
+  .hero-about-link {
+    max-width: calc(100% - 56px);
+    gap: 10px;
+    font-size: 12px;
+  }
+  .hero-about-link img {
+    width: 32px;
+    height: 32px;
+  }
+  :root[data-theme] .hero-scroll-link {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #f7f8fa;
+    text-shadow: none;
+  }
+  :root[data-theme] .hero-scroll-link .scroll-arrow {
+    width: 40px;
+    height: 40px;
+    border-color: #ffffff80;
+  }
+}

@@ -30,3 +30,6 @@
   line-height: 1.08;
   letter-spacing: -0.05em;
 }
+.hero-intro-compact {
+  display: none;
+}

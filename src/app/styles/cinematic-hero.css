@@ -47,8 +47,15 @@
   gap: 12px;
 }
 .hero-art-credit {
+  display: inline-block;
   max-width: 300px;
-  text-align: right;
+  padding: 6px 10px;
+  border: 1px solid #ffffff26;
+  border-radius: 6px;
+  background: #071322e6;
+  color: #f7f8fa;
+  line-height: 1.6;
+  text-align: left;
 }
 .cinematic-top > span:first-child::before {
   content: "";
@@ -171,74 +178,6 @@
   }
   .cinematic-hero h1 {
     font-size: clamp(52px, 8.3vw, 76px);
-  }
-}
-@media (max-width: 600px) {
-  .cinematic-hero {
-    min-height: 0;
-  }
-  .cinematic-inner {
-    padding-block: 20px;
-  }
-  .cinematic-top {
-    align-items: flex-start;
-    font-size: 10px;
-    gap: 20px;
-  }
-  .cinematic-top > span:first-child {
-    max-width: 150px;
-    gap: 8px;
-  }
-  .cinematic-top > span:first-child::before {
-    flex-shrink: 0;
-  }
-  .cinematic-hero .personal-hero-copy {
-    padding-block: 28px 26px;
-  }
-  .cinematic-hero .personal-kicker {
-    font-size: 10px;
-    margin-bottom: 14px;
-  }
-  .cinematic-hero h1 {
-    font-size: clamp(36px, 9.8vw, 52px);
-  }
-  .cinematic-hero .personal-hero-copy > p {
-    font-size: 14px;
-    max-width: 350px;
-    margin: 18px 0;
-    line-height: 1.75;
-  }
-  .cinematic-hero .hero-actions {
-    gap: 18px;
-  }
-  .cinematic-hero .hero-actions .text-link {
-    font-size: 12px;
-  }
-  .cinematic-hero .button {
-    padding: 15px 19px;
-    font-size: 12px;
-  }
-  .hero-photo-print img {
-    object-position: 58% center;
-  }
-  .cinematic-footer {
-    gap: 15px;
-    padding-top: 14px;
-  }
-  .hero-about-link {
-    max-width: 100%;
-    font-size: 11px;
-    gap: 10px;
-  }
-  .hero-scroll-link > span:first-child {
-    display: none;
-  }
-  .hero-about-link > span {
-    max-width: 200px;
-  }
-  .scroll-arrow {
-    width: 34px;
-    height: 34px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
