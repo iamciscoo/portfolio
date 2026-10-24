@@ -29,36 +29,29 @@
     padding-block: 20px;
     gap: 24px;
   }
-  .cinematic-top {
-    display: block;
-  }
-  .cinematic-top > span:first-child,
+  /* The art credit belongs to the desktop composition only. */
+  .cinematic-top,
   .cinematic-hero .personal-kicker,
   .hero-intro-full,
   .hero-scroll-link > span:first-child {
     display: none;
   }
-  .hero-art-credit {
-    display: inline-block;
-    max-width: 100%;
-    padding: 5px 9px;
-    font-size: 10px;
-  }
   .cinematic-hero .personal-hero-copy {
     margin-block: auto;
-    padding-block: 0;
+    padding-block: 4px;
   }
   /* The photo surface stays light-on-dark, including pending scroll reveals. */
+  /* With the credit row gone the copy owns the frame, so it can breathe. */
   :root[data-theme] .cinematic-hero h1 {
     color: inherit;
-    font-size: clamp(32px, 9.7vw, 46px);
-    line-height: 1.12;
+    font-size: clamp(36px, 10.6vw, 50px);
+    line-height: 1.1;
     letter-spacing: -0.04em;
   }
   :root[data-theme] .hero-introduction {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: #f7f8fa;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.2;
   }
   :root[data-theme] .hero-name {
