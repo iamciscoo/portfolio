@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -17,6 +17,12 @@ export function DesktopNav() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [hovered, setHovered] = useState<string | null>(null);
+  // Same-route links have nowhere to navigate; use them as a lift-to-top gesture.
+  const returnToTop = (event: MouseEvent, url: string) => {
+    if (pathname !== url) return;
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "instant" });
+  };
   const current = portfolioLinks.find(([, url]) =>
     pathname.startsWith(url),
   )?.[0];
@@ -31,6 +37,7 @@ export function DesktopNav() {
           key={key}
           href={url}
           aria-current={current === key ? "page" : undefined}
+          onClick={(event) => returnToTop(event, url)}
           onPointerEnter={() => setHovered(key)}
           onFocus={() => setHovered(key)}
           onBlur={() => setHovered(null)}

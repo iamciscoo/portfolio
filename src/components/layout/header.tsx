@@ -1,18 +1,40 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { useTranslations } from "next-intl";
 import * as Dialog from "@radix-ui/react-dialog";
 import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { LocaleSwitcher } from "./locale-switcher";
 import { DesktopNav, portfolioLinks } from "./desktop-nav";
 import { motion, useScroll, useSpring } from "motion/react";
 
 export function Header() {
   const t = useTranslations("nav");
+  const pathname = usePathname();
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 180, damping: 35 });
   const [open, setOpen] = useState(false);
+  const liftAfterClose = useRef(false);
+  // Same-route links have nowhere to navigate; use them as a lift-to-top gesture.
+  function returnToTop(event: MouseEvent, url: string) {
+    if (pathname !== url) return;
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
+  // The panel's scroll lock is released after this handler runs, so the lift
+  // waits for the close commit instead of being overridden by it.
+  useEffect(() => {
+    if (open || !liftAfterClose.current) return;
+    liftAfterClose.current = false;
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [open]);
+  function handlePanelLink(event: MouseEvent, url: string) {
+    if (pathname === url) {
+      event.preventDefault();
+      liftAfterClose.current = true;
+    }
+    setOpen(false);
+  }
   function toggleTheme() {
     const next =
       document.documentElement.dataset.theme === "light" ? "dark" : "light";
@@ -30,7 +52,12 @@ export function Header() {
         {t("skip")}
       </a>
       <header className="site-header">
-        <Link className="wordmark" href="/" aria-label="Cisco - Home">
+        <Link
+          className="wordmark"
+          href="/"
+          aria-label="Cisco - Home"
+          onClick={(event) => returnToTop(event, "/")}
+        >
           cisco<span>*</span>
         </Link>
         <DesktopNav />
@@ -76,7 +103,11 @@ export function Header() {
                     ...portfolioLinks,
                     ["contact", "/contact"],
                   ].map(([key, url]) => (
-                    <Link href={url} key={key} onClick={() => setOpen(false)}>
+                    <Link
+                      href={url}
+                      key={key}
+                      onClick={(event) => handlePanelLink(event, url)}
+                    >
                       {t(key)}
                       <ArrowUpRight size={20} />
                     </Link>
