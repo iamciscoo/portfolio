@@ -1,10 +1,8 @@
 "use client";
-import { inView, useAnimate } from "motion/react";
-import { useEffect } from "react";
+import { scroll, transform } from "motion/react";
+import { useEffect, useRef } from "react";
 import { useMediaQuery } from "./use-media-query";
 import "./reveal.css";
-
-const restingOpacity = 0.65;
 
 export function Reveal({
   children,
@@ -13,76 +11,45 @@ export function Reveal({
   children: React.ReactNode;
   className?: string;
 }) {
-  const [scope, animate] = useAnimate<HTMLDivElement>();
+  const scope = useRef<HTMLDivElement>(null);
   const reduced = useMediaQuery("(prefers-reduced-motion: reduce)");
 
   useEffect(() => {
-    if (reduced) return;
+    if (reduced || !scope.current) return;
     const container = scope.current;
-    const targets = Array.from(
-      container.querySelectorAll<HTMLElement>("h1, h2, h3, p"),
-    );
-    // IntersectionObserver percentages use width, so calculate the reading
-    // area's bottom inset from viewport height explicitly, including on phones.
-    const bottomInset = () =>
-      Math.round(
-        window.innerHeight *
-          (window.matchMedia("(max-width: 700px)").matches ? 0.38 : 0.24),
-      );
-    for (const element of targets) {
-      if (
-        !element.hasAttribute("data-reveal-entered") &&
-        element.getBoundingClientRect().top >=
-          window.innerHeight - bottomInset()
-      ) {
-        element.dataset.revealPending = "true";
-        element.style.opacity = String(restingOpacity);
-        element.style.transform = "none";
-      }
-    }
-    let stopObserving = () => {};
-    function observe() {
-      stopObserving();
-      stopObserving = inView(
-        targets,
-        (element) => {
-          if (element.hasAttribute("data-reveal-entered")) return;
-          container.dataset.entered = "true";
-          element.removeAttribute("data-reveal-pending");
-          element.setAttribute("data-reveal-entered", "true");
-          animate(
-            element,
-            {
-              opacity: [restingOpacity, 1],
-              transform: [
-                `translateY(${element.tagName === "P" ? 12 : 24}px)`,
-                "translateY(0px)",
-              ],
-            },
-            {
-              duration: 1,
-              delay: element.tagName === "P" ? 0.18 : 0,
-              ease: [0.2, 0.65, 0.3, 1],
-            },
-          );
+    const targets = [
+      ...container.querySelectorAll<HTMLElement>("h1, h2, h3, p"),
+    ];
+    // Scroll position drives the same path in both directions. Keep the middle
+    // reading area still and legible; never hide copy at either viewport edge.
+    const stops = targets.map((element) => {
+      const distance = element.tagName === "P" ? 12 : 24;
+      const opacity = transform([0, 0.28, 0.72, 1], [0.65, 1, 1, 0.65]);
+      const travel = transform([0, 0.28, 0.72, 1], [distance, 0, 0, -distance]);
+      return scroll(
+        (progress) => {
+          const alpha = opacity(progress);
+          element.style.opacity = String(alpha);
+          element.style.transform = `translateY(${travel(progress)}px)`;
+          element.toggleAttribute("data-reveal-pending", alpha < 0.999);
+          if (!element.hasAttribute("data-reveal-entered")) {
+            element.setAttribute("data-reveal-entered", "true");
+            container.dataset.entered = "true";
+          }
         },
-        { amount: 0.2, margin: `0px 0px ${-bottomInset()}px 0px` },
+        { target: element, offset: ["start end", "end start"] },
       );
-    }
-    observe();
-    window.addEventListener("resize", observe);
+    });
     return () => {
-      stopObserving();
-      window.removeEventListener("resize", observe);
-      // Restore pending copy when reduced motion is enabled or scope changes.
+      stops.forEach((stop) => stop());
       for (const element of targets) {
-        if (!element.hasAttribute("data-reveal-pending")) continue;
         element.removeAttribute("data-reveal-pending");
+        element.removeAttribute("data-reveal-entered");
         element.style.removeProperty("opacity");
         element.style.removeProperty("transform");
       }
     };
-  }, [animate, reduced, scope]);
+  }, [reduced]);
 
   return (
     <div ref={scope} className={`text-reveal ${className}`.trim()}>

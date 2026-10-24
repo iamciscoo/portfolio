@@ -23,7 +23,23 @@
     margin-bottom: 24px;
   }
   .showcase-rail {
-    scroll-snap-type: x proximity;
+    grid-auto-columns: 100%;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+  }
+  .studio-showcase .showcase-rail {
+    grid-auto-columns: 100%;
+  }
+  .section-heading {
+    display: block;
+  }
+  .section-heading > div {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+  .section-heading p {
+    max-width: none;
   }
   .showcase-rail .exhibit-copy {
     min-height: 0;
