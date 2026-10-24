@@ -8,6 +8,12 @@
     line-height: 1.22;
     letter-spacing: -0.025em;
   }
+  .work-section .section-heading h2 {
+    white-space: normal;
+    text-wrap: wrap;
+    font-size: clamp(26px, 7.5vw, 32px);
+    max-width: none;
+  }
   .work-section .section-heading p,
   .studio-section .section-heading p,
   .showcase-offer p {

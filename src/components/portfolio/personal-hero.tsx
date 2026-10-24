@@ -11,6 +11,10 @@ import { cinematic } from "@/content/cinematic";
 
 export async function PersonalHero({ locale }: { locale: Locale }) {
   const t = await getTranslations();
+  const intro = text(homeNotes.intro, locale);
+  const sentenceEnd = intro.indexOf(". ");
+  const lead = sentenceEnd < 0 ? intro : intro.slice(0, sentenceEnd + 1);
+  const support = sentenceEnd < 0 ? "" : intro.slice(sentenceEnd + 2);
   return (
     <HeroScene
       top={
@@ -31,7 +35,15 @@ export async function PersonalHero({ locale }: { locale: Locale }) {
               {text(homeNotes.title, locale)}
             </span>
           </h1>
-          <p>{text(homeNotes.intro, locale)}</p>
+          <p>
+            <span className="hero-intro-lead">{lead}</span>
+            {support && (
+              <>
+                {" "}
+                <span className="hero-intro-support">{support}</span>
+              </>
+            )}
+          </p>
           <div className="hero-actions">
             <Link href="/projects" className="button primary">
               {t("common.explore")}
