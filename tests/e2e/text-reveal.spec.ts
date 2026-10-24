@@ -40,7 +40,7 @@ for (const width of [390, 1440]) {
         ".studio-section .section-heading.text-reveal",
       );
       const heading = block.locator(tag);
-      await expect(heading).toHaveCSS("opacity", "0");
+      await expect(heading).toHaveCSS("opacity", "0.65");
       const sample = () =>
         heading.evaluate(
           (node) =>
@@ -67,14 +67,19 @@ for (const width of [390, 1440]) {
         );
       const frames = await sample();
       expect(Math.min(...frames.map((frame) => frame.opacity))).toBeLessThan(
-        0.2,
+        0.8,
       );
+      expect(
+        Math.min(...frames.map((frame) => frame.opacity)),
+      ).toBeGreaterThanOrEqual(0.65);
       expect(frames.some((frame) => frame.opacity < 0.99 && frame.y > 0)).toBe(
         true,
       );
-      expect(Math.max(...frames.map((frame) => frame.y))).toBeGreaterThan(32);
+      expect(Math.max(...frames.map((frame) => frame.y))).toBeGreaterThan(
+        tag === "p" ? 8 : 16,
+      );
       expect(Math.max(...frames.map((frame) => frame.y))).toBeLessThanOrEqual(
-        44,
+        tag === "p" ? 12 : 24,
       );
       await expect(heading).toHaveCSS("opacity", "1");
       expect(

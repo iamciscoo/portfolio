@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { useMediaQuery } from "./use-media-query";
 import "./reveal.css";
 
+const restingOpacity = 0.65;
+
 export function Reveal({
   children,
   className = "",
@@ -34,8 +36,8 @@ export function Reveal({
           window.innerHeight - bottomInset()
       ) {
         element.dataset.revealPending = "true";
-        element.style.opacity = "0";
-        element.style.transform = "translateY(44px)";
+        element.style.opacity = String(restingOpacity);
+        element.style.transform = "none";
       }
     }
     let stopObserving = () => {};
@@ -51,8 +53,11 @@ export function Reveal({
           animate(
             element,
             {
-              opacity: [0, 1],
-              transform: ["translateY(44px)", "translateY(0px)"],
+              opacity: [restingOpacity, 1],
+              transform: [
+                `translateY(${element.tagName === "P" ? 12 : 24}px)`,
+                "translateY(0px)",
+              ],
             },
             {
               duration: 1,

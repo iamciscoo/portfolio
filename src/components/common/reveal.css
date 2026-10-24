@@ -1,3 +1,7 @@
+.text-reveal [data-reveal-pending] {
+  color: var(--text);
+}
+
 .text-reveal:focus-within,
 .text-reveal:focus-within [data-reveal-pending],
 .text-reveal:focus-within [data-reveal-entered],

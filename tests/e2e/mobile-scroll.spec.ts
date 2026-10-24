@@ -1,4 +1,5 @@
 import { test, expect } from "./fixtures";
+import AxeBuilder from "@axe-core/playwright";
 
 for (const width of [360, 390]) {
   test(`touch scroll reveals mobile copy in the reading area at ${width}px`, async ({
@@ -24,6 +25,19 @@ for (const width of [360, 390]) {
         "data-reveal-pending",
         "true",
       );
+      await expect(copy.locator("h2")).toHaveCSS("opacity", "0.65");
+      await expect(copy.locator("p")).toHaveCSS("opacity", "0.65");
+      await expect(copy.locator("p")).toHaveCSS("transform", "none");
+      const paragraph = await copy.locator("p").boundingBox();
+      const link = await copy.locator("a").boundingBox();
+      expect(paragraph!.y + paragraph!.height).toBeLessThan(link!.y);
+      const contrast = await new AxeBuilder({ page })
+        .include("#selected-work .section-heading")
+        .withRules(["color-contrast"])
+        .analyze();
+      expect(contrast.violations.map((violation) => violation.id)).toEqual([]);
+      const hero = await page.locator(".cinematic-hero").boundingBox();
+      expect(hero!.height).toBeLessThan(width <= 360 ? 500 : 450);
       await page.screenshot({ path: `tmp/touch-motion/before-${width}.png` });
       const samples = copy.evaluate(
         (node) =>
@@ -65,14 +79,16 @@ for (const width of [360, 390]) {
         touchPoints: [],
       });
       expect(await page.evaluate(() => scrollY)).toBeGreaterThan(200);
-      for (const frames of await samples) {
+      for (const [index, frames] of (await samples).entries()) {
         expect(
           frames.some(
             (frame) =>
-              frame.opacity > 0.05 && frame.opacity < 0.8 && frame.y > 8,
+              frame.opacity > 0.65 && frame.opacity < 0.95 && frame.y > 2,
           ),
         ).toBe(true);
-        expect(Math.max(...frames.map((frame) => frame.y))).toBeGreaterThan(32);
+        expect(Math.max(...frames.map((frame) => frame.y))).toBeGreaterThan(
+          index === 0 ? 16 : 8,
+        );
       }
       await expect(copy.locator("h2")).toHaveCSS("opacity", "1");
       await expect(copy.locator("p")).toHaveCSS("opacity", "1");
