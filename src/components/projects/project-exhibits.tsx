@@ -8,6 +8,7 @@ import { text } from "@/lib/localize";
 import { ProjectScene } from "@/components/portfolio/scroll-scenes";
 import { HorizontalShowcase } from "@/components/common/horizontal-showcase";
 import { showcase } from "@/content/showcase";
+import { Reveal } from "@/components/common/reveal";
 
 export async function ProjectExhibits({ locale }: { locale: Locale }) {
   const t = await getTranslations();
@@ -51,13 +52,13 @@ export async function ProjectExhibits({ locale }: { locale: Locale }) {
             />
           }
         >
-          <div>
+          <Reveal>
             <span className="personal-kicker">
               {text(project.role, locale)}
             </span>
             <h3 data-sc-cue>{project.name}</h3>
             <p>{text(project.intro, locale)}</p>
-          </div>
+          </Reveal>
           <div className="exhibit-actions">
             <Link className="text-link" href={`/projects/${project.slug}`}>
               {t("common.view")}

@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { homeNotes } from "@/content/home-notes";
 import { text } from "@/lib/localize";
 import type { Locale } from "@/i18n/routing";
+import { Reveal } from "@/components/common/reveal";
 
 export async function WorkNotes({ locale }: { locale: Locale }) {
   const t = await getTranslations("common");
@@ -20,7 +21,7 @@ export async function WorkNotes({ locale }: { locale: Locale }) {
         />
         <figcaption>{text(homeNotes.workCaption, locale)}</figcaption>
       </figure>
-      <div className="work-note-copy">
+      <Reveal className="work-note-copy">
         <span className="personal-kicker">
           {text(homeNotes.workLabel, locale)}
         </span>
@@ -40,7 +41,7 @@ export async function WorkNotes({ locale }: { locale: Locale }) {
           {text(homeNotes.watch, locale)}
           <ArrowUpRight size={15} aria-hidden="true" />
         </a>
-      </div>
+      </Reveal>
     </section>
   );
 }

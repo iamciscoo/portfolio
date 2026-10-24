@@ -1,9 +1,11 @@
-.text-reveal:focus-within {
+.text-reveal:focus-within,
+.text-reveal:focus-within [data-reveal-entered] {
   opacity: 1 !important;
   transform: none !important;
 }
 @media (prefers-reduced-motion: reduce) {
-  .text-reveal {
+  .text-reveal,
+  .text-reveal [data-reveal-entered] {
     opacity: 1 !important;
     transform: none !important;
   }

@@ -1,3 +1,5 @@
+import { Reveal } from "./reveal";
+
 export function PageHeading({
   label,
   title,
@@ -13,8 +15,10 @@ export function PageHeading({
         <span className="blue-dot" />
         {label}
       </div>
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <Reveal>
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </Reveal>
     </section>
   );
 }

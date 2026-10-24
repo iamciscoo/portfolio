@@ -2,6 +2,7 @@
 import { useRef, type ReactNode } from "react";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useCompactMotion } from "@/components/common/use-compact-motion";
+import { Reveal } from "@/components/common/reveal";
 
 export function HeroScene({
   copy,
@@ -43,7 +44,7 @@ export function HeroScene({
       <div className="hero-shade" aria-hidden="true" />
       <div className="cinematic-inner wrap">
         {top}
-        <div className="personal-hero-copy">{copy}</div>
+        <Reveal className="personal-hero-copy">{copy}</Reveal>
         <div className="cinematic-footer">{caption}</div>
       </div>
     </section>

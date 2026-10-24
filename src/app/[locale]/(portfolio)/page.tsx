@@ -51,13 +51,13 @@ export default async function Home({
           </div>
         </Reveal>
         <ProjectExhibits locale={locale} />
-        <div className="showcase-offer">
+        <Reveal className="showcase-offer">
           <p>{text(showcase.offer, locale)}</p>
           <Link className="text-link" href="/contact?service=business">
             {text(showcase.build, locale)}
             <ArrowUpRight size={17} />
           </Link>
-        </div>
+        </Reveal>
       </section>
       <section className="studio-section">
         <div className="wrap">
@@ -84,12 +84,12 @@ export default async function Home({
         </Reveal>
         <div className="expertise-grid">
           {skillGroups.map((group, i) => (
-            <div key={i}>
+            <Reveal key={i}>
               <h3>{text(group.title, locale)}</h3>
               <p>
                 {group.skills.map((skill) => text(skill, locale)).join(" / ")}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -106,11 +106,11 @@ export default async function Home({
           {milestones
             .filter((m) => m.type === "experience")
             .map((m) => (
-              <div className="mini-milestone" key={m.id}>
+              <Reveal className="mini-milestone" key={m.id}>
                 <span>{text(m.date, locale)}</span>
                 <h3>{text(m.title, locale)}</h3>
                 <p>{text(m.place, locale)}</p>
-              </div>
+              </Reveal>
             ))}
         </div>
       </section>

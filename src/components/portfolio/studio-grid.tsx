@@ -7,6 +7,7 @@ import type { Locale } from "@/i18n/routing";
 import { text } from "@/lib/localize";
 import { HorizontalShowcase } from "@/components/common/horizontal-showcase";
 import { showcase } from "@/content/showcase";
+import { Reveal } from "@/components/common/reveal";
 export async function StudioGrid({
   locale,
   compact = false,
@@ -37,13 +38,13 @@ export async function StudioGrid({
               </h3>
             </div>
           </Link>
-          <div className="studio-caption">
+          <Reveal className="studio-caption">
             <p>{text(demo.body, locale)}</p>
             <Link href={`/studio/${demo.slug}`}>
               {t("common.demo")}
               <ArrowUpRight size={17} />
             </Link>
-          </div>
+          </Reveal>
         </article>
       ))}
     </>

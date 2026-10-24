@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { profile } from "@/content/profile";
+import { Reveal } from "./reveal";
 export async function ContactBand() {
   const t = await getTranslations();
   return (
@@ -23,7 +24,7 @@ export async function ContactBand() {
         </p>
       </div>
       <span className="eyebrow">{t("home.contactLabel")}</span>
-      <div>
+      <Reveal>
         <h2 data-sc-cue>{t("home.contactTitle")}</h2>
         <Link
           href="/contact"
@@ -32,8 +33,10 @@ export async function ContactBand() {
         >
           <ArrowUpRight />
         </Link>
-      </div>
-      <p>{t("home.contactBody")}</p>
+      </Reveal>
+      <Reveal>
+        <p>{t("home.contactBody")}</p>
+      </Reveal>
     </section>
   );
 }

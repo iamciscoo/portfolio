@@ -1,8 +1,8 @@
 "use client";
-import { motion, useReducedMotion } from "motion/react";
-import { useState } from "react";
-import { useCompactMotion } from "./use-compact-motion";
+import { inView, useAnimate, useReducedMotion } from "motion/react";
+import { useEffect } from "react";
 import "./reveal.css";
+
 export function Reveal({
   children,
   className = "",
@@ -10,27 +10,42 @@ export function Reveal({
   children: React.ReactNode;
   className?: string;
 }) {
+  const [scope, animate] = useAnimate<HTMLDivElement>();
   const reduced = useReducedMotion();
-  const compact = useCompactMotion();
-  const [entered, setEntered] = useState(false);
+
+  useEffect(() => {
+    if (reduced) return;
+    const container = scope.current;
+    const targets = Array.from(
+      container.querySelectorAll<HTMLElement>("h1, h2, h3, p"),
+    );
+    // Observe text itself: a tall section can enter long before its copy does.
+    return inView(
+      targets,
+      (element) => {
+        if (element.hasAttribute("data-reveal-entered")) return;
+        container.dataset.entered = "true";
+        element.setAttribute("data-reveal-entered", "true");
+        animate(
+          element,
+          {
+            opacity: [0, 1],
+            transform: ["translateY(32px)", "translateY(0px)"],
+          },
+          {
+            duration: 0.85,
+            delay: element.tagName === "P" ? 0.14 : 0,
+            ease: [0.2, 0.65, 0.3, 1],
+          },
+        );
+      },
+      { amount: 0.2, margin: "0px 0px -10% 0px" },
+    );
+  }, [animate, reduced, scope]);
+
   return (
-    <motion.div
-      className={`text-reveal ${className}`.trim()}
-      data-entered={entered}
-      initial={false}
-      whileInView={
-        reduced
-          ? { transform: "none", opacity: 1 }
-          : {
-              transform: [`translateY(${compact ? 20 : 18}px)`, "none"],
-              opacity: [0.15, 1],
-            }
-      }
-      onViewportEnter={() => setEntered(true)}
-      viewport={{ once: true, amount: 0.12, margin: "0px 0px -24px 0px" }}
-      transition={{ duration: compact ? 0.7 : 0.6, ease: [0.22, 1, 0.36, 1] }}
-    >
+    <div ref={scope} className={`text-reveal ${className}`.trim()}>
       {children}
-    </motion.div>
+    </div>
   );
 }

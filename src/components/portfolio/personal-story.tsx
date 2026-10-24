@@ -12,10 +12,10 @@ export async function PersonalStory({ locale }: { locale: Locale }) {
   const t = await getTranslations();
   return (
     <section id="intro" className="personal-story wrap" data-sc-act="story">
-      <div className="story-heading">
+      <Reveal className="story-heading">
         <span className="personal-kicker">{t("nav.about")}</span>
         <h2 data-sc-cue>{text(personalStory.title, locale)}</h2>
-      </div>
+      </Reveal>
       <div className="story-layout">
         <figure className="story-photo">
           <div>

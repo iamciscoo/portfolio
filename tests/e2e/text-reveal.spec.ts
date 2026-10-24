@@ -15,7 +15,8 @@ for (const width of [390, 1440]) {
       const block = page.locator(".studio-invitation .text-reveal");
       await block.scrollIntoViewIfNeeded();
       await expect(block).toHaveAttribute("data-entered", "true");
-      await expect(block).toHaveCSS("opacity", "1");
+      await expect(block.locator("h2")).toHaveCSS("opacity", "1");
+      await expect(block.locator("p")).toHaveCSS("opacity", "1");
       const scan = await new AxeBuilder({ page })
         .include(".studio-invitation")
         .withRules(["color-contrast"])
@@ -29,64 +30,68 @@ for (const width of [390, 1440]) {
     }
   });
 
-  test(`text enters once and remains readable at ${width}px`, async ({
-    page,
-  }) => {
-    await page.setViewportSize({ width, height: 844 });
-    await page.goto("/en");
-    const heading = page.locator(".studio-section .text-reveal");
-    await expect(heading).toHaveCSS("opacity", "1");
-    const sample = () =>
-      heading.evaluate(
-        (node) =>
-          new Promise<{ opacity: number; y: number }[]>((resolve) => {
-            const frames: { opacity: number; y: number }[] = [];
-            const start = performance.now();
-            const tick = () => {
-              const style = getComputedStyle(node);
-              frames.push({
-                opacity: Number(style.opacity),
-                y: new DOMMatrixReadOnly(style.transform).m42,
+  for (const tag of ["h2", "p"])
+    test(`individual ${tag} enters once and remains readable at ${width}px`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width, height: 844 });
+      await page.goto("/en");
+      const block = page.locator(".studio-section .section-heading.text-reveal");
+      const heading = block.locator(tag);
+      await expect(heading).toHaveCSS("opacity", "1");
+      const sample = () =>
+        heading.evaluate(
+          (node) =>
+            new Promise<{ opacity: number; y: number }[]>((resolve) => {
+              const frames: { opacity: number; y: number }[] = [];
+              const start = performance.now();
+              const tick = () => {
+                const style = getComputedStyle(node);
+                frames.push({
+                  opacity: Number(style.opacity),
+                  y: new DOMMatrixReadOnly(style.transform).m42,
+                });
+                if (performance.now() - start < 1250)
+                  requestAnimationFrame(tick);
+                else resolve(frames);
+              };
+              requestAnimationFrame(tick);
+              scrollTo({
+                top:
+                  node.getBoundingClientRect().top + scrollY - innerHeight / 2,
+                behavior: "instant",
               });
-              if (performance.now() - start < 950) requestAnimationFrame(tick);
-              else resolve(frames);
-            };
-            requestAnimationFrame(tick);
-            scrollTo({
-              top: node.getBoundingClientRect().top + scrollY - innerHeight / 2,
-              behavior: "instant",
-            });
-          }),
+            }),
+        );
+      const frames = await sample();
+      expect(Math.min(...frames.map((frame) => frame.opacity))).toBeLessThan(
+        0.2,
       );
-    const frames = await sample();
-    expect(Math.min(...frames.map((frame) => frame.opacity))).toBeLessThan(0.6);
-    expect(frames.some((frame) => frame.opacity < 0.99 && frame.y > 0)).toBe(
-      true,
-    );
-    expect(Math.min(...frames.map((frame) => frame.opacity))).toBeGreaterThan(
-      0.14,
-    );
-    expect(Math.max(...frames.map((frame) => frame.y))).toBeLessThanOrEqual(
-      width < 700 ? 20 : 18,
-    );
-    await expect(heading).toHaveCSS("opacity", "1");
-    expect(
-      await heading.evaluate(
-        (node) =>
-          new DOMMatrixReadOnly(getComputedStyle(node).transform).isIdentity,
-      ),
-    ).toBe(true);
-    await page.evaluate(() => scrollTo({ top: 0, behavior: "instant" }));
-    await expect(heading).not.toBeInViewport();
-    expect(
-      (await sample()).every((frame) => frame.opacity === 1 && frame.y === 0),
-    ).toBe(true);
-    const link = heading.locator("a");
-    await link.focus();
-    await expect(heading).toHaveCSS("transform", "none");
-    await link.click();
-    await expect(page).toHaveURL(/\/en\/studio$/);
-  });
+      expect(frames.some((frame) => frame.opacity < 0.99 && frame.y > 0)).toBe(
+        true,
+      );
+      expect(Math.max(...frames.map((frame) => frame.y))).toBeGreaterThan(24);
+      expect(Math.max(...frames.map((frame) => frame.y))).toBeLessThanOrEqual(
+        32,
+      );
+      await expect(heading).toHaveCSS("opacity", "1");
+      expect(
+        await heading.evaluate(
+          (node) =>
+            new DOMMatrixReadOnly(getComputedStyle(node).transform).isIdentity,
+        ),
+      ).toBe(true);
+      await page.evaluate(() => scrollTo({ top: 0, behavior: "instant" }));
+      await expect(heading).not.toBeInViewport();
+      expect(
+        (await sample()).every((frame) => frame.opacity === 1 && frame.y === 0),
+      ).toBe(true);
+      const link = block.locator("a");
+      await link.focus();
+      await expect(heading).toHaveCSS("transform", "none");
+      await link.click();
+      await expect(page).toHaveURL(/\/en\/studio$/);
+    });
 }
 
 test("reduced motion keeps section text still and fully visible", async ({
