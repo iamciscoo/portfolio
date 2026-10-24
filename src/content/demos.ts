@@ -1,19 +1,6 @@
 import { l } from "@/lib/localize";
 export const demos = [
   {
-    slug: "shop",
-    name: "PACE",
-    category: "shop",
-    image: "/images/demos/shop.webp",
-    body: l(
-      "An everyday-goods shop with product filters and a working sample bag.",
-      "Магазин повседневных вещей с фильтрами и демо-корзиной.",
-      "Duka la bidhaa za kila siku lenye vichujio na kikapu cha mfano.",
-      "Une boutique du quotidien avec filtres et panier de démonstration.",
-      "Una tienda de artículos cotidianos con filtros y bolsa de muestra.",
-    ),
-  },
-  {
     slug: "tours",
     name: "SAFIRI",
     category: "tours",
@@ -24,6 +11,19 @@ export const demos = [
       "Kampuni ya utalii Tanzania yenye ratiba za mfano na maombi ya safari.",
       "Une agence de voyages en Tanzanie avec itinéraires et demandes de voyage.",
       "Una agencia de viajes por Tanzania con itinerarios y consultas de viaje.",
+    ),
+  },
+  {
+    slug: "shop",
+    name: "PACE",
+    category: "shop",
+    image: "/images/demos/shop.webp",
+    body: l(
+      "An everyday-goods shop with product filters and a working sample bag.",
+      "Магазин повседневных вещей с фильтрами и демо-корзиной.",
+      "Duka la bidhaa za kila siku lenye vichujio na kikapu cha mfano.",
+      "Une boutique du quotidien avec filtres et panier de démonstration.",
+      "Una tienda de artículos cotidianos con filtros y bolsa de muestra.",
     ),
   },
   {
