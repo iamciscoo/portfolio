@@ -16,6 +16,7 @@ export function Header() {
   function toggleTheme() {
     const next =
       document.documentElement.dataset.theme === "light" ? "dark" : "light";
+    document.documentElement.dataset.themeTransition = "true";
     document.documentElement.dataset.theme = next;
     try {
       localStorage.setItem("cisco-theme", next);

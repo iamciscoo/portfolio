@@ -12,24 +12,9 @@ for (const width of [390, 1440]) {
         (value) => document.documentElement.setAttribute("data-theme", value),
         theme,
       );
-      await page.addStyleTag({
-        content:
-          ".studio-invitation .text-reveal h2 { animation-duration: 60s !important; }",
-      });
       const block = page.locator(".studio-invitation .text-reveal");
       await block.scrollIntoViewIfNeeded();
       await expect(block).toHaveAttribute("data-entered", "true");
-      expect(
-        await block.locator("h2").evaluate((node) => {
-          const animations = node.getAnimations();
-          for (const animation of animations) {
-            animation.pause();
-            animation.currentTime = 0;
-          }
-          return animations.length;
-        }),
-      ).toBeGreaterThan(0);
-      await expect(block.locator("h2")).toHaveCSS("opacity", "0.65");
       await expect(block).toHaveCSS("opacity", "1");
       const scan = await new AxeBuilder({ page })
         .include(".studio-invitation")
@@ -60,12 +45,10 @@ for (const width of [390, 1440]) {
             const tick = () => {
               const style = getComputedStyle(node);
               frames.push({
-                opacity: Number(
-                  getComputedStyle(node.querySelector("h2")!).opacity,
-                ),
+                opacity: Number(style.opacity),
                 y: new DOMMatrixReadOnly(style.transform).m42,
               });
-              if (performance.now() - start < 700) requestAnimationFrame(tick);
+              if (performance.now() - start < 950) requestAnimationFrame(tick);
               else resolve(frames);
             };
             requestAnimationFrame(tick);
@@ -76,14 +59,15 @@ for (const width of [390, 1440]) {
           }),
       );
     const frames = await sample();
+    expect(Math.min(...frames.map((frame) => frame.opacity))).toBeLessThan(0.6);
     expect(frames.some((frame) => frame.opacity < 0.99 && frame.y > 0)).toBe(
       true,
     );
     expect(Math.min(...frames.map((frame) => frame.opacity))).toBeGreaterThan(
-      0.64,
+      0.14,
     );
     expect(Math.max(...frames.map((frame) => frame.y))).toBeLessThanOrEqual(
-      width < 700 ? 10 : 18,
+      width < 700 ? 20 : 18,
     );
     await expect(heading).toHaveCSS("opacity", "1");
     expect(

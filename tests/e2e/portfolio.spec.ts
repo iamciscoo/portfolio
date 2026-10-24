@@ -148,9 +148,9 @@ test("mobile menu closes and theme persists", async ({ page }) => {
   await expect(page).toHaveURL(/\/en\/about$/);
   await expect(page.getByRole("dialog")).toHaveCount(0);
   await page.getByRole("button", { name: "Change color theme" }).click();
-  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   await page.reload();
-  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
 });
 test("restaurant menu and reservation preview work without sending", async ({
   page,

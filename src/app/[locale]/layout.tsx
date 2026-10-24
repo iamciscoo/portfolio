@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -36,15 +35,15 @@ export default async function LocaleLayout({
     <html
       className="sc-ready"
       lang={locale}
+      data-theme="light"
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <head>
-        <Script
+        <script
           id="theme-init"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem('cisco-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark'}catch(e){}`,
+            __html: `try{var t=localStorage.getItem('cisco-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light'}catch(e){}`,
           }}
         />
       </head>

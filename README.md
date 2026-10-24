@@ -1,5 +1,7 @@
 # Francis Mwambene / Cisco
 
+Light mode is the default; an explicitly saved dark preference is restored before hydration. Navigation uses a CSS glass material inspired by [liquid-glass](https://github.com/iamciscoo/liquid-glass/blob/main/src/GlassMaterial.tsx): backdrop frost, tint, rim lighting, and crisp controls, with opaque fallback styling. The existing artwork gets a pale CSS atmosphere in light mode. Motion (`motion/react`, formerly Framer Motion) handles scroll-triggered text fades and the navigation pill; reduced motion and keyboard focus keep content still and readable.
+
 The mobile reading pass shortens repeated copy, improves type spacing and keeps hero text steady during gentle background movement. Inquiry templates sit directly above "Tell me what you need" and fill the editable brief immediately when selected. Em dashes are removed from tracked source and documentation. See `docs/MOBILE-CLARITY.md` for behavior and proof.
 
 A multilingual personal portfolio and interactive design studio with six industry concepts, built with Next.js App Router, React, TypeScript, Tailwind, next-intl, Motion, Radix Dialog, React Hook Form, Zod and Resend. Prepared for Vercel. No application database is required.

@@ -9,7 +9,7 @@
   --font-sans: Manrope, Arial, sans-serif;
   --color-accent: #537dff;
 }
-:root {
+:root[data-theme="dark"] {
   --bg: #171819;
   --surface: #1e2022;
   --raised: #272a2d;
@@ -22,7 +22,9 @@
   --radius: 4px;
   color-scheme: dark;
 }
+:root,
 :root[data-theme="light"] {
+  --radius: 4px;
   --bg: #f4f3ef;
   --surface: #eae9e4;
   --raised: #e2e2dc;
