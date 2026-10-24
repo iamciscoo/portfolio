@@ -16,7 +16,6 @@ export async function PersonalHero({ locale }: { locale: Locale }) {
       top={
         <div className="cinematic-top">
           <span>{text(cinematic.role, locale)}</span>
-          <span className="hero-art-credit">{text(cinematic.art, locale)}</span>
         </div>
       }
       copy={

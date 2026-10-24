@@ -46,17 +46,6 @@
   align-items: center;
   gap: 12px;
 }
-.hero-art-credit {
-  display: inline-block;
-  max-width: 300px;
-  padding: 6px 10px;
-  border: 1px solid #ffffff26;
-  border-radius: 6px;
-  background: #071322e6;
-  color: #f7f8fa;
-  line-height: 1.6;
-  text-align: left;
-}
 .cinematic-top > span:first-child::before {
   content: "";
   width: 6px;

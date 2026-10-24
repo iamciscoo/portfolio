@@ -22,13 +22,6 @@ export const cinematic = {
     "Découvrez les projets plus bas",
     "Descubre los proyectos más abajo",
   ),
-  art: l(
-    "An imagined journey · Tanzania ↔ Russia",
-    "Воображаемое путешествие · Танзания ↔ Россия",
-    "Safari ya kufikirika · Tanzania ↔ Urusi",
-    "Un voyage imaginé · Tanzanie ↔ Russie",
-    "Un viaje imaginado · Tanzania ↔ Rusia",
-  ),
   alt: l(
     "Cinematic artwork joining a Tanzanian coastline to a Russian river city at sunset",
     "Художественный пейзаж: побережье Танзании переходит в российский город у реки на закате",
