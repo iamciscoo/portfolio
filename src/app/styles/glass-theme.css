@@ -179,21 +179,8 @@
   }
   :root[data-theme="light"] .hero-intro-support {
     display: block;
-    position: relative;
-    isolation: isolate;
     margin-top: 4px;
     color: #fff;
-    text-shadow: 0 1px 3px #07132280;
-  }
-  :root[data-theme="light"] .hero-intro-support::before {
-    content: "";
-    position: absolute;
-    inset: -4px -8px;
-    z-index: -1;
-    pointer-events: none;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #0b1824b3, #0b182473);
-    filter: blur(8px);
   }
 }
 @supports not (backdrop-filter: blur(1px)) {
