@@ -6,18 +6,20 @@ The WhatsApp message includes the service, visitor name, brief, email, optional 
 
 ## Local setup
 
-The owner's authorized Green API instance is connected. Keep these values only in the gitignored `.env.local` and Vercel environment settings:
+Keep these values only in the gitignored `.env.local` and Vercel environment settings. The Green API instance must show **Authorized** before testing WhatsApp delivery:
 
-| Variable                   | Value/source                                                                                                                                       |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GREEN_API_URL`            | `https://7107.api.greenapi.com`                                                                                                                    |
-| `GREEN_API_INSTANCE_ID`    | `710722779815`                                                                                                                                     |
-| `GREEN_API_TOKEN`          | Copy `apiTokenInstance` from the Green API instance page. Never commit it.                                                                         |
-| `CONTACT_WHATSAPP_CHAT_ID` | The linked number in international digits, followed by `@c.us`. The configured owner's number ends in 9306. Copy the full value from `.env.local`. |
+| Variable                   | Value/source                                                                                                                                          |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GREEN_API_URL`            | `https://7107.api.greenapi.com`                                                                                                                       |
+| `GREEN_API_INSTANCE_ID`    | `710722779815`                                                                                                                                        |
+| `GREEN_API_TOKEN`          | Copy `apiTokenInstance` from the Green API instance page. Never commit it.                                                                            |
+| `CONTACT_WHATSAPP_CHAT_ID` | The receiving number in international digits, followed by `@c.us`. The configured owner's number ends in 9306. Copy the full value from `.env.local`. |
 
 Keep `RESEND_API_KEY` and `CONTACT_TO_EMAIL` unchanged. The server accepts only HTTPS Green API hosts and a numeric personal WhatsApp chat ID. These are server-side variables: do not add `NEXT_PUBLIC_` prefixes.
 
-Run `npm run dev` and open `http://127.0.0.1:3000/en/contact`. Restart the development server if it has not reloaded `.env.local`. Submit one clearly labeled test enquiry and check the owner's email and the WhatsApp chat with yourself. For messages sent to the linked number itself, Green API documents `sent`/one tick as the expected status; a read receipt is not required.
+Use a separate WhatsApp account for sending so the owner receives an incoming message. The owner selected the sender account ending 0248; the recipient remains the main number ending 9306. Relinking this same instance changes the sender without changing the instance ID, API URL, token, or recipient variable. To replace the sender later, unlink the current account from the instance and authorize the replacement using its WhatsApp **Linked devices → Link a device** screen. This grants Green API linked-device access to the sender account. Verify that the instance remains authorized after pairing; a successful QR scan alone does not confirm a persistent connection.
+
+Run `npm run dev` and open `http://127.0.0.1:3000/en/contact`. Restart the development server if it has not reloaded `.env.local`. Submit one clearly labeled test enquiry and check the owner's email and the incoming WhatsApp chat from the sender account. Sending to the same number as the linked sender produces a **Message yourself** conversation; it does not provide an incoming-message alert on that account.
 
 ## Vercel setup when publishing
 
@@ -39,6 +41,14 @@ The live Vercel project is `iamciscoos-projects/portfolio`, serving `justcisco.b
 - There is no durable retry queue. An unsuccessful WhatsApp attempt is logged, while the accepted email remains the reliable record. Fix the provider/configuration rather than asking visitors to resubmit. A later retry of the same submission may retry a failed WhatsApp attempt.
 - Remove all four WhatsApp variables and redeploy to disable alerts without affecting email.
 
+## Sender-switch verification, 25 October 2026
+
+The sender ending 0248 appeared as authorized, but the instance's authorization history subsequently displayed **Not Authorized** about 89 seconds after linking. A labeled local enquiry returned the existing email-success confirmation; the recent outgoing WhatsApp journal was empty. The owner confirmed the device was still listed in WhatsApp **Linked devices**.
+
+Direct API diagnostics clarified the misleading console label: `getStateInstance` returned `suspended`, while the legacy `getStatusInstance` returned `online`. The latter method is documented as potentially inaccurate and is not proof of permission to send. `getWaSettings` identified the sender ending 0248 and returned `suspendedUntil: 1792898285`, corresponding to **25 October 2026, 06:18:05 Europe/Moscow** (03:18:05 UTC). Green API documents `suspended` as temporary WhatsApp account restrictions; the exact reason for this account's restriction was not exposed.
+
+Leave the existing device link in place and check `getStateInstance` again after the reported expiry. Once the state is `authorized`, submit one labeled enquiry and confirm the matching incoming message on the main number. New-sender delivery remains unverified until that succeeds. No reboot or repeated re-pairing was attempted after discovering the suspension. The API settings and main receiving number were preserved, and no GitHub push or Vercel change was made.
+
 ## Local verification, 24 October 2026
 
 - The existing `.env.local` values were preserved and the four WhatsApp settings were appended with owner approval. No secrets were added to tracked source.
@@ -56,4 +66,5 @@ The live Vercel project is `iamciscoos-projects/portfolio`, serving `justcisco.b
 - [Green API SendMessage](https://green-api.com/en/docs/api/sending/SendMessage/): endpoint, response ID, self-message status, queue behavior and text limits.
 - [Developer plan limit errors](https://green-api.com/en/docs/api/466-error-example-body/).
 - [Vercel environment variables](https://vercel.com/docs/environment-variables): Production/Preview scope, Secret values, and changes applying only to new deployments.
+- [Green API suspended status](https://green-api.com/en/docs/faq/what-is-meaning-status-suspended/): temporary WhatsApp restrictions and the `suspendedUntil` expiry field.
 - The installed Next.js `after()` reference is `node_modules/next/dist/docs/01-app/03-api-reference/04-functions/after.md`.
