@@ -160,27 +160,31 @@
   }
   :root[data-theme="light"] .cinematic-hero::before {
     background: radial-gradient(
-      ellipse 130% 105% at -35% 30%,
+      ellipse 130% 140% at -25% 40%,
       #f4f3ef 0%,
-      #f4f3eff0 38%,
-      #f4f3efad 61%,
-      transparent 90%
+      #f4f3effa 64%,
+      #f4f3efdc 82%,
+      #f4f3ef38 96%,
+      transparent 100%
     );
   }
   :root[data-theme="light"] .hero-scroll-link {
     padding: 4px;
   }
-  :root[data-theme="light"] .hero-about-link {
-    color: #fff;
-    text-shadow: 0 1px 4px #071322;
+  :root[data-theme="light"] .hero-about-link,
+  :root[data-theme="light"] .cinematic-hero .personal-hero-copy > p {
+    color: var(--text);
+    text-shadow: none;
   }
-  :root[data-theme="light"] .hero-intro-lead {
-    display: block;
+  :root[data-theme="light"] .cinematic-hero .text-link,
+  :root[data-theme="light"] .hero-scroll-link {
+    color: var(--text);
+    background: #f4f3efbf;
+    border-color: #35435350;
+    text-shadow: none;
   }
-  :root[data-theme="light"] .hero-intro-support {
-    display: block;
-    margin-top: 4px;
-    color: #fff;
+  :root[data-theme="light"] .hero-scroll-link .scroll-arrow {
+    border-color: #35435350;
   }
 }
 @supports not (backdrop-filter: blur(1px)) {
