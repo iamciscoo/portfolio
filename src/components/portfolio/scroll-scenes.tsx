@@ -26,11 +26,11 @@ export function HeroScene({
     damping: 32,
     mass: 0.35,
   });
-  const photoY = useTransform(travel, [0, 1], [0, compact ? 24 : 110]);
+  const photoY = useTransform(travel, [0, 1], [0, compact ? 56 : 140]);
   const photoScale = useTransform(
     travel,
     [0, 1],
-    [1.03, compact ? 1.06 : 1.16],
+    [1.03, compact ? 1.1 : 1.18],
   );
   return (
     <section ref={ref} className="cinematic-hero" data-sc-act="hero">
@@ -74,11 +74,11 @@ export function ProjectScene({
   const desktopScale = useTransform(
     settled,
     [0, 1],
-    [compact ? 0.985 : 0.92, 1],
+    [compact ? 0.95 : 0.9, 1],
   );
-  const desktopRotate = useTransform(settled, [0, 1], [compact ? 0 : 5, 0]);
-  const phoneY = useTransform(settled, [0, 1], [compact ? 12 : 52, 0]);
-  const phoneRotate = useTransform(settled, [0, 1], [compact ? 0.8 : 4, 0]);
+  const desktopRotate = useTransform(settled, [0, 1], [compact ? 1.5 : 6, 0]);
+  const phoneY = useTransform(settled, [0, 1], [compact ? 32 : 72, 0]);
+  const phoneRotate = useTransform(settled, [0, 1], [compact ? 2 : 5, 0]);
   return (
     <article className="project-exhibit" data-sc-act="project">
       <div className="exhibit-copy">{children}</div>
@@ -112,7 +112,7 @@ export function CaseVisual({ children }: { children: ReactNode }) {
     damping: 32,
     mass: 0.3,
   });
-  const scale = useTransform(settled, [0, 1], [compact ? 0.985 : 0.97, 1]);
+  const scale = useTransform(settled, [0, 1], [compact ? 0.95 : 0.93, 1]);
   return (
     <div ref={ref} data-sc-act="case">
       <motion.div className="case-visual-motion" style={{ scale }}>

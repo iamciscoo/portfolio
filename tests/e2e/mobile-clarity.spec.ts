@@ -84,20 +84,24 @@ test("mobile scroll leaves copy stable and limits background travel", async ({
         (el) => new DOMMatrixReadOnly(getComputedStyle(el).transform).m11,
       ),
     )
-    .toBeLessThanOrEqual(1.061);
-  await page.evaluate(() => scrollTo({ top: 180, behavior: "instant" }));
+    .toBeLessThanOrEqual(1.101);
+  await page
+    .locator(".cinematic-hero")
+    .evaluate((hero) =>
+      scrollTo({ top: hero.clientHeight * 0.6, behavior: "instant" }),
+    );
   await expect
     .poll(() =>
       photo.evaluate(
         (el) => new DOMMatrixReadOnly(getComputedStyle(el).transform).m42,
       ),
     )
-    .toBeGreaterThan(0);
+    .toBeGreaterThan(24);
   expect(
     await photo.evaluate(
       (el) => new DOMMatrixReadOnly(getComputedStyle(el).transform).m42,
     ),
-  ).toBeLessThanOrEqual(24);
+  ).toBeLessThanOrEqual(56);
   expect(
     await page
       .locator(".personal-hero-copy")

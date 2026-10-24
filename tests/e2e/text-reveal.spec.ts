@@ -36,9 +36,11 @@ for (const width of [390, 1440]) {
     }) => {
       await page.setViewportSize({ width, height: 844 });
       await page.goto("/en");
-      const block = page.locator(".studio-section .section-heading.text-reveal");
+      const block = page.locator(
+        ".studio-section .section-heading.text-reveal",
+      );
       const heading = block.locator(tag);
-      await expect(heading).toHaveCSS("opacity", "1");
+      await expect(heading).toHaveCSS("opacity", "0");
       const sample = () =>
         heading.evaluate(
           (node) =>
@@ -51,7 +53,7 @@ for (const width of [390, 1440]) {
                   opacity: Number(style.opacity),
                   y: new DOMMatrixReadOnly(style.transform).m42,
                 });
-                if (performance.now() - start < 1250)
+                if (performance.now() - start < 1500)
                   requestAnimationFrame(tick);
                 else resolve(frames);
               };
@@ -70,9 +72,9 @@ for (const width of [390, 1440]) {
       expect(frames.some((frame) => frame.opacity < 0.99 && frame.y > 0)).toBe(
         true,
       );
-      expect(Math.max(...frames.map((frame) => frame.y))).toBeGreaterThan(24);
+      expect(Math.max(...frames.map((frame) => frame.y))).toBeGreaterThan(32);
       expect(Math.max(...frames.map((frame) => frame.y))).toBeLessThanOrEqual(
-        32,
+        44,
       );
       await expect(heading).toHaveCSS("opacity", "1");
       expect(

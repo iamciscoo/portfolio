@@ -44,11 +44,30 @@ for (const width of [320, 768, 1024, 1440]) {
     expect(
       await page.evaluate(() => document.documentElement.scrollWidth),
     ).toBeLessThanOrEqual(width);
+    // Keyboard navigation can start a neighbouring caption's reveal. Check
+    // final reading contrast after those entrances finish, not mid-fade.
+    await expect
+      .poll(() =>
+        showcase.evaluate((root) =>
+          [...root.querySelectorAll("[data-reveal-entered]")].every(
+            (node) => getComputedStyle(node).opacity === "1",
+          ),
+        ),
+      )
+      .toBe(true);
     const scan = await new AxeBuilder({ page })
       .include(".project-exhibits")
       .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
       .analyze();
-    expect(scan.violations.map((v) => v.id)).toEqual([]);
+    expect(
+      scan.violations.map((v) => ({
+        id: v.id,
+        nodes: v.nodes.map((node) => ({
+          target: node.target,
+          summary: node.failureSummary,
+        })),
+      })),
+    ).toEqual([]);
     expect(errors).toEqual([]);
     await page.screenshot({ path: `tmp/motion-polish/rail-${width}.png` });
   });

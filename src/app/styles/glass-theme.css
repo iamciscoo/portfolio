@@ -80,7 +80,7 @@
       #f4f3ef20 66%,
       transparent
     ),
-    linear-gradient(0deg, #f4f3efe6, transparent 24%);
+    linear-gradient(0deg, #f4f3efa3, transparent 18%);
   opacity: 0;
 }
 :root[data-theme="light"] .cinematic-hero {
@@ -94,7 +94,7 @@
   opacity: 0;
 }
 :root[data-theme="light"] .hero-photo-print {
-  opacity: 0.92;
+  opacity: 1;
 }
 :root[data-theme="light"] .hero-introduction,
 :root[data-theme="light"] .cinematic-hero .text-link {
@@ -141,12 +141,18 @@
 }
 @media (max-width: 700px) {
   :root[data-theme="light"] .hero-photo-print {
-    opacity: 0.75;
+    opacity: 0.94;
   }
   :root[data-theme="light"] .cinematic-hero::before {
     background:
-      linear-gradient(90deg, #f4f3eff0, #f4f3efb8 55%, #f4f3ef38),
-      linear-gradient(0deg, #f4f3ef, transparent 35%);
+      linear-gradient(
+        90deg,
+        #f4f3eff5,
+        #f4f3efc4 44%,
+        #f4f3ef38 78%,
+        transparent
+      ),
+      linear-gradient(0deg, #f4f3efb8, transparent 22%);
   }
 }
 @supports not (backdrop-filter: blur(1px)) {
