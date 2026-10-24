@@ -42,7 +42,10 @@ function projectDetails(input: ContactInput) {
     ["Reply in", languages[input.locale]],
   ];
 }
-export function inquiryText(input: ContactInput) {
+export function inquiryText(
+  input: ContactInput,
+  channel: "email" | "whatsapp" = "email",
+) {
   return [
     `New message from ${input.name}`,
     `Service: ${serviceName(input)}`,
@@ -53,7 +56,9 @@ export function inquiryText(input: ContactInput) {
     ...(input.phone ? [`Phone: ${input.phone}`] : []),
     ...projectDetails(input).map(([label, value]) => `${label}: ${value}`),
     "",
-    "Reply to this email to contact the sender.",
+    channel === "email"
+      ? "Reply to this email to contact the sender."
+      : "Contact the sender using the email or phone above.",
     "The sender agreed to be contacted about this request.",
   ].join("\n");
 }

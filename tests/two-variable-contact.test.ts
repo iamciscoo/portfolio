@@ -1,4 +1,5 @@
 import { afterEach, expect, it, vi } from "vitest";
+vi.mock("next/server", () => ({ after: vi.fn() }));
 import { emailPreviewInquiry } from "./fixtures/inquiry";
 
 const { send } = vi.hoisted(() => ({ send: vi.fn() }));

@@ -1,11 +1,13 @@
 import { Resend } from "resend";
 import { createHash } from "node:crypto";
+import { after } from "next/server";
 import { contactSchema } from "@/lib/contact-schema";
 import { inquiryEmail, inquiryText } from "@/lib/inquiry-email";
+import { notifyInquiryWhatsApp } from "@/lib/inquiry-whatsapp";
 import { allowInquiry } from "@/lib/rate-limit";
 import { services } from "@/content/services";
 export const runtime = "nodejs";
-export const maxDuration = 15;
+export const maxDuration = 30;
 const maxBytes = 16384;
 const reply = (code: string, status: number) =>
   Response.json(
@@ -99,6 +101,14 @@ export async function POST(request: Request) {
       { idempotencyKey },
     );
     if (result.error || !result.data?.id) return reply("error", 502);
+    try {
+      after(() => notifyInquiryWhatsApp(input, idempotencyKey));
+    } catch {
+      // Email was accepted. Never ask the visitor to resubmit a delivered enquiry.
+      console.warn("WhatsApp inquiry notification failed", {
+        reason: "scheduling",
+      });
+    }
     return reply("success", 200);
   } catch {
     return reply("error", 503);

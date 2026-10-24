@@ -143,7 +143,7 @@
     "description": "Cuéntame qué necesitas",
     "language": "Idioma preferido",
     "consent": "Acepto que Francis use mi correo y cualquier teléfono que facilite para responder a esta consulta.",
-    "privacy": "Tus datos se usan para responder a esta consulta. El formulario no los guarda en tu navegador.",
+    "privacy": "Tu consulta puede enviarse a Francis por correo electrónico y WhatsApp. Tus datos se usan para responderte y no se guardan en tu navegador.",
     "choose": "Selecciona un servicio",
     "unsure": "Lo hablamos",
     "namePlaceholder": "Tu nombre completo",

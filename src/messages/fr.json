@@ -143,7 +143,7 @@
     "description": "Décrivez votre besoin",
     "language": "Langue souhaitée",
     "consent": "J’accepte que Francis utilise mon e-mail et tout numéro fourni pour répondre à cette demande.",
-    "privacy": "Vos coordonnées servent à répondre à cette demande. Le formulaire ne les enregistre pas dans votre navigateur.",
+    "privacy": "Votre demande peut être transmise à Francis par e-mail et WhatsApp. Vos coordonnées servent à vous répondre et ne sont pas enregistrées dans votre navigateur.",
     "choose": "Choisir un service",
     "unsure": "À discuter",
     "namePlaceholder": "Votre nom complet",

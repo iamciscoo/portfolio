@@ -1,4 +1,5 @@
 import { beforeEach, afterEach, describe, it, expect, vi } from "vitest";
+vi.mock("next/server", () => ({ after: vi.fn() }));
 const mocks = vi.hoisted(() => ({ send: vi.fn(), allow: vi.fn() }));
 vi.mock("resend", () => ({
   Resend: class {

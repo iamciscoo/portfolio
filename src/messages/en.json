@@ -143,7 +143,7 @@
     "description": "Tell me what you need",
     "language": "Preferred language",
     "consent": "I agree that Francis may use my email and any phone number I provide to respond to this inquiry.",
-    "privacy": "Your contact details are used to respond to this inquiry. The form does not save them in your browser.",
+    "privacy": "Your inquiry may be delivered to Francis by email and WhatsApp. Your contact details are used to respond and are not saved in your browser.",
     "choose": "Select a service",
     "unsure": "Let's discuss",
     "namePlaceholder": "Your full name",
