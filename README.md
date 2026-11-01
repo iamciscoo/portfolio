@@ -1,5 +1,9 @@
 # Francis Mwambene / Cisco
 
+[Visit the portfolio](https://justcisco.business/) · [Website packages](https://justcisco.business/en/pricing) · [Kiswahili](https://justcisco.business/sw)
+
+Search setup is documented in [docs/SEO.md](docs/SEO.md). The [November 2026 search audit and growth plan](docs/SEO-GROWTH-2026-11.md) records the Search Console setup, live findings and next priorities.
+
 Light mode is the default; an explicitly saved dark preference is restored before hydration. Navigation uses a CSS glass material inspired by [liquid-glass](https://github.com/iamciscoo/liquid-glass/blob/main/src/GlassMaterial.tsx): backdrop frost, tint, rim lighting, and crisp controls, with opaque fallback styling. The existing artwork gets a pale CSS atmosphere in light mode. Motion (`motion/react`, formerly Framer Motion) handles scroll-linked text fades that reverse when scrolling back, plus the navigation pill; reduced motion and keyboard focus keep content still and readable.
 
 The mobile reading pass shortens repeated copy, improves type spacing and keeps hero text steady during gentle background movement. Inquiry templates sit directly above "Tell me what you need" and fill the editable brief immediately when selected. Em dashes are removed from tracked source and documentation. See `docs/MOBILE-CLARITY.md` for behavior and proof.

@@ -6,6 +6,8 @@ Person, WebSite and project CreativeWork structured data are rendered in the ini
 
 ## Google Search Console
 
+Use the verified **`https://justcisco.business/`** URL-prefix property for the whole HTTPS site. The older `/en/` property covers only English URLs. The root property includes all five languages and the root sitemap. On 1 November 2026, Google verified the root property through the existing HTML tag and processed `sitemap.xml` successfully, discovering 50 pages. Discovery does not mean all 50 are indexed. See [the audit and growth plan](SEO-GROWTH-2026-11.md).
+
 The locale root layout uses Next.js `metadata.verification.google` to publish the owner's Google verification tag in the document head, including the homepage reached after the root URL redirects to a language. This verification value is intentionally public and must remain in place after verification.
 
 After deployment:
