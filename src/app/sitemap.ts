@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/projects",
     "/studio",
     "/services",
+    "/pricing",
     "/contact",
     ...projects.map((project) => `/projects/${project.slug}`),
   ];

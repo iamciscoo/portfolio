@@ -138,6 +138,19 @@ export default async function Home({
         ))}
       </section>
       <SoftwareSupport locale={locale} />
+      <section className="section-heading wrap pricing-preview">
+        <div>
+          <span className="eyebrow">{t("nav.pricing")}</span>
+          <h2>{t("pricing.teaser")}</h2>
+        </div>
+        <div>
+          <p>{t("pricing.teaserBody")}</p>
+          <Link href="/pricing" className="text-link">
+            {t("pricing.view")}
+            <ArrowUpRight size={17} />
+          </Link>
+        </div>
+      </section>
       <ContactBand />
     </>
   );

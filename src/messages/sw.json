@@ -13,7 +13,8 @@
     "language": "Lugha",
     "theme": "Badilisha mandhari",
     "skip": "Nenda kwenye maudhui",
-    "back": "Rudi kwenye portfolio"
+    "back": "Rudi kwenye portfolio",
+    "pricing": "Bei"
   },
   "common": {
     "explore": "Tazama kazi zangu",
@@ -89,7 +90,8 @@
     "contactIntro": "Unahitaji tovuti au msaada wa kompyuta? Tuma maelezo hapa au niandikie WhatsApp.",
     "notFound": "Tumepotea kidogo.",
     "notFoundBody": "Ukurasa huu haupo. Turudi mwanzo.",
-    "metadata": "Francis Mwambene - Cisco | Msanidi Programu na Mbunifu wa Bidhaa"
+    "metadata": "Francis Mwambene - Cisco | Msanidi Programu na Mbunifu wa Bidhaa",
+    "pricingIntro": "Vifurushi vya tovuti kuanzia TZS 450,000 hadi 1,400,000, pamoja na gharama za seva, arifa na masasisho."
   },
   "about": {
     "origin": "KUTOKA TANZANIA, NA MTAZAMO MPANA",
@@ -229,5 +231,93 @@
     "hint": "Niandikie WhatsApp",
     "direct": "Au tuongee WhatsApp",
     "message": "Habari Cisco, nimeona tovuti yako na ningependa msaada wa "
+  },
+  "pricing": {
+    "eyebrow": "Tovuti, kwa bajeti iliyo wazi",
+    "title": "Tovuti bora.\nMwanzo ulio wazi.",
+    "intro": "Kuanzia ukurasa wa kuitambulisha biashara hadi tovuti ya kusimamia shughuli zako. Chagua namna ya kuwasiliana na wateja, kisha tupange maelezo pamoja.",
+    "explore": "Tafuta kifurushi chako",
+    "oneTime": "Malipo ya mara moja ya ujenzi",
+    "domainIncluded": "Kikoa kimejumuishwa",
+    "currency": "Bei katika {currency}",
+    "packages": "Vifurushi vya tovuti",
+    "starting": "Makadirio ya kuanzia · ujenzi wa mara moja",
+    "choose": "Jadili: {package}",
+    "included": "Kimejumuishwa",
+    "inquiry": "Habari Cisco, ninahitaji kifurushi cha {package}, kuanzia {price}. Tunaweza kujadili tovuti yangu?",
+    "landing": {
+      "label": "Anza mtandaoni",
+      "name": "Mwanzo",
+      "description": "Itambulishe biashara yako vizuri na uwape wateja njia rahisi ya kukufikia."
+    },
+    "email": {
+      "label": "Pokea maulizo",
+      "name": "Ukuaji",
+      "description": "Pokea maulizo ya wateja moja kwa moja kwenye barua pepe yako."
+    },
+    "whatsapp": {
+      "label": "Endeleza mazungumzo",
+      "name": "Biashara",
+      "description": "Pokea maulizo mapya kwenye mazungumzo ya WhatsApp unayotumia."
+    },
+    "portal": {
+      "label": "Simamia biashara yako",
+      "name": "Kamili",
+      "description": "Tovuti kamili yenye sehemu maalumu ya kusimamia rasilimali zako."
+    },
+    "estimate": "Hizi ni bei za makadirio ya kuanzia; kazi na bei ya mwisho hukubaliwa kabla ya kuanza.",
+    "conversion": "Makadirio ya ubadilishaji wa fedha yamezungushwa kwa viwango vya {date}. Bei za msingi za ujenzi ziko katika TZS.",
+    "rates": "Chanzo cha viwango vya fedha",
+    "hostingLabel": "Gharama za uendeshaji",
+    "hosting": "Uhifadhi wa tovuti ulio wazi.",
+    "hostingIntro": "Ujenzi wa tovuti na gharama za uendeshaji ni tofauti. Tunakubaliana mpango wa uhifadhi na bajeti ya rasilimali ya kila mwezi kabla ya kuzindua.",
+    "resourcesTitle": "Uwezo wa kawaida wa uhifadhi kwa mwezi",
+    "transfer": "Data inayotumwa kwa wageni",
+    "requests": "Maombi ya CDN",
+    "compute": "Bajeti ya uchakataji wa seva",
+    "delivery": "Muunganisho salama wa tovuti",
+    "perMonth": "/ mwezi",
+    "usageCredit": "salio la rasilimali kwa mwezi",
+    "allocation": "Huu ni mfano wa uwezo wa uhifadhi unaoshirikiwa, si mgao uliohakikishwa kwa kila tovuti. Mgao wa mradi wako hukubaliwa kabla ya kuzindua; hifadhidata na hifadhi ya faili hupangiwa tofauti.",
+    "upgradeTitle": "Tovuti ikihitaji rasilimali zaidi",
+    "upgradeBody": "Tovuti yako ikizidi mgao wa rasilimali uliokubaliwa, tenga bajeti inayoanzia kiasi hiki kwa mwezi kwa kuongeza rasilimali za seva.",
+    "overages": "Rasilimali za ziada za seva huanzia takribani {monthly} kwa mwezi. Haya si matumizi yasiyo na kikomo; matumizi makubwa zaidi, kodi na huduma za kulipia huwekewa bei tofauti.",
+    "aftercareLabel": "Baada ya kukabidhiwa",
+    "aftercare": "Nafasi ya kuendelea kukua.",
+    "aftercareBody": "Mabadiliko na masasisho baada ya kukamilika hulipiwa kulingana na ukubwa wa kazi, kuanzia marekebisho madogo ya maudhui hadi mabadiliko makubwa. Bei hukubaliwa kabla ya kazi.",
+    "perUpdate": "kwa sasisho, kulingana na ukubwa wa kazi",
+    "details": "Maelezo ya vifurushi",
+    "domainQuestion": "Kikoa kilichojumuishwa kinahusu nini?",
+    "domainAnswer": "Kikoa kimoja cha kawaida kimejumuishwa. Tutakubaliana kiendelezi, muda wa usajili na gharama ya kuhuisha kwenye nukuu yako. Majina maalumu na uhuishaji wa baadaye vinaweza kuwa na gharama ya ziada.",
+    "providersQuestion": "Je, usajili wa barua pepe, WhatsApp na hifadhi umejumuishwa?",
+    "providersAnswer": "Vifurushi vinajumuisha uunganishaji na usanidi ulioelezwa. Arifa za WhatsApp zilizojumuishwa zinaishia kwenye mazungumzo 3 maalumu, yawe namba binafsi au vikundi. Arifa kwa mazungumzo ya watumiaji tofauti zinahitaji nyongeza ya kila mwezi ya WhatsApp. Gharama nyingine za barua pepe, WhatsApp API, hifadhidata na hifadhi huwekewa bei tofauti.",
+    "unsure": "Hujui uanzie wapi?",
+    "unsureBody": "Niambie biashara yako inahitaji kufanya nini. Tutapanga kazi inayofaa pamoja.",
+    "talk": "Tujadili tovuti yako",
+    "teaser": "Bajeti ya tovuti unayoweza kupanga.",
+    "teaserBody": "Angalia vifurushi vinne, vilivyojumuishwa na gharama za kuendesha tovuti yako.",
+    "view": "Angalia bei za tovuti",
+    "featureList": "Linganisha vipengele vya vifurushi",
+    "notIncluded": "Hakijajumuishwa",
+    "features": {
+      "design": "Tovuti inayofaa simu na kompyuta",
+      "domain": "Kikoa cha kawaida",
+      "socials": "Viungo vya mitandao na mazungumzo ya WhatsApp",
+      "form": "Fomu ya mawasiliano na maulizo",
+      "email": "Arifa za maulizo kwa barua pepe",
+      "whatsapp": "Arifa za maulizo kwa WhatsApp",
+      "destinations": "Mazungumzo 3 ya arifa kwa kiwango cha juu: namba au vikundi",
+      "admin": "Sehemu ya msimamizi yenye kuingia salama",
+      "resources": "Usimamizi wa rasilimali na maudhui ya biashara",
+      "seo": "Uboreshaji wa tovuti kwa injini za utafutaji (SEO)"
+    },
+    "swipe": "Telezesha kulinganisha vifurushi",
+    "previousPackage": "Kifurushi kilichotangulia",
+    "nextPackage": "Kifurushi kinachofuata",
+    "downloadPdf": "Pakua bei kama PDF",
+    "whatsappAddOnLabel": "Nyongeza ya hiari ya WhatsApp",
+    "whatsappAddOnTitle": "Arifa kwa watumiaji tofauti wa WhatsApp",
+    "whatsappAddOnBody": "Vifurushi vya Biashara na Kamili vinajumuisha hadi mazungumzo 3 maalumu ya kupokea arifa: namba binafsi au vikundi. Kutuma arifa kwenye mazungumzo binafsi ya watumiaji tofauti kunahitaji nyongeza hii ya kila mwezi.",
+    "whatsappAddOnPeriod": "ya ziada / mwezi"
   }
 }

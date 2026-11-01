@@ -7,6 +7,7 @@ import { InquiryForm } from "@/components/contact/inquiry-form";
 import { pageMetadata } from "@/lib/metadata";
 import "./contact.css";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 export async function generateMetadata({
   params,
 }: {
@@ -50,6 +51,9 @@ export default async function Contact({
               {profile.email} ↗
             </a>
             <p>{t("footer.based")}</p>
+            <Link className="text-link" href="/pricing">
+              {t("pricing.view")} ↗
+            </Link>
             <a
               className="contact-whatsapp text-link"
               href={`https://wa.me/${profile.whatsapp}`}

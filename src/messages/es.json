@@ -13,7 +13,8 @@
     "language": "Idioma",
     "theme": "Cambiar tema",
     "skip": "Saltar al contenido",
-    "back": "Volver al portfolio"
+    "back": "Volver al portfolio",
+    "pricing": "Precios"
   },
   "common": {
     "explore": "Ver mis proyectos",
@@ -89,7 +90,8 @@
     "contactIntro": "¿Un sitio nuevo o ayuda informática? Envíame los detalles aquí o escríbeme por WhatsApp.",
     "notFound": "Un pequeño desvío.",
     "notFoundBody": "Esta página no existe. Volvamos a un lugar conocido.",
-    "metadata": "Francis Mwambene - Cisco | Desarrollador y creador de productos"
+    "metadata": "Francis Mwambene - Cisco | Desarrollador y creador de productos",
+    "pricingIntro": "Sitios desde 450.000 hasta 1.400.000 TZS, con costes claros de alojamiento, notificaciones y actualizaciones."
   },
   "about": {
     "origin": "DESDE TANZANIA, CON PERSPECTIVA",
@@ -229,5 +231,93 @@
     "hint": "Escríbeme por WhatsApp",
     "direct": "O hablemos por WhatsApp",
     "message": "Hola Cisco, he visto tu sitio y necesito ayuda con "
+  },
+  "pricing": {
+    "eyebrow": "Sitios web con un presupuesto claro",
+    "title": "Una buena web.\nUn comienzo claro.",
+    "intro": "Desde una página de presentación hasta una web para gestionar tu negocio. Elige cómo conectar con tus clientes y definamos los detalles juntos.",
+    "explore": "Encuentra tu paquete",
+    "oneTime": "Pago único por el desarrollo",
+    "domainIncluded": "Dominio incluido",
+    "currency": "Precios en {currency}",
+    "packages": "Paquetes de sitios web",
+    "starting": "Estimación inicial · desarrollo de pago único",
+    "choose": "Consultar {package}",
+    "included": "Incluido",
+    "inquiry": "Hola Cisco, me interesa el paquete {package}, desde {price}. ¿Podemos hablar de mi sitio web?",
+    "landing": {
+      "label": "Presencia en internet",
+      "name": "Inicial",
+      "description": "Una presentación cuidada de tu negocio y una forma sencilla de contactarte."
+    },
+    "email": {
+      "label": "Recibe consultas",
+      "name": "Crecimiento",
+      "description": "Recibe las consultas de tus clientes directamente en tu bandeja de entrada."
+    },
+    "whatsapp": {
+      "label": "Mantén la conversación",
+      "name": "Negocio",
+      "description": "Recibe nuevas consultas en los chats de WhatsApp que ya utilizas."
+    },
+    "portal": {
+      "label": "Gestiona tu negocio",
+      "name": "Completo",
+      "description": "Una web completa con un espacio dedicado a gestionar tus recursos."
+    },
+    "estimate": "Son precios iniciales aproximados. El alcance y el presupuesto final se acuerdan antes de empezar.",
+    "conversion": "Las conversiones son estimaciones redondeadas con el cambio del {date}. Los precios base de desarrollo están en TZS.",
+    "rates": "Fuente del tipo de cambio",
+    "hostingLabel": "Los gastos recurrentes",
+    "hosting": "Alojamiento sin sorpresas.",
+    "hostingIntro": "La creación de tu web y los gastos de funcionamiento son independientes. El alojamiento y el presupuesto mensual de recursos se acuerdan antes del lanzamiento.",
+    "resourcesTitle": "Capacidad mensual orientativa del alojamiento",
+    "transfer": "Datos transferidos a visitantes",
+    "requests": "Solicitudes a la CDN",
+    "compute": "Presupuesto de procesamiento del servidor",
+    "delivery": "Conexión segura al sitio",
+    "perMonth": "/ mes",
+    "usageCredit": "crédito mensual de recursos",
+    "allocation": "Estas capacidades orientativas son compartidas, no un límite garantizado para cada sitio. Los recursos de tu proyecto se acuerdan antes del lanzamiento; la base de datos y el almacenamiento se presupuestan aparte.",
+    "upgradeTitle": "Si tu sitio necesita más recursos",
+    "upgradeBody": "Si tu sitio supera los recursos acordados, prevé un presupuesto mensual desde esta cantidad para ampliar los recursos del servidor.",
+    "overages": "Los recursos adicionales del servidor empiezan en aproximadamente {monthly} al mes. El uso no es ilimitado; mayor consumo, impuestos y servicios de pago se presupuestan aparte.",
+    "aftercareLabel": "Después de la entrega",
+    "aftercare": "Espacio para seguir creciendo.",
+    "aftercareBody": "Los cambios y actualizaciones tras la entrega se cobran según la carga de trabajo, desde un pequeño ajuste de contenido hasta cambios más complejos. El presupuesto se acuerda antes de trabajar.",
+    "perUpdate": "por actualización, según la carga de trabajo",
+    "details": "Detalles de los paquetes",
+    "domainQuestion": "¿Qué cubre el dominio incluido?",
+    "domainAnswer": "Se incluye un dominio estándar. La extensión, el plazo de registro y el coste de renovación se acuerdan en tu presupuesto. Los nombres prémium y las renovaciones futuras pueden tener un coste adicional.",
+    "providersQuestion": "¿Se incluyen las suscripciones de correo, WhatsApp y almacenamiento?",
+    "providersAnswer": "Los paquetes cubren la integración y configuración descritas. Las notificaciones de WhatsApp incluidas se limitan a 3 chats definidos, sean números individuales o grupos. Las notificaciones a distintos usuarios requieren la opción mensual de WhatsApp. Los demás gastos de correo, API de WhatsApp, base de datos y almacenamiento se presupuestan aparte.",
+    "unsure": "¿No sabes por dónde empezar?",
+    "unsureBody": "Cuéntame qué necesita hacer tu negocio. Definiremos juntos el alcance adecuado.",
+    "talk": "Hablemos de tu sitio",
+    "teaser": "Un presupuesto web que puedes planificar.",
+    "teaserBody": "Explora cuatro paquetes, lo que incluyen y el coste de mantener tu web.",
+    "view": "Explorar precios de sitios web",
+    "featureList": "Comparar las funciones de los paquetes",
+    "notIncluded": "No incluido",
+    "features": {
+      "design": "Diseño adaptable a móviles y ordenadores",
+      "domain": "Dominio estándar",
+      "socials": "Enlaces sociales y chat directo de WhatsApp",
+      "form": "Formulario de contacto y consultas",
+      "email": "Notificaciones de consultas por correo",
+      "whatsapp": "Notificaciones de consultas por WhatsApp",
+      "destinations": "Máximo 3 chats de notificaciones: números o grupos",
+      "admin": "Administración con acceso seguro",
+      "resources": "Gestión de recursos y contenido del negocio",
+      "seo": "Optimización para motores de búsqueda (SEO)"
+    },
+    "swipe": "Desliza para comparar paquetes",
+    "previousPackage": "Paquete anterior",
+    "nextPackage": "Paquete siguiente",
+    "downloadPdf": "Descargar precios en PDF",
+    "whatsappAddOnLabel": "Opción adicional de WhatsApp",
+    "whatsappAddOnTitle": "Notificaciones a distintos usuarios de WhatsApp",
+    "whatsappAddOnBody": "Los paquetes Negocio y Completo incluyen un máximo de 3 chats de notificación definidos: números individuales o grupos. Para enviar notificaciones a los chats personales de distintos usuarios, añade esta opción mensual.",
+    "whatsappAddOnPeriod": "adicionales / mes"
   }
 }

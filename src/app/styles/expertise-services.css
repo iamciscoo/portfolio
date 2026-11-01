@@ -101,3 +101,12 @@
   background: var(--accent);
   color: white;
 }
+.pricing-preview {
+  padding-block: 48px;
+  border-top: 1px solid var(--line);
+}
+.pricing-preview h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  letter-spacing: -0.035em;
+  margin-top: 16px;
+}

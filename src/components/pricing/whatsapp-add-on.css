@@ -1,0 +1,6 @@
+.pricing-aftercare.pricing-whatsapp-addon h2 {
+  font-size: clamp(24px, 2.6vw, 34px);
+}
+.pricing-whatsapp-addon p {
+  font-size: 14px;
+}

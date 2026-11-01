@@ -13,7 +13,8 @@
     "language": "Language",
     "theme": "Change color theme",
     "skip": "Skip to content",
-    "back": "Back to portfolio"
+    "back": "Back to portfolio",
+    "pricing": "Pricing"
   },
   "common": {
     "explore": "See my work",
@@ -89,7 +90,8 @@
     "contactIntro": "A new website or a computer problem? Send me a few details, or message me on WhatsApp.",
     "notFound": "A small detour.",
     "notFoundBody": "This page isn't here. Let's get you back to familiar ground.",
-    "metadata": "Francis Mwambene - Cisco | Developer & Product Builder"
+    "metadata": "Francis Mwambene - Cisco | Developer & Product Builder",
+    "pricingIntro": "Website packages from TZS 450,000 to 1,400,000, with clear hosting, notification and update costs."
   },
   "about": {
     "origin": "FROM TANZANIA, WITH PERSPECTIVE",
@@ -229,5 +231,93 @@
     "hint": "Message me on WhatsApp",
     "direct": "Or chat on WhatsApp",
     "message": "Hi Cisco, I found your website and I'd like help with "
+  },
+  "pricing": {
+    "eyebrow": "Websites, with a clear budget",
+    "title": "A good website.\nA clear starting point.",
+    "intro": "From a focused landing page to a business you can manage online. Choose the level of connection your customers need, and we’ll shape the details together.",
+    "explore": "Find your package",
+    "oneTime": "One-time website build",
+    "domainIncluded": "Domain included",
+    "currency": "Prices in {currency}",
+    "packages": "Website packages",
+    "starting": "Starting estimate · one-time build",
+    "choose": "Discuss {package}",
+    "included": "Included",
+    "inquiry": "Hi Cisco, I’m interested in the {package} package, starting at {price}. Can we discuss my website?",
+    "landing": {
+      "label": "Get online",
+      "name": "Starter",
+      "description": "A polished introduction to your business, with a simple way to reach you."
+    },
+    "email": {
+      "label": "Receive enquiries",
+      "name": "Growth",
+      "description": "Turn interest into enquiries delivered straight to your inbox."
+    },
+    "whatsapp": {
+      "label": "Stay in the conversation",
+      "name": "Business",
+      "description": "Bring new enquiries to the WhatsApp chats you already use."
+    },
+    "portal": {
+      "label": "Manage your business",
+      "name": "Complete",
+      "description": "A complete website with a dedicated space to manage your resources."
+    },
+    "estimate": "These are rough starting prices; the final scope and quote are agreed before work begins.",
+    "conversion": "Currency conversions are rounded estimates using exchange rates from {date}. The base build prices are in TZS.",
+    "rates": "Exchange-rate source",
+    "hostingLabel": "The ongoing side",
+    "hosting": "Hosting, without surprises.",
+    "hostingIntro": "Your website build and running costs are separate. We agree the hosting setup and monthly resource budget before launch.",
+    "resourcesTitle": "Typical monthly hosting capacity",
+    "transfer": "Data transfer to visitors",
+    "requests": "CDN requests",
+    "compute": "Server processing budget",
+    "delivery": "Secure website connection",
+    "perMonth": "/ month",
+    "usageCredit": "monthly resource credit",
+    "allocation": "Reference capacity is shared hosting capacity, not a guaranteed allowance for each website. Your project’s allocation is agreed before launch; databases and file storage are scoped separately.",
+    "upgradeTitle": "When your site needs more resources",
+    "upgradeBody": "If your site exceeds its agreed resource allocation, budget from this amount each month for a server-resource upgrade.",
+    "overages": "Extra server resources start at approximately {monthly} per month. This is not unlimited usage; higher usage, taxes and paid services are quoted separately.",
+    "aftercareLabel": "After handover",
+    "aftercare": "Room to keep growing.",
+    "aftercareBody": "Changes and updates after completion are priced by the workload, from a small content edit to a more involved change. I’ll quote the work before making it.",
+    "perUpdate": "per update, depending on workload",
+    "details": "Package details",
+    "domainQuestion": "What does “domain included” cover?",
+    "domainAnswer": "One standard domain is included in the build. We’ll agree the extension, registration period and renewal cost in your quote. Premium names and future renewals may cost extra.",
+    "providersQuestion": "Are email, WhatsApp and storage subscriptions included?",
+    "providersAnswer": "The packages cover the integration and setup described above. Included WhatsApp notifications are limited to 3 specified destination chats, whether individual numbers or groups. Notifications to different users’ chats require the monthly WhatsApp add-on. Other ongoing email, WhatsApp API, database and storage charges are quoted separately.",
+    "unsure": "Not sure where to start?",
+    "unsureBody": "Tell me what your business needs to do. We can find the right scope together.",
+    "talk": "Let’s talk about your website",
+    "teaser": "A website budget you can plan around.",
+    "teaserBody": "Explore four packages, what they include and what it costs to keep your site running.",
+    "view": "Explore website pricing",
+    "featureList": "Compare package features",
+    "notIncluded": "Not included",
+    "features": {
+      "design": "Responsive website design",
+      "domain": "Standard domain",
+      "socials": "Social links & direct WhatsApp chat",
+      "form": "Contact & enquiry form",
+      "email": "Email enquiry notifications",
+      "whatsapp": "WhatsApp enquiry notifications",
+      "destinations": "Maximum 3 notification chats: numbers or groups",
+      "admin": "Admin portal with secure sign-in",
+      "resources": "Manage business resources & content",
+      "seo": "Search engine optimization (SEO)"
+    },
+    "swipe": "Swipe to compare packages",
+    "previousPackage": "Previous package",
+    "nextPackage": "Next package",
+    "downloadPdf": "Download pricing PDF",
+    "whatsappAddOnLabel": "Optional WhatsApp add-on",
+    "whatsappAddOnTitle": "Notifications to different WhatsApp users",
+    "whatsappAddOnBody": "Business and Complete include a maximum of 3 specified notification chats: individual numbers or groups. To send notifications to different users’ own chats, add this monthly option.",
+    "whatsappAddOnPeriod": "extra / month"
   }
 }

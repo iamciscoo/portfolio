@@ -67,16 +67,22 @@ export async function PersonalHero({ locale }: { locale: Locale }) {
       }
       caption={
         <>
-          <Link className="hero-about-link" href="/about">
-            <Image
-              src={profile.photos.headshot.src}
-              alt=""
-              width={44}
-              height={44}
-            />
-            <span>{text(cinematic.meet, locale)}</span>
-            <ArrowUpRight size={18} />
-          </Link>
+          <div className="hero-caption-links">
+            <Link className="hero-about-link" href="/about">
+              <Image
+                src={profile.photos.headshot.src}
+                alt=""
+                width={44}
+                height={44}
+              />
+              <span>{text(cinematic.meet, locale)}</span>
+              <ArrowUpRight size={18} />
+            </Link>
+            <Link className="hero-pricing-pill" href="/pricing">
+              <span>{t("nav.pricing")}</span>
+              <ArrowUpRight size={15} aria-hidden="true" />
+            </Link>
+          </div>
           <a
             className="hero-scroll-link"
             href="#selected-work"

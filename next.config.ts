@@ -7,6 +7,10 @@ const config: NextConfig = {
   async headers() {
     return [
       {
+        source: "/pricing/:filename",
+        headers: [{ key: "Content-Disposition", value: "attachment" }],
+      },
+      {
         source: "/(.*)",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },

@@ -11,6 +11,7 @@ export const portfolioLinks = [
   ["studio", "/studio"],
   ["journey", "/journey"],
   ["services", "/services"],
+  ["pricing", "/pricing"],
 ] as const;
 
 export function DesktopNav() {

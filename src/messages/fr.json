@@ -13,7 +13,8 @@
     "language": "Langue",
     "theme": "Changer le thème",
     "skip": "Aller au contenu",
-    "back": "Retour au portfolio"
+    "back": "Retour au portfolio",
+    "pricing": "Tarifs"
   },
   "common": {
     "explore": "Voir mes projets",
@@ -89,7 +90,8 @@
     "contactIntro": "Un nouveau site ou un problème informatique ? Envoyez-moi quelques détails ici ou sur WhatsApp.",
     "notFound": "Un petit détour.",
     "notFoundBody": "Cette page n’existe pas. Retrouvons un chemin connu.",
-    "metadata": "Francis Mwambene - Cisco | Développeur et créateur de produits"
+    "metadata": "Francis Mwambene - Cisco | Développeur et créateur de produits",
+    "pricingIntro": "Des sites de 450 000 à 1 400 000 TZS, avec des coûts clairs pour l’hébergement, les notifications et les mises à jour."
   },
   "about": {
     "origin": "DE TANZANIE, AVEC UN REGARD OUVERT",
@@ -229,5 +231,93 @@
     "hint": "Écrivez-moi sur WhatsApp",
     "direct": "Ou discutons sur WhatsApp",
     "message": "Bonjour Cisco, j’ai vu votre site et j’aurais besoin d’aide pour "
+  },
+  "pricing": {
+    "eyebrow": "Un site, un budget clair",
+    "title": "Un bon site.\nUn point de départ clair.",
+    "intro": "D’une page de présentation à un site pour gérer votre activité. Choisissez comment communiquer avec vos clients, puis définissons les détails ensemble.",
+    "explore": "Trouver votre formule",
+    "oneTime": "Création payée une seule fois",
+    "domainIncluded": "Domaine inclus",
+    "currency": "Prix en {currency}",
+    "packages": "Formules de création de sites",
+    "starting": "Estimation de départ · création unique",
+    "choose": "Parlons de {package}",
+    "included": "Inclus",
+    "inquiry": "Bonjour Cisco, la formule {package}, à partir de {price}, m’intéresse. Pouvons-nous parler de mon site ?",
+    "landing": {
+      "label": "Être présent en ligne",
+      "name": "Essentiel",
+      "description": "Une présentation soignée de votre activité et un moyen simple de vous joindre."
+    },
+    "email": {
+      "label": "Recevoir des demandes",
+      "name": "Croissance",
+      "description": "Recevez les demandes de vos clients directement dans votre boîte mail."
+    },
+    "whatsapp": {
+      "label": "Garder le contact",
+      "name": "Business",
+      "description": "Retrouvez les nouvelles demandes dans vos conversations WhatsApp habituelles."
+    },
+    "portal": {
+      "label": "Gérer votre activité",
+      "name": "Complet",
+      "description": "Un site complet avec un espace dédié à la gestion de vos ressources."
+    },
+    "estimate": "Ces prix sont des estimations de départ. Le périmètre et le devis final sont convenus avant de commencer.",
+    "conversion": "Les conversions sont des estimations arrondies au taux du {date}. Les prix de base de création sont en TZS.",
+    "rates": "Source des taux de change",
+    "hostingLabel": "Les frais récurrents",
+    "hosting": "L’hébergement, sans surprise.",
+    "hostingIntro": "La création du site et les frais de fonctionnement sont distincts. Nous convenons de l’hébergement et du budget mensuel avant le lancement.",
+    "resourcesTitle": "Capacité mensuelle indicative de l’hébergement",
+    "transfer": "Données transférées aux visiteurs",
+    "requests": "Requêtes CDN",
+    "compute": "Budget de traitement serveur",
+    "delivery": "Connexion sécurisée au site",
+    "perMonth": "/ mois",
+    "usageCredit": "crédit mensuel de ressources",
+    "allocation": "Ces capacités indicatives sont partagées, et non garanties pour chaque site. Les ressources de votre projet sont convenues avant le lancement ; la base de données et le stockage sont chiffrés séparément.",
+    "upgradeTitle": "Si votre site a besoin de plus de ressources",
+    "upgradeBody": "Si votre site dépasse les ressources convenues, prévoyez un budget mensuel à partir de ce montant pour augmenter les ressources serveur.",
+    "overages": "Les ressources serveur supplémentaires commencent à environ {monthly} par mois. L’utilisation n’est pas illimitée ; consommation supérieure, taxes et services payants sont chiffrés séparément.",
+    "aftercareLabel": "Après la livraison",
+    "aftercare": "De la place pour évoluer.",
+    "aftercareBody": "Les modifications et mises à jour après livraison sont facturées selon la charge de travail, d’une petite retouche à un changement plus conséquent. Le devis est convenu avant toute intervention.",
+    "perUpdate": "par mise à jour, selon la charge de travail",
+    "details": "Détails des formules",
+    "domainQuestion": "Que couvre le domaine inclus ?",
+    "domainAnswer": "Un domaine standard est inclus. L’extension, la durée d’enregistrement et le coût du renouvellement sont convenus dans le devis. Les noms premium et futurs renouvellements peuvent coûter plus cher.",
+    "providersQuestion": "Les abonnements e-mail, WhatsApp et stockage sont-ils inclus ?",
+    "providersAnswer": "Les formules couvrent l’intégration et la configuration décrites. Les notifications WhatsApp incluses sont limitées à 3 conversations définies, numéros individuels ou groupes. Les notifications à différents utilisateurs nécessitent l’option WhatsApp mensuelle. Les autres frais d’e-mail, d’API WhatsApp, de base de données et de stockage sont chiffrés séparément.",
+    "unsure": "Vous hésitez sur le point de départ ?",
+    "unsureBody": "Expliquez-moi les besoins de votre activité. Nous définirons le bon périmètre ensemble.",
+    "talk": "Parlons de votre site",
+    "teaser": "Un budget de site que vous pouvez prévoir.",
+    "teaserBody": "Découvrez quatre formules, leur contenu et les coûts d’exploitation de votre site.",
+    "view": "Découvrir les tarifs des sites",
+    "featureList": "Comparer les fonctionnalités",
+    "notIncluded": "Non inclus",
+    "features": {
+      "design": "Design adapté aux mobiles et ordinateurs",
+      "domain": "Domaine standard",
+      "socials": "Liens sociaux et discussion WhatsApp",
+      "form": "Formulaire de contact et de demande",
+      "email": "Notifications des demandes par e-mail",
+      "whatsapp": "Notifications des demandes par WhatsApp",
+      "destinations": "3 conversations de notification maximum : numéros ou groupes",
+      "admin": "Administration avec connexion sécurisée",
+      "resources": "Gestion des ressources et contenus",
+      "seo": "Optimisation pour les moteurs de recherche (SEO)"
+    },
+    "swipe": "Balayez pour comparer les formules",
+    "previousPackage": "Formule précédente",
+    "nextPackage": "Formule suivante",
+    "downloadPdf": "Télécharger les tarifs en PDF",
+    "whatsappAddOnLabel": "Option WhatsApp",
+    "whatsappAddOnTitle": "Des notifications à différents utilisateurs WhatsApp",
+    "whatsappAddOnBody": "Les formules Business et Complet incluent au maximum 3 conversations de notification définies : numéros individuels ou groupes. Pour envoyer des notifications dans les conversations personnelles de différents utilisateurs, ajoutez cette option mensuelle.",
+    "whatsappAddOnPeriod": "en supplément / mois"
   }
 }

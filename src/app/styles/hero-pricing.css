@@ -1,0 +1,105 @@
+.hero-caption-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+}
+.hero-caption-links .hero-about-link {
+  max-width: none;
+}
+.hero-pricing-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid #ffffff60;
+  border-radius: 999px;
+  background: #142235d9;
+  color: #f7f8fa;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hero-pricing-pill:active:not(:focus-visible) {
+  transform: scale(0.97);
+}
+@media (min-width: 601px) {
+  .hero-caption-links {
+    gap: 40px;
+  }
+  .hero-pricing-pill {
+    position: relative;
+    gap: 8px;
+    padding-inline: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    font-weight: 500;
+    transition: none;
+  }
+  .hero-pricing-pill::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    width: 1px;
+    height: 18px;
+    background: currentColor;
+    opacity: 0.3;
+  }
+  .hero-pricing-pill > span {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+  }
+  .hero-pricing-pill:active:not(:focus-visible) {
+    transform: none;
+  }
+  .hero-pricing-pill > svg {
+    transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+@media (min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hero-pricing-pill:hover > svg {
+    transform: translate(2px, -2px);
+  }
+}
+@media (max-width: 600px) {
+  .hero-caption-links {
+    flex: 1;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .hero-caption-links .hero-about-link {
+    gap: 8px;
+    min-width: 0;
+  }
+  .hero-caption-links .hero-about-link > svg {
+    display: none;
+  }
+  .hero-pricing-pill {
+    gap: 6px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  .cinematic-footer {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 360px) {
+  .hero-caption-links {
+    flex-basis: 100%;
+  }
+  .cinematic-footer .hero-scroll-link {
+    margin-left: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-pricing-pill {
+    transition: none;
+    transform: none;
+  }
+}

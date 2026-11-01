@@ -21,6 +21,7 @@ export async function Footer() {
             "studio",
             "journey",
             "services",
+            "pricing",
             "contact",
           ].map((key) => (
             <Link key={key} href={`/${key}`}>

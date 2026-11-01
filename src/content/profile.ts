@@ -1,12 +1,11 @@
 import { l } from "@/lib/localize";
 import { personalMoments } from "./personal-moments";
+import { profileContact } from "./profile-contact";
 
 export const profile = {
   name: "Francis Jacob Mwambene",
-  shortName: "Francis Mwambene",
+  ...profileContact,
   alias: "Cisco",
-  email: "francisjac21@gmail.com",
-  whatsapp: "255693749306",
   origin: "Tanzania",
   location: "Russia",
   github: "https://github.com/iamciscoo",

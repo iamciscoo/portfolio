@@ -35,6 +35,11 @@ export default async function Services({
         title={t("pages.services")}
         description={t("pages.servicesIntro")}
       />
+      <div className="wrap">
+        <Link className="text-link" href="/pricing">
+          {t("pricing.view")} ↗
+        </Link>
+      </div>
       <section className="page-content wrap">
         {services.map((service, i) => (
           <article className="service-detail" key={service.id}>
