@@ -319,5 +319,39 @@
     "whatsappAddOnTitle": "Notifications to different WhatsApp users",
     "whatsappAddOnBody": "Business and Complete include a maximum of 3 specified notification chats: individual numbers or groups. To send notifications to different users’ own chats, add this monthly option.",
     "whatsappAddOnPeriod": "extra / month"
+  },
+  "seo": {
+    "home": {
+      "title": "Francis Mwambene (Cisco) | Web Developer",
+      "description": "Francis Mwambene, known as Cisco, builds websites and full-stack apps. Explore my work, website packages, and software support in Tanzania and Russia."
+    },
+    "about": {
+      "title": "About Francis Mwambene (Cisco) | Web Developer",
+      "description": "Meet Francis Jacob Mwambene, a developer from Tanzania studying in Russia. Learn about my approach to websites, products, and working with people."
+    },
+    "journey": {
+      "title": "Education & Experience | Francis Mwambene",
+      "description": "Explore Francis Mwambene’s education, practical experience, and product work, from Tanzania to Russia and the projects shaping my development journey."
+    },
+    "projects": {
+      "title": "Web Development Projects | Francis Mwambene",
+      "description": "Explore my team contributions to GloboExpats and independent development of iPhone Service TZ, with project details, design decisions, and live websites."
+    },
+    "studio": {
+      "title": "Website Design Concepts | Cisco Studio",
+      "description": "Try six interactive website concepts for restaurants, fashion, construction, consulting, shops, and tours. Discuss a website adapted to your business."
+    },
+    "services": {
+      "title": "Website Development & Software Support | Cisco",
+      "description": "Get a responsive website, full-stack application, or practical software support from Francis Mwambene. Explore services and discuss your project."
+    },
+    "pricing": {
+      "title": "Website Pricing & Packages | Cisco",
+      "description": "Compare website packages with SEO, domains, email, WhatsApp notifications, and admin portals. See hosting costs, update fees, and download the pricing PDF."
+    },
+    "contact": {
+      "title": "Contact Francis Mwambene | Website Enquiries",
+      "description": "Discuss your website or software support needs with Francis Mwambene. Send a project enquiry or get in touch directly through WhatsApp."
+    }
   }
 }

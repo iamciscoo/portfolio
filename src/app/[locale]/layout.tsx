@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Francis Mwambene - Cisco",
   description: "Developer and product builder. From Tanzania, based in Russia.",
+  verification: {
+    google: "G4HB_bkaBI7rxhEaAqt7vM7g9_2KZ0p3A4_tA4H-yNI",
+  },
   icons: {
     icon: [
       { url: "/icon.svg?v=c", type: "image/svg+xml" },

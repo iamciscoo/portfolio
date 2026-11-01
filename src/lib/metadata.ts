@@ -6,18 +6,35 @@ const deploymentHost =
 export const siteUrl = deploymentHost
   ? `https://${deploymentHost}`
   : "http://127.0.0.1:3000";
+export const siteName = "Cisco · Francis Mwambene";
+const openGraphLocales: Record<Locale, string> = {
+  en: "en_US",
+  ru: "ru_RU",
+  sw: "sw_TZ",
+  fr: "fr_FR",
+  es: "es_ES",
+};
 export async function pageMetadata(
   locale: Locale,
   page: string,
   path = "",
 ): Promise<Metadata> {
-  const t = await getTranslations({ locale });
-  const title =
-    page === "home"
-      ? t("pages.metadata")
-      : `${t(`nav.${page}`)} · Francis Mwambene`;
-  const description =
-    page === "home" ? t("home.intro") : t(`pages.${page}Intro`);
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return localizedMetadata(
+    locale,
+    t(`${page}.title`),
+    t(`${page}.description`),
+    path,
+  );
+}
+
+export function localizedMetadata(
+  locale: Locale,
+  title: string,
+  description: string,
+  path = "",
+  image = { url: "/opengraph-image", width: 1200, height: 630, alt: siteName },
+): Metadata {
   return {
     metadataBase: new URL(siteUrl),
     title,
@@ -32,16 +49,20 @@ export async function pageMetadata(
     openGraph: {
       title,
       description,
-      locale,
+      siteName,
+      locale: openGraphLocales[locale],
+      alternateLocale: locales
+        .filter((lang) => lang !== locale)
+        .map((lang) => openGraphLocales[lang]),
       type: "website",
       url: `/${locale}${path}`,
-      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/opengraph-image"],
+      images: [image],
     },
   };
 }

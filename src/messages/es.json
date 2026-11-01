@@ -319,5 +319,39 @@
     "whatsappAddOnTitle": "Notificaciones a distintos usuarios de WhatsApp",
     "whatsappAddOnBody": "Los paquetes Negocio y Completo incluyen un máximo de 3 chats de notificación definidos: números individuales o grupos. Para enviar notificaciones a los chats personales de distintos usuarios, añade esta opción mensual.",
     "whatsappAddOnPeriod": "adicionales / mes"
+  },
+  "seo": {
+    "home": {
+      "title": "Francis Mwambene (Cisco) | Desarrollador web",
+      "description": "Francis Mwambene, conocido como Cisco, crea sitios y aplicaciones full-stack. Explora mis proyectos, paquetes web y soporte en Tanzania y Rusia."
+    },
+    "about": {
+      "title": "Sobre Francis Mwambene (Cisco) | Desarrollador",
+      "description": "Conoce a Francis Jacob Mwambene, desarrollador de Tanzania que estudia en Rusia, y mi enfoque para crear sitios, productos y trabajar con otras personas."
+    },
+    "journey": {
+      "title": "Formación y experiencia | Francis Mwambene",
+      "description": "Explora la formación, experiencia práctica y proyectos de Francis Mwambene, desde Tanzania hasta Rusia, que dan forma a mi trayectoria como desarrollador."
+    },
+    "projects": {
+      "title": "Proyectos de desarrollo web | Francis Mwambene",
+      "description": "Descubre mi contribución al equipo de GloboExpats y el desarrollo independiente de iPhone Service TZ, con detalles de diseño y enlaces a los sitios."
+    },
+    "studio": {
+      "title": "Conceptos de diseño web | Cisco Studio",
+      "description": "Prueba seis conceptos interactivos para restaurantes, moda, construcción, consultoría, tiendas y turismo. Hablemos de un sitio adaptado a tu negocio."
+    },
+    "services": {
+      "title": "Desarrollo web y soporte de software | Cisco",
+      "description": "Sitios adaptados a móviles, aplicaciones full-stack y soporte de software de Francis Mwambene. Consulta los servicios y hablemos de tu proyecto."
+    },
+    "pricing": {
+      "title": "Precios y paquetes de sitios web | Cisco",
+      "description": "Compara paquetes con SEO, dominio, correo, notificaciones de WhatsApp y panel de administración. Consulta los costes de alojamiento y descarga el PDF."
+    },
+    "contact": {
+      "title": "Contactar con Francis Mwambene | Proyecto web",
+      "description": "Habla con Francis Mwambene sobre tu sitio o necesidades de soporte de software. Envía una consulta de proyecto o contáctame directamente por WhatsApp."
+    }
   }
 }

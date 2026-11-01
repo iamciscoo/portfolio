@@ -18,9 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     locales.map((locale) => ({
       url: `${siteUrl}/${locale}${path}`,
       alternates: {
-        languages: Object.fromEntries(
-          locales.map((lang) => [lang, `${siteUrl}/${lang}${path}`]),
-        ),
+        languages: {
+          ...Object.fromEntries(
+            locales.map((lang) => [lang, `${siteUrl}/${lang}${path}`]),
+          ),
+          "x-default": `${siteUrl}/en${path}`,
+        },
       },
       changeFrequency: "monthly" as const,
       priority: path === "" ? 1 : 0.7,

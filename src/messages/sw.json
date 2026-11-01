@@ -319,5 +319,39 @@
     "whatsappAddOnTitle": "Arifa kwa watumiaji tofauti wa WhatsApp",
     "whatsappAddOnBody": "Vifurushi vya Biashara na Kamili vinajumuisha hadi mazungumzo 3 maalumu ya kupokea arifa: namba binafsi au vikundi. Kutuma arifa kwenye mazungumzo binafsi ya watumiaji tofauti kunahitaji nyongeza hii ya kila mwezi.",
     "whatsappAddOnPeriod": "ya ziada / mwezi"
+  },
+  "seo": {
+    "home": {
+      "title": "Francis Mwambene (Cisco) | Mtengenezaji wa Tovuti",
+      "description": "Francis Mwambene, maarufu kama Cisco, anajenga tovuti na programu za full-stack. Angalia kazi, vifurushi vya tovuti na msaada wa programu Tanzania na Urusi."
+    },
+    "about": {
+      "title": "Kuhusu Francis Mwambene (Cisco) | Msanidi",
+      "description": "Mfahamu Francis Jacob Mwambene, msanidi kutoka Tanzania anayesoma Urusi. Soma kuhusu mtazamo wangu wa kujenga tovuti, bidhaa na kufanya kazi na watu."
+    },
+    "journey": {
+      "title": "Elimu na Uzoefu | Francis Mwambene",
+      "description": "Fuatilia elimu, uzoefu wa vitendo na kazi za bidhaa za Francis Mwambene, kutoka Tanzania hadi Urusi, pamoja na miradi inayounda safari yangu ya maendeleo."
+    },
+    "projects": {
+      "title": "Miradi ya Tovuti | Francis Mwambene",
+      "description": "Angalia mchango wangu katika timu ya GloboExpats na utengenezaji wa iPhone Service TZ nilioufanya mwenyewe, pamoja na maelezo na viungo vya tovuti."
+    },
+    "studio": {
+      "title": "Dhana za Muundo wa Tovuti | Cisco Studio",
+      "description": "Jaribu dhana sita za tovuti za migahawa, mitindo, ujenzi, ushauri, maduka na utalii. Tuongee kuhusu tovuti inayolingana na biashara yako."
+    },
+    "services": {
+      "title": "Utengenezaji wa Tovuti na Msaada wa Programu | Cisco",
+      "description": "Pata tovuti inayofanya kazi kwenye simu, programu ya full-stack au msaada wa programu kutoka kwa Francis Mwambene. Angalia huduma na tujadili mradi wako."
+    },
+    "pricing": {
+      "title": "Bei na Vifurushi vya Tovuti | Cisco",
+      "description": "Linganisha vifurushi vya tovuti vyenye SEO, kikoa, barua pepe, arifa za WhatsApp na mfumo wa usimamizi. Angalia gharama za seva na masasisho, na pakua PDF."
+    },
+    "contact": {
+      "title": "Wasiliana na Francis Mwambene | Maombi ya Tovuti",
+      "description": "Jadili mahitaji yako ya tovuti au msaada wa programu na Francis Mwambene. Tuma maelezo ya mradi au wasiliana nami moja kwa moja kupitia WhatsApp."
+    }
   }
 }

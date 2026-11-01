@@ -1,14 +1,13 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { isLocale, locales } from "@/i18n/routing";
+import { isLocale } from "@/i18n/routing";
 import { projects } from "@/content/projects";
 import { ImageGallery } from "@/components/common/image-gallery";
 import { ContactBand } from "@/components/common/contact-band";
 import { text } from "@/lib/localize";
-import { siteUrl } from "@/lib/metadata";
+import { localizedMetadata, siteUrl } from "@/lib/metadata";
 import { CaseVisual } from "@/components/portfolio/scroll-scenes";
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -24,21 +23,12 @@ export async function generateMetadata({
   if (!project || !isLocale(locale)) return {};
   const title = `${project.name} · Cisco`;
   const description = text(project.intro, locale);
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: `/${locale}/projects/${slug}`,
-      languages: Object.fromEntries(
-        locales.map((lang) => [lang, `/${lang}/projects/${slug}`]),
-      ),
-    },
-    openGraph: {
-      title,
-      description,
-      images: [{ url: project.cover, width: 1440, height: 1000 }],
-    },
-  };
+  return localizedMetadata(locale, title, description, `/projects/${slug}`, {
+    url: project.cover,
+    width: 1440,
+    height: 1000,
+    alt: project.name,
+  });
 }
 export default async function CaseStudy({
   params,
@@ -156,9 +146,8 @@ export default async function CaseStudy({
         </Link>
       </article>
       <ContactBand />
-      <Script
+      <script
         id={`project-schema-${project.slug}`}
-        strategy="afterInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -167,7 +156,7 @@ export default async function CaseStudy({
             name: project.name,
             description: text(project.intro, locale),
             url: `${siteUrl}/${locale}/projects/${slug}`,
-            author: { "@type": "Person", name: "Francis Jacob Mwambene" },
+            author: { "@id": `${siteUrl}/#person` },
             sameAs: project.url,
           }).replace(/</g, "\u003c"),
         }}

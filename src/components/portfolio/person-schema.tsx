@@ -1,22 +1,36 @@
 import { profile } from "@/content/profile";
-import Script from "next/script";
-import { siteUrl } from "@/lib/metadata";
+import { siteName, siteUrl } from "@/lib/metadata";
+import { locales } from "@/i18n/routing";
 export function PersonSchema() {
   return (
-    <Script
+    <script
       id="person-schema"
-      strategy="afterInteractive"
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Person",
-          name: profile.name,
-          alternateName: profile.alias,
-          url: siteUrl,
-          jobTitle: "Software Developer & Product Builder",
-          sameAs: [profile.github, ...profile.instagram],
-          nationality: { "@type": "Country", name: "Tanzania" },
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": `${siteUrl}/#person`,
+              name: profile.name,
+              alternateName: profile.alias,
+              url: siteUrl,
+              image: `${siteUrl}${profile.photos.headshot.src}`,
+              jobTitle: "Software Developer & Product Builder",
+              sameAs: [profile.github, ...profile.instagram],
+              nationality: { "@type": "Country", name: "Tanzania" },
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${siteUrl}/#website`,
+              name: siteName,
+              alternateName: profile.name,
+              url: `${siteUrl}/`,
+              inLanguage: locales,
+              publisher: { "@id": `${siteUrl}/#person` },
+            },
+          ],
         }).replace(/</g, "\u003c"),
       }}
     />

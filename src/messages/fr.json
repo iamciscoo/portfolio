@@ -319,5 +319,39 @@
     "whatsappAddOnTitle": "Des notifications à différents utilisateurs WhatsApp",
     "whatsappAddOnBody": "Les formules Business et Complet incluent au maximum 3 conversations de notification définies : numéros individuels ou groupes. Pour envoyer des notifications dans les conversations personnelles de différents utilisateurs, ajoutez cette option mensuelle.",
     "whatsappAddOnPeriod": "en supplément / mois"
+  },
+  "seo": {
+    "home": {
+      "title": "Francis Mwambene (Cisco) | Développeur web",
+      "description": "Francis Mwambene, alias Cisco, crée des sites et des applications full-stack. Découvrez mes projets, mes forfaits et mon assistance en Tanzanie et en Russie."
+    },
+    "about": {
+      "title": "À propos de Francis Mwambene (Cisco)",
+      "description": "Découvrez Francis Jacob Mwambene, développeur tanzanien étudiant en Russie, et mon approche des sites web, des produits et du travail avec les autres."
+    },
+    "journey": {
+      "title": "Formation et expérience | Francis Mwambene",
+      "description": "Découvrez la formation, les expériences pratiques et les projets de Francis Mwambene, de la Tanzanie à la Russie, qui façonnent mon parcours de développeur."
+    },
+    "projects": {
+      "title": "Projets de développement web | Francis Mwambene",
+      "description": "Découvrez mes contributions à GloboExpats en équipe et la réalisation indépendante d’iPhone Service TZ, avec les choix de conception et les sites en ligne."
+    },
+    "studio": {
+      "title": "Concepts de sites web | Cisco Studio",
+      "description": "Essayez six concepts interactifs pour la restauration, la mode, la construction, le conseil, le commerce et le tourisme. Discutons d’un site pour votre activité."
+    },
+    "services": {
+      "title": "Création de sites et assistance logicielle | Cisco",
+      "description": "Sites adaptés aux mobiles, applications full-stack et assistance logicielle par Francis Mwambene. Découvrez les services et discutons de votre projet."
+    },
+    "pricing": {
+      "title": "Tarifs et forfaits de sites web | Cisco",
+      "description": "Comparez les forfaits avec SEO, domaine, e-mail, notifications WhatsApp et espace d’administration. Consultez les frais d’hébergement et téléchargez le PDF."
+    },
+    "contact": {
+      "title": "Contacter Francis Mwambene | Projet de site web",
+      "description": "Parlez de votre site ou de vos besoins d’assistance logicielle avec Francis Mwambene. Envoyez votre demande ou contactez-moi directement sur WhatsApp."
+    }
   }
 }
